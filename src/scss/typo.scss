@@ -1,0 +1,35 @@
+@import "colors";
+
+$fontSizeSmall: 14px;
+$fontSizeMain: 16px;
+$fontSizeMedium: 24px;
+$fontSizeLarge: 32px;
+$fontSizeBig: 56px;
+
+$fontMicro: 12px/18px "Roboto";
+$fontSmall: 14px/21px "Roboto";
+$fontMain: 16px/22px "Roboto";
+$fontHeadline: 700 56px/72px "Montserrat";
+$fontHeadlineMedium: 700 32px/48px "Montserrat";
+$fontHeadlineSmall: 700 24px/32px "Montserrat";
+
+a {
+  text-decoration: none;
+  color: $chromeYellow;
+}
+
+h1 {
+  font: $fontHeadline;
+  margin: 0;
+  
+  @include respond(mobile) {
+    font: $fontSizeSmall;
+  }
+}
+
+h2 {
+  font: $fontHeadlineSmall;
+}
+strong {
+  font-weight: 600;
+}

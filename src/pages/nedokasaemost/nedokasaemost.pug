@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / перевылизанность',
+    'рецензия на EP Гречки «Недокасаемость»',
+    'http://sayocean.me/img/nedokasaemost.jpg',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Перевылизанность')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/review/nedokasaemost.md
+    +footer()

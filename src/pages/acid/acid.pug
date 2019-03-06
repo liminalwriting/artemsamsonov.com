@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'недоскинс',
+    'артём cошников — о недотягивающей до «фильма поколения» картине александра горчилина «кислота»',
+    'http://sayocean.me/img/films-acid.jpg',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Недоскинс')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../../soshnikov-writing/publications/review/acid.md
+    +footer()

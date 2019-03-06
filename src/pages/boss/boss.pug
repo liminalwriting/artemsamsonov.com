@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / начальник',
+    'из цикла «чужие снимки»',
+    'http://sayocean.me/img/shoots.jpg',
+    'book'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Начальник')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/cycles/shoots/boss.md
+    +footer()

@@ -1,0 +1,33 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/footer/footer
+doctype html(prefix="og: http://ogp.me/ns#")
+html
+    +head(
+    'артём сошников / обозреватель прозы, рассказчик',
+    'пишу и обозреваю прозу, веду телеграм-канал о реализме «чернотроп»',
+    'http://sayocean.me/img/default.jpg',
+    ''
+    )
+body.body_dark
+    +header()
+    div.index
+        div.index__main-info
+            | пишу реалистические
+            = " "
+            a.index__main-info-link(href="writing.html") рассказы
+            |,
+            = " "
+            a.index__main-info-link(href="articles.html") обозреваю
+            =" "
+            | русскую литературу и гуманитарный нон-фикшн, веду книжный
+            = " "
+            a.index__main-info-link(href="http://t.me/blacktrope" target="blank") telegram-канал
+            = " "
+            |«чернотроп».
+        div.index__secondary-info
+            div.index__secondary-info-fact родился и вырос в ульяновске, шесть лет живу в петербурге
+            div.index__secondary-info-fact работал дворником, сторожем, разнорабочим на заводах. сейчас комфортно увядаю в IT
+            div.index__secondary-info-fact выпускник литературной мастерской аствацатурова и орехова (2016)
+            div.index__secondary-info-fact выпускник школы культурной журналистики, направление литературной критики (2018)
+    +footer()

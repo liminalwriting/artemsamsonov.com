@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / дворник',
+    'рассказ из архива вк-паблика «dutch rudder»',
+    'http://sayocean.me/img/default.jpg',
+    'book'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Дворник')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/short-stories/caretaker.md
+    +footer()

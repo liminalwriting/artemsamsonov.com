@@ -1,0 +1,11 @@
+mixin head(title, description, image, type, font)
+    head
+        meta(charset ='utf-8')
+        meta(name='viewport', content="width=device-width, initial-scale=1.0")
+        meta(property="og:type" content=type)
+        meta(property="og:title" content=title)
+        meta(property="og:description" content=description)
+        meta(property="og:image" content=image)
+        link(href="https://fonts.googleapis.com/css?family=Montserrat:700,900|Roboto:400,400i,600" rel="stylesheet")
+        link(href=font rel="stylesheet")
+        title=title

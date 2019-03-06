@@ -1,0 +1,40 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/page-header/page-header
+include ../../components/page-description/page-description
+include ../../components/list-header/list-header
+include ../../components/list-row/list-row
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / вот мои селфи',
+    '',
+    '../../img/selfie.jpg',
+    'book'
+    )
+body.body_dark
+    +header()
+    div.content
+        +page-header('Вот мои селфи')
+        div.annotation
+            div.annotation__image
+                img(src="../../img/selfie-cover.jpg")
+            div.annotation__description
+                p Сборник короткой прозы о провинциальном мальчике Тёме, который рос среди пацанов и панелек-баракко, мечтал сбежать от них подальше, но неожиданно быстро вырос и обнаружил вокруг себя смешных, наивных, но в целом замечательных людей.
+        div.data
+            div.list
+                div.list__section
+                    +list-header('детство')
+                    +list-row('pomegranade.html', 'гранаты', '', '', '')
+                    +list-row('clump.html', 'клок', '', '')
+                    +list-row('suite.html', 'костюм', '', '')
+                    +list-row('run-tema-run.html', 'эстафеты', '', '')
+                    +list-row('not-chav.html', 'ни пацан, ни мацан', '', '')
+                    +list-row('park.html', 'парк', '', '')
+                    +list-row('bag.html', 'пакет', '', '')
+                div.list__section
+                    +list-header('отрочество')
+                    +list-row('debut.html', 'дебют', '', '')
+                    +list-row('alien.html', 'инопланетянин', '', '')
+    +footer()

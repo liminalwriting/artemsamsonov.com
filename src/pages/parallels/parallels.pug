@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / параллельные общества',
+    'обзор книги сержа михалыча "параллельные общества"',
+    'http://sayocean.me/img/parallels.jpg',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Параллельные общества')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/review/parallels.md
+    +footer()

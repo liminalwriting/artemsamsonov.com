@@ -1,0 +1,193 @@
+// scss
+
+@mixin col100($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 100%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin colauto($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: auto;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col5($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 5%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col10($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 10%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col15($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 15%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col20($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 20%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col25($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 25%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col30($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 30%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col35($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 35%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col40($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 40%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col45($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 45%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col50($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 50%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col55($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 55%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col60($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 60%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col65($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 65%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col70($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 70%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col75($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 75%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col80($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 80%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col85($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 85%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col90($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 90%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin col95($padding, $flex-direction: row, $justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  width: 95%;
+  padding: $padding;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// Media queries
+
+$mobile: 320px;
+$tablet: 767px;
+$desk: 1023px;
+
+@mixin respond($media) {
+  @if $media == mobile {
+    @media only screen and (min-width: $mobile) and (max-width: $tablet) {
+      @content;
+    }
+  }
+  @if $media == tablet {
+    @media only screen and (min-width: $tablet) and (max-width: $desk) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'перебор с реализмом',
+    'артём cошников — о нашумевшем фильме сергея дворцевого «айка», бесспорных преимуществах картины и откровенном переборе с реализмом',
+    'https://www.vokrug.tv/pic/product/2/3/c/f/23cf6bbbf3be1af41236360a664ef0b2.jpg',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Перебор с реализмом')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/review/aika.md
+    +footer()

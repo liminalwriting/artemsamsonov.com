@@ -1,0 +1,33 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/page-header/page-header
+include ../../components/list-header/list-header
+include ../../components/list-row/list-row
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / проза',
+    'короткие рассказы и повести… ладно, повестей пока нет — читайте рассказы',
+    'http://sayocean.me/img/default.jpg',
+    'book'
+    )
+body.body_dark
+    +header()
+    div.content
+        +page-header('Проза')
+        div.data
+            div.list
+                div.list__section
+                    +list-header('циклы')
+                    +list-row('misfortunes.html', 'рассказы разных бед', '', '')
+                    +list-row('selfie.html', 'вот мои селфи', '', '')
+                    +list-row('shoots.html', 'чужие снимки', '', '')
+                div.list__section
+                    +list-header('рассказы')
+                    +list-row('https://ru.bookmate.com/books/li8yAn4W', 'инсайд', '', '', 'blank')
+                    +list-row('thai.html', 'в тае снег растаял', '', 'взмах #3')
+                div.list__section
+                    +list-header('повести и новеллы')
+                    +list-row('observer.html', 'наблюдатель', '', 'coming soon', '')
+    +footer()

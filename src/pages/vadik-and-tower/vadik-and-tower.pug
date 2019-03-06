@@ -1,0 +1,20 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / вадик и башня',
+    'первый опыт магического реализма, знаете ли',
+    'http://sayocean.me/img/vadik.jpg',
+    'book'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Вадик и башня')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/stories/vadik-and-tower.md
+    +footer()

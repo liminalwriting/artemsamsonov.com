@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / о писателях и «писателях»',
+    'завелись у нас тут, знаете ли, умники, что делят писателей по неподходящим им признакам…',
+    'http://sayocean.me/img/default.jpg',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('О писателях и «писателях»')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/esse/true-and-pseudo.md
+    +footer()

@@ -1,0 +1,14 @@
+@import "../../scss/grid";
+@import "../../scss/typo";
+
+.list-header {
+  @include col100(4px 0 12px 0, row);
+  color: $gray;
+  font: $fontSmall;
+  
+  &__line {
+    @include col100(0);
+    height: 1px;
+    background-color: $codGray;
+  }
+}

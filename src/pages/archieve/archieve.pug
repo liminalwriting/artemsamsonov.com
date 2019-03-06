@@ -1,0 +1,81 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/page-header/page-header
+include ../../components/page-description/page-description
+include ../../components/list-header/list-header
+include ../../components/list-row/list-row
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / архив',
+    'сборник старых текстом, сохранённых скорее для истории, нежели для чтения',
+    'http://sayocean.me/img/default.jpg',
+    'book'
+    )
+body.body_dark
+    +header()
+    div.content
+        +page-header('Архив', 'dark')
+        +page-description('Здесь покоятся тексты, которые по разным причинам я уже считаю слабыми. Но оценивать, как известно, не мне, так что если захотите почитать — читайте:')
+        div.data
+            div.list
+                div.list__section
+                    +list-header('ранние рассказы')
+                    +list-row('hopper.html', 'хоппер', '', '')
+                    +list-row('kommunar.html', 'добро пожаловать в коммунар', '', '')
+                    +list-row('vadik-and-tower.html', 'вадик и башня', '', 'год литературы')
+                    +list-row('pavle.html', 'павле', '', '')
+                    +list-row('zefir.html', 'зефир', '', '')
+                div.list__section
+                    +list-header('истории из паблика «dutch rudder»')
+                    +list-row('burial-ground.html', 'кладбон', '', '')
+                    +list-row('caretaker.html', 'дворник', '', '')
+                    +list-row('fashion.html', 'модник', '', '')
+                    +list-row('post-office.html', 'почта россии', '', '')
+                    +list-row('homeless.html', 'как бомж', '', '')
+                    +list-row('adult.html', 'взрослая жизнь', '', '')
+                    +list-row('winters.html', 'зимы', '', '')
+                    +list-row('umbrella.html', 'зонт', '', '')
+                    +list-row('may.html', 'май', '', '')
+                    +list-row('vip-markets.html', 'премиум-супермаркеты', '', '')
+                    +list-row('2007.html', '2007', '', '')
+                    +list-row('dunduks.html', 'дундуки', '', '')
+                    +list-row('new-gogol.html', 'новый гоголь', '', '')
+                    +list-row('siri.html', 'сири', '', '')
+                    +list-row('web-punk.html', 'веб-панк', '', '')
+                    +list-row('susanna.html', 'сюзанна', '', '')
+                    +list-row('bold-man.html', 'лихой человек', '', '')
+                    +list-row('sunflower-seeds.html', 'семки', '', '')
+                    +list-row('kvn.html', 'квн', '', '')
+                    +list-row('molko.html', 'жзл: молко', '', '')
+                    +list-row('pelevin.html', 'жзл: пелевин', '', '')
+                    +list-row('prilepin.html', 'жзл: прилепин', '', '')
+                div.list__section
+                    +list-header('стихотворения')
+                    +list-row('spring.html', 'весну мы встречали разбитыми', '', '2014')
+                    +list-row('overcasts.html', 'тучи чёрные чередом', '', '2014')
+                    +list-row('my-city.html', 'город мой, старый приятель', '', '2016')
+                    +list-row('after-training.html', 'после тренировки', '', '2015')
+                    +list-row('sunburn.html', 'рассвет на ленинском', '', '2015')
+                    +list-row('office.html', 'первые дни в офисе', '', '2015')
+                    +list-row('in-thai.html', 'пляж', '', '2014')
+                    +list-row('rubinstein.html', 'рубинштейна', '', '2016')
+                    +list-row('twenty-five.html', '25', '', '2015')
+                    +list-row('hangover.html', 'похмелье', '', '2015')
+                    +list-row('winter-again.html', 'снег выпал рано', '', '2015')
+                    +list-row('trud.html', 'снова на родину', '', '2015')
+                    +list-row('wave.html', 'волна', '', '2014')
+                    +list-row('black-city.html', 'чёрный город', '', '2014')
+                    +list-row('veche.html', 'вече', '', '2014')
+                    +list-row('astoria.html', 'астория', '', '2014')
+                    +list-row('avenue.html', 'аллея славы', '', '2013')
+                    +list-row('black-story.html', 'чёрная сказка', '', '2013')
+                    +list-row('anna.html', 'романс для анны', '', '2013')
+                    +list-row('stone.html', 'камень', '', '2014')
+                    +list-row('november-fourth.html', 'день единства', '', '2013')
+                    +list-row('without-underground.html', 'в моем городе нет метро', '', '2013')
+                    +list-row('sot-song.html', 'песня пьяниц', '', '2016')
+                    +list-row('winter.html', 'зима', '', '2015')
+                    +list-row('russky.html', 'russky', '', '2018')
+    +footer()

@@ -1,0 +1,9 @@
+mixin list-row(href, storyName, author, source, target)
+    a(href=href target=target class!=attributes.class).list__row
+        if author === ''
+            return
+                div.list__row-name=storyName
+        else
+            return
+                div.list__row-name= `${author} / ${storyName}`
+        div.list__row-source= source

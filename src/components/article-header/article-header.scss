@@ -1,0 +1,24 @@
+@import "../../scss/grid";
+@import "../../scss/colors";
+@import "../../scss/typo";
+
+.article-header {
+  @include col100(64px 0 32px 0, row, center);
+  width: 600px;
+  word-break: break-word;
+  text-align: center;
+  
+  @include respond(mobile) {
+    @include col100(32px 32px 24px 32px, row, center);
+    text-align: center;
+  }
+  
+  &__headline {
+    margin: 0;
+    font: $fontHeadlineMedium;
+    
+    @include respond(mobile) {
+      margin: 0;
+    }
+  }
+}

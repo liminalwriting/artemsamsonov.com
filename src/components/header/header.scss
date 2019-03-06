@@ -1,0 +1,69 @@
+@import "../../scss/grid";
+@import "../../scss/typo";
+
+.header {
+  @include col100(0 24px, row, flex-start, center);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  height: 48px;
+  font: $fontSmall;
+  line-height: 1;
+  background-color: $darkGray;
+  
+  @include respond(mobile) {
+    @include col100(0 12px, row, flex-start, center);
+    height: 48px;
+  }
+  
+  & svg {
+    fill: $white;
+  }
+  
+  &__logo {
+    @include col20(0);
+    
+    @include respond(mobile) {
+      @include col90(0 12px, row, flex-start);
+    }
+    
+    &-link {
+      color: $chromeYellow;
+    }
+  }
+  
+  &__menu {
+    @include col80(0, row, flex-end);
+    
+    @include respond(tablet) {
+      @include col80(0, row, flex-end);
+    }
+    
+    @include respond(mobile) {
+      display: none;
+    }
+    
+    &_mobile {
+      display: none;
+      
+      @include respond(tablet) {
+        display: none;
+      }
+      
+      @include respond(mobile) {
+        display: flex;
+        @include col10(0, column, center, flex-end);
+      }
+    }
+    
+    &-elem {
+      @include colauto(0 0 0 12px);
+      color: $chromeYellow;
+      
+      &_disabled {
+        color: $gray;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ const path = require('path');
 const glob = require('glob');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -22,7 +22,7 @@ let plugins = [
 /* PUG → HTML  */
 
 // получаем список pug-файлов
-let pugPages = glob.sync(__dirname + '/src/components/pages/**/*.pug');
+let pugPages = glob.sync(__dirname + '/src/pages/**/*.pug');
 
 // цикл, который берёт список pug-файлов и создаёт плагины для генерации html
 pugPages.forEach(function (file) {
@@ -30,7 +30,7 @@ pugPages.forEach(function (file) {
   plugins.push(
     new HtmlWebpackPlugin({
       filename: `./${base}.html`,
-      template: `./src/components/pages/${base}/${base}.pug`,
+      template: `./src/pages/${base}/${base}.pug`,
       inject:   true
     })
   );
@@ -38,7 +38,7 @@ pugPages.forEach(function (file) {
 
 /* MAIN */
 const config = {
-  entry:     ['./src/js/index.js', './src/scss/main.scss'],
+  entry:     ['./src/js/index.js', './src/scss/imports.scss'],
   output:    {
     filename: './js/bundle.js',
     path:     path.resolve(__dirname, './dist')
@@ -104,7 +104,20 @@ const config = {
             }
           }
         ]
-      }]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use:  [
+          {
+            loader:  'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img',
+            }
+          }
+        ]
+      }
+    ]
   },
   devServer: {
     overlay: true

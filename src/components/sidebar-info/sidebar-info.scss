@@ -1,0 +1,41 @@
+@import "../../scss/grid";
+@import "../../scss/typo";
+@import "../../scss/main";
+
+.sidebar-info {
+  position: absolute;
+  width: 240px;
+  right: -290px;
+  font-size: $fontSizeSmall;
+  color: darken($soapStone, 30%);
+  
+  @include respond(mobile) {
+    display: none;
+  }
+  
+  &__image-block {
+    width: 160px;
+    min-height: 240px;
+    border-radius: 3px;
+    margin: 0 auto;
+  }
+  
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+  
+  &__text-block {
+    width: 200px;
+    margin: 0 auto;
+  }
+  
+  &__figcaption {
+    color: $black;
+    line-height: 1.4;
+    
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+}

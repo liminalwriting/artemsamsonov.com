@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'бенджамин баттон современной литературы',
+    'артём сошников — о новом рассказе алексея сальникова из «искусства кино» и странной писательской траектории екатеринбургского прозаика.',
+    'http://sayocean.me/img/salnikov-1904.jpg',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Бенджамин Баттон современной литературы')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/review/salnikov-1904.md
+    +footer()

@@ -1,0 +1,17 @@
+@import "../../scss/grid";
+@import "../../scss/typo";
+
+.year {
+  @include colauto(0 24px, column, center);
+  height: 24px;
+  border-radius: 50px;
+  font: $fontSmall;
+  line-height: 1;
+  color: $chromeYellow;
+  
+  &_active {
+    background-color: $gray;
+    color: $white;
+    cursor: default;
+  }
+}

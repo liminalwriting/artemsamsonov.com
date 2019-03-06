@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / балет рабочего класса',
+    'рецензия на книгу саймона кричли "о чем мы думаем, когда думаем о футболе". рипол-классик, 2018',
+    'https://lamcdn.net/the-village.ru/post-og_image/Hl-OINwQnhna0JwQyqO3HA.jpg',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Балет рабочего класса')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/review/about-football.md
+    +footer()

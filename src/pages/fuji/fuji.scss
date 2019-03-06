@@ -1,0 +1,219 @@
+.fudji {
+  @include respond(mobile) {
+    @include col100(0, column);
+  }
+  
+  p {
+    margin: 14px 0;
+  }
+  
+  &__header {
+    @include col100(0 0 0 0, column);
+    align-items: center;
+    height: 500px;
+    background-image: linear-gradient(180deg, hsla(146, 65%, 27%, 1.00) 0%, hsla(242, 47%, 24%, 1.00) 100%), url('http://sayocean.me/img/fudji.jpeg');
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    
+    @include respond(mobile) {
+      @include col100(0 0 48px 0, column);
+      align-items: center;
+      height: auto;
+    }
+    
+    &-link {
+      color: hsla(146, 100%, 60%, 1.00);
+    }
+    
+    &-title {
+      @include col100(22px 12px 0 12px, row, center);
+      margin: 0 0 70px 0;
+      text-align: center;
+      height: 56px;
+      font: $fontSmall;
+      color: white;
+      
+      & span {
+        margin: 0 4px;
+      }
+      
+      @include respond(mobile) {
+        margin: 0 0 16px 0;
+      }
+    }
+    
+    &-headline {
+      @include col100(16px 32px, row, center);
+      text-align: center;
+      
+      & h1 {
+        margin: 0;
+        font-size: 64px;
+        font: $fontHeadline;
+        
+        @include respond(mobile) {
+          font-size: 32px;
+        }
+      }
+      
+      @include respond(mobile) {
+        @include col100(0 32px, row, center);
+        text-align: center;
+        margin: 0;
+      }
+    }
+    
+    &-description {
+      @include col100(24px 0 0 0);
+      max-width: 680px;
+      text-align: center;
+      line-height: 1.5;
+      
+      @include respond(mobile) {
+        @include col100(24px 24px 0 24px);
+        font-size: 16px;
+      }
+    }
+  }
+  
+  &__content {
+    @include col100(0, column);
+    background-color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+    
+    @include respond(mobile) {
+      font: $fontMain;
+      line-height: 1.6;
+    }
+    
+    &-data {
+      @include col100(48px 0, column);
+      max-width: 680px;
+      align-self: center;
+      
+      @include respond(mobile) {
+        @include col100(24px 32px, column);
+        font-size: 14px;
+      }
+    }
+  }
+  
+  &__dop {
+    @include col100(48px 0, column, flex-start);
+    align-items: center;
+    text-align: center;
+    background-color: hsla(25, 20%, 95%, 1.00);
+    
+    @include respond(mobile) {
+      @include col100(32px, column, flex-start);
+      align-items: center;
+      font-size: 14px;
+    }
+    
+    &-content {
+      width: 680px;
+      
+      @include respond(mobile) {
+        width: 100%;
+      }
+    }
+    
+    a {
+      color: #D0021B;
+    }
+  }
+  
+  &__card {
+    @include col80(24px 0, column, flex-start);
+    background-color: white;
+    border-radius: 3px;
+    margin: 0 auto;
+    align-items: center;
+    height: 340px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.10), 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    
+    @include respond(mobile) {
+      @include col100(24px 0, column, flex-start);
+      align-items: center;
+      height: auto;
+    }
+    
+    &-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      
+      @include respond(mobile) {
+        width: 32px;
+        height: 32px;
+      }
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    
+    &-title {
+      @include col100(18px 0, column, flex-start, center);
+      border-bottom: 1px solid hsla(0, 0, 90%, 1.00);
+      
+      @include respond(mobile) {
+        @include col100(12px 24px, column, flex-start, center);
+      }
+      
+      h3 {
+        margin: 4px 0 0 0;
+      }
+    }
+    
+    &-year {
+      @include col100(0, row, center);
+      font-size: 12px;
+      color: gray;
+    }
+    
+    &-content {
+      @include col100(0);
+      
+      @include respond(mobile) {
+        @include col100(0, column);
+        align-items: center;
+      }
+      
+      &-col {
+        @include col50(24px, column, flex-start);
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        
+        @include respond(mobile) {
+          @include col100(12px 24px 0 24px, column, flex-start);
+          align-items: center;
+          
+          p {
+            margin: 8px 0;
+          }
+        }
+        
+        h4 {
+          margin: 0;
+          font-size: 16px;
+          
+          @include respond(mobile) {
+            font-size: 14px;
+            font: $fontMain;
+          }
+        }
+      }
+    }
+  }
+}

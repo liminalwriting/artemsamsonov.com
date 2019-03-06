@@ -1,0 +1,20 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / снова на родине',
+    'стихотворение из архива',
+    'http://sayocean.me/img/default.jpg',
+    'book'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Снова на родине')
+        div.article.article_poetry
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/poetry/trud.md
+    +footer()

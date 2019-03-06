@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / три отличных романа 2017-го года',
+    'обзор трёх романов 2017-го, которые меня впечатлили',
+    'http://sayocean.me/img/three-novels-17.jpg',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Три отличных романа 2017-го года')
+        div.article.data_markdown-image
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/review/three-novels-17.md
+    +footer()

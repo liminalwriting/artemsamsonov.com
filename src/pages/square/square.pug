@@ -1,0 +1,19 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / построение квадрата на шестом уроке',
+    'обзор романа сергея носова "построение квадрата на шестом уроке"',
+    'http://sayocean.me/img/square.jpg',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Построение квадрата на шестом уроке')
+        div.article.data_markdown-image
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/review/square.md
+    +footer()
