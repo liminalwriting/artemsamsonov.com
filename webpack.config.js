@@ -38,7 +38,7 @@ pugPages.forEach(function (file) {
 
 /* MAIN */
 const config = {
-  entry:     ['./src/js/index.js', './src/scss/style.scss'],
+  entry:     ['./src/js/index.js', './src/scss/main.scss'],
   output:    {
     filename: './js/bundle.js',
     path:     path.resolve(__dirname, './dist')
