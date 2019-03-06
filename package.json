@@ -6,11 +6,12 @@
     "dev": "webpack --mode development",
     "watch": "webpack --mode development --watch",
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production && prettier --print-width=120 --parser html --write dist/*.html"
+    "build": "webpack --mode production --print-width=120"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "7",
     "clean-webpack-plugin": "^2.0.0",
     "copy-webpack-plugin": "^5.0.0",
@@ -22,10 +23,8 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "postcss-loader": "^3.0.0",
-    "prettier": "^1.16.4",
     "pug-html-loader": "^1.1.5",
     "sass-loader": "^7.1.0",
-    "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"

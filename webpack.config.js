@@ -1,20 +1,28 @@
 const path = require('path');
 const glob = require('glob');
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+/* ПЛАГИНЫ */
+let plugins = [
+  new MiniCssExtractPlugin({
+    filename: './css/style.bundle.css'
+  }),
+  new CopyWebpackPlugin([
+    {
+      from: './src/img',
+      to:   './img'
+    }
+  ])
+];
 
 /* PUG → HTML  */
 
 // получаем список pug-файлов
 let pugPages = glob.sync(__dirname + '/src/components/pages/**/*.pug');
-
-// это массив плагинов, куда будут падать HtmlWebpackPlugin с каждым pug-файлом
-let plugins = [
-  new MiniCssExtractPlugin({
-    filename: './css/style.bundle.css'
-  })
-];
 
 // цикл, который берёт список pug-файлов и создаёт плагины для генерации html
 pugPages.forEach(function (file) {
@@ -29,12 +37,11 @@ pugPages.forEach(function (file) {
 });
 
 /* MAIN */
-module.exports = {
-  entry:     ["./src/js/index.js", "./src/scss/style.scss"],
+const config = {
+  entry:     ['./src/js/index.js', './src/scss/style.scss'],
   output:    {
-    filename:   './js/bundle.js',
-    path:       path.resolve(__dirname, './dist'),
-    publicPath: ''
+    filename: './js/bundle.js',
+    path:     path.resolve(__dirname, './dist')
   },
   module:    {
     rules: [
@@ -103,4 +110,11 @@ module.exports = {
     overlay: true
   },
   plugins:   plugins
+};
+
+module.exports = (env, argv) => {
+  if (argv.mode === 'production') {
+    plugins.push(new CleanWebpackPlugin());
+  }
+  return config;
 };
