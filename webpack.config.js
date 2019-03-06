@@ -3,131 +3,66 @@ const glob = require('glob');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const merge = require('webpack-merge');
+const files = require('./webpack/files');
+const pug = require('./webpack/pug');
+const script = require('./webpack/script');
+const scss = require('./webpack/scss');
+const pugToHtml = require('./webpack/pug-to-html');
+
+/* ПУТИ */
+const PATHS = {
+  dist:    path.join(__dirname, './dist'),
+  distImg: path.join(__dirname, './dist/img'),
+  src:     path.join(__dirname, './src'),
+  img:     path.join(__dirname, './src/img'),
+  styles:  path.join(__dirname, 'src/scss')
+};
 
 /* ПЛАГИНЫ */
 let plugins = [
+  new CleanWebpackPlugin(),
   new MiniCssExtractPlugin({
     filename: './css/style.bundle.css'
   }),
   new CopyWebpackPlugin([
     {
-      from: './src/img',
-      to:   './img'
+      from: PATHS.img,
+      to:   PATHS.distImg
     }
   ])
 ];
 
-/* PUG → HTML  */
-
-// получаем список pug-файлов
-let pugPages = glob.sync(__dirname + '/src/pages/**/*.pug');
-
-// цикл, который берёт список pug-файлов и создаёт плагины для генерации html
-pugPages.forEach(function (file) {
-  let base = path.basename(file, '.pug');
-  plugins.push(
-    new HtmlWebpackPlugin({
-      filename: `./${base}.html`,
-      template: `./src/pages/${base}/${base}.pug`,
-      inject:   true
-    })
-  );
-});
+/* КОНВЕРТ PUG В HTML */
+pugToHtml(PATHS.src);
 
 /* MAIN */
-const config = {
-  entry:     ['./src/js/index.js', './src/scss/imports.scss'],
-  output:    {
-    filename: './js/bundle.js',
-    path:     path.resolve(__dirname, './dist')
+const common = merge([
+  {
+    entry:       [`${PATHS.src}/js/index.js`, `${PATHS.src}/scss/imports.scss`],
+    output:      {
+      filename: './js/bundle.js',
+      path:     PATHS.dist
+    },
+    devServer:   {
+      overlay: true
+    },
+    plugins:     plugins,
+    performance: {
+      hints: false
+    }
   },
-  module:    {
-    rules: [
-      {
-        test:   /\.js$/,
-        loader: 'babel-loader'
-      },
-      {
-        test:    /\.(sass|scss)$/,
-        include: path.resolve(__dirname, 'src/scss'),
-        use:     [
-          {
-            loader:  MiniCssExtractPlugin.loader,
-            options: {}
-          },
-          {
-            loader:  'css-loader',
-            options: {
-              sourceMap: true,
-              url:       false
-            }
-          },
-          {
-            loader:  'postcss-loader',
-            options: {
-              ident:     'postcss',
-              sourceMap: true,
-              plugins:   () => [
-                require('cssnano')({
-                  preset: [
-                    'default',
-                    {
-                      discardComments: {
-                        removeAll: true
-                      }
-                    }
-                  ]
-                })
-              ]
-            }
-          },
-          {
-            loader:  'sass-loader',
-            options: {
-              sourceMap: true
-            }
-          }
-        ]
-      },
-      {
-        test:    /\.pug$/,
-        loaders: [
-          {
-            loader: 'html-loader'
-          },
-          {
-            loader:  'pug-html-loader',
-            options: {
-              'pretty': true
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(png|jpg|gif)$/,
-        use:  [
-          {
-            loader:  'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'img',
-            }
-          }
-        ]
-      }
-    ]
-  },
-  devServer: {
-    overlay: true
-  },
-  plugins:   plugins
-};
+  files(),
+  pug(),
+  script(),
+  scss()
+]);
 
 module.exports = (env, argv) => {
   if (argv.mode === 'production') {
-    plugins.push(new CleanWebpackPlugin());
+    return common;
   }
-  return config;
+  return common;
 };
