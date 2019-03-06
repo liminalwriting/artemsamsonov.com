@@ -4,14 +4,19 @@ const glob = require('glob');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+/* PUG → HTML  */
+
+// получаем список pug-файлов
 let pugPages = glob.sync(__dirname + '/src/components/pages/**/*.pug');
 
-let pugFilesList = [
+// это массив плагинов, куда будут падать HtmlWebpackPlugin с каждым pug-файлом
+let plugins = [
   new MiniCssExtractPlugin({
     filename: './css/style.bundle.css'
   })
 ];
 
+// цикл, который берёт список pug-файлов и создаёт плагины для генерации html
 pugPages.forEach(function (file) {
   let base = path.basename(file, '.pug');
   pugFilesList.push(
@@ -23,6 +28,7 @@ pugPages.forEach(function (file) {
   );
 });
 
+/* MAIN */
 module.exports = {
   entry:     ["./src/js/index.js", "./src/scss/style.scss"],
   output:    {
@@ -96,5 +102,5 @@ module.exports = {
   devServer: {
     overlay: true
   },
-  plugins:   pugFilesList
+  plugins:   plugins
 };
