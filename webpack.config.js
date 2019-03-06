@@ -36,7 +36,7 @@ let plugins = [
 ];
 
 /* КОНВЕРТ PUG В HTML */
-pugToHtml(PATHS.src);
+pugToHtml(PATHS.src, plugins);
 
 /* MAIN */
 const common = merge([
