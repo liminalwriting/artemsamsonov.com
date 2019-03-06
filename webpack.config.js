@@ -19,7 +19,7 @@ let plugins = [
 // цикл, который берёт список pug-файлов и создаёт плагины для генерации html
 pugPages.forEach(function (file) {
   let base = path.basename(file, '.pug');
-  pugFilesList.push(
+  plugins.push(
     new HtmlWebpackPlugin({
       filename: `./${base}.html`,
       template: `./src/components/pages/${base}/${base}.pug`,
