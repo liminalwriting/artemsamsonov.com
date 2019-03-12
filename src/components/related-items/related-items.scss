@@ -1,0 +1,15 @@
+.related-items {
+  @include col100(0, column);
+  
+  &__header {
+    @include col100(32px 0 0 0);
+  }
+  
+  &__headline {
+   margin: 0;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,33 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+include ../../components/related-items/related-items
+include ../../components/go-back/go-back
+doctype html
+html
+    +head(
+    'вылизано, но',
+    'артём сошников — о том, как рынок портит романы алексея сальникова',
+    'http://sayocean.me/img/oposredovanno.jpg',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Вылизано, но')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../../soshnikov-writing/publications/review/oposredovanno.md
+            +relatedItems('Почитайте ещё:')
+                p О том, почему Алексей Сальников кажется мне
+                    =" "
+                    a(href="http://sayocean.me/department.html") Бенджамином Баттоном русской литературы.
+                p
+                    a(href="http://sayocean.me/department.html") О первом романе Сальникова «Отдел»,
+                    = " "
+                    span который удивительным образом вышел только после второго.
+                p
+                    a(href="http://sayocean.me/department.html") О трёх достойных романах 2017-го года
+                    span , среди которых книга Сальникова «Петровы в гриппе и вокруг него».
+                +goBack
+    +footer()

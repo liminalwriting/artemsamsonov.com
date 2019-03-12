@@ -1,0 +1,7 @@
+.go-back {
+  @include col100(32px 0 0 0);
+  
+  &__link {
+    margin: 0 0 0 4px;
+  }
+}

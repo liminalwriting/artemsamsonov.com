@@ -47,7 +47,7 @@ body {
 .article {
   width: 600px;
   font: $fontMain;
-  line-height: 1.6;
+  line-height: 1.65;
   
   @include respond(mobile) {
     @include col100(0 32px, column);
@@ -178,6 +178,17 @@ p {
   @include respond(mobile) {
     margin: 12px 0;
   }
+}
+
+pre {
+  padding: 12px 24px 16px 24px;
+  background-color: lighten($soapStone, 3%);
+  border-radius: 4px;
+}
+
+code {
+  font-family: 'PT Mono';
+  color: darken($milanoRed, 10%);
 }
 
 .annotation {
