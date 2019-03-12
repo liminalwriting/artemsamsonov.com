@@ -12,6 +12,7 @@ $fontMain: 16px/23px "Roboto";
 $fontHeadline: 700 56px/72px "Montserrat";
 $fontHeadlineMedium: 700 32px/48px "Montserrat";
 $fontHeadlineSmall: 700 24px/32px "Montserrat";
+$fontHeadlineMicro: 700 20px/26px "Montserrat";
 
 a {
   text-decoration: none;
@@ -30,6 +31,11 @@ h1 {
 h2 {
   font: $fontHeadlineSmall;
 }
+
+h3 {
+  font: $fontHeadlineMicro;
+}
+
 strong {
-  font-weight: 600;
+  font-weight: 500;
 }
