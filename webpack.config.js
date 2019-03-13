@@ -14,8 +14,8 @@ const pugToHtml = require('./webpack/pug-to-html');
 
 /* ПУТИ */
 const PATHS = {
-  dist:    path.join(__dirname, './dist'),
-  distImg: path.join(__dirname, './dist/img'),
+  dist:    path.join(__dirname, './docs'),
+  distImg: path.join(__dirname, './docs/img'),
   src:     path.join(__dirname, './src'),
   img:     path.join(__dirname, './src/img'),
   styles:  path.join(__dirname, 'src/scss')
