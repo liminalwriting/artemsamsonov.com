@@ -1,0 +1,26 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/feed-article/feed-article
+
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+      'хроника текстов артёма сошникова',
+      'можете считать это чем-то вроде дневника',
+      'http://sayocean.me/img/default.jpg',
+      'book'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('От жизни к смерти')
+        div.article
+            div.article__lead Здесь я буду собирать все написанные мной тексты — из разных источников, в хронологическом порядке.
+            div.feed-article__icon
+                i.material-icons fingerprint
+            +feed-article('Заголовок', '#', 'facebook.com')
+                p Тест
+
++footer()

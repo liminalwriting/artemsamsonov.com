@@ -1,0 +1,47 @@
+@import "../../scss/grid";
+@import "../../scss/typo";
+@import "../../scss/colors";
+
+.feed-article {
+  width: 600px;
+  font: $fontMain;
+  line-height: 1.65;
+  margin: 24px 0 48px 0;
+  
+  @include respond(mobile) {
+    @include col100(0, column);
+    font-size: $fontSmall;
+    margin: 24px 0 24px 0;
+  }
+  
+  &__icon {
+    @include col100(0 0 24px 0, center, center);
+    color: $milanoRed;
+    
+    @include respond(mobile) {
+      @include col100(24px 0 24px 0, center, center);
+    }
+  }
+  
+  header {
+    h3 {
+      margin: 4px 0 0 0;
+      
+      color: $black;
+    }
+  }
+  
+  &__content {
+    p:first-child {
+      margin-top: 12px;
+    }
+  }
+  
+  &__footer {
+    font-size: 12px;
+  }
+  
+  &__separator {
+    @include col100(48px 0);
+  }
+}
