@@ -13,8 +13,11 @@
     }
     
     @include respond(mobile) {
-      margin: 108px 0 0 0;
+      margin: 36px 0 0 0;
       font: $fontHeadlineSmall;
+    }
+    p {
+      margin: 24px 0;
     }
   }
   
