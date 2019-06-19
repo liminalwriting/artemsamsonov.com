@@ -6,7 +6,7 @@ include ../../components/footer/footer
 doctype html
 html
     +head(
-    'артём сошников / командировка',
+    'артём сошников / командировки',
     'из цикла «рассказы разных бед»',
     'http://sayocean.me/img/misfortunes.jpg',
     'book'
@@ -14,7 +14,7 @@ html
 body.body_light
     +header()
     div.content
-        +article-header('Командировка')
+        +article-header('Командировки')
         div.article
             include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/cycles/misfortunes/business-trip.md
     +footer()
