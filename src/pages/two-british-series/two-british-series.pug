@@ -1,0 +1,34 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+include ../../components/related-items/related-items
+include ../../components/go-back/go-back
+doctype html
+html
+    +head(
+    'быков всё сказал',
+    'артём cошников — о двух отличных британских сериалах и завуалированной психотерапии',
+    'https://pmcvariety.files.wordpress.com/2018/12/screen-shot-2019-01-09-at-11.25.44-am-e1547052332390.png',
+    'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Лечите нас, британцы')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../../soshnikov-writing/publications/review/two-british-series.md
+            +relatedItems('Почитайте ещё:')
+                p
+                    | О недотягивающей до «фильма поколения»
+                    = " "
+                    a(href="aika.html") картине
+                    =" "
+                    | Александра Горчилина «Кислота».
+                p
+                    | О
+                    = " "
+                    a(href="stories-meschaninova.html") британской чёрной комедии
+                    |, весело эксплуатирующей образ молодого писателя.
+                +goBack
+    +footer()
