@@ -1,0 +1,13 @@
+@import "../../scss/grid";
+@import "../../scss/colors";
+@import "../../scss/typo";
+
+.menu {
+  @include col100(48px 12px 64px 12px, column, flex-start, center);
+  
+  &_mobile {
+    @include col100(0, column, center, center);
+    height: 48px;
+    font: $fontHeadlineMicro;
+  }
+}
