@@ -5343,9 +5343,9 @@ pseudomap@^1.0.2:
   integrity sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
 
 psl@^1.1.24:
-  version "1.1.32"
-  resolved "https://registry.yarnpkg.com/psl/-/psl-1.1.32.tgz#3f132717cf2f9c169724b2b6caf373cf694198db"
-  integrity sha512-MHACAkHpihU/REGGPLj4sEfc/XKW2bheigvHO1dUqjaKigMp1C8+WLQYRGgeKFMsw5PMfegZcaN8IDXK/cD0+g==
+  version "1.1.33"
+  resolved "https://registry.yarnpkg.com/psl/-/psl-1.1.33.tgz#5533d9384ca7aab86425198e10e8053ebfeab661"
+  integrity sha512-LTDP2uSrsc7XCb5lO7A8BI1qYxRe/8EqlRvMeEl6rsnYAqDOl8xHR+8lSAIVfrNaSAlTPTNOCgNjWcoUL3AZsw==
 
 public-encrypt@^4.0.0:
   version "4.0.3"
@@ -6141,9 +6141,9 @@ sockjs@0.3.19:
     uuid "^3.0.1"
 
 soshnikov-writing@^1.0.21:
-  version "1.0.49"
-  resolved "https://registry.yarnpkg.com/soshnikov-writing/-/soshnikov-writing-1.0.49.tgz#7f7bb21e20a3ee56a7be02f93b8b8e498a9551e8"
-  integrity sha512-EPDwgX6GchwDBMEgSYTjpKDsbmtG9NPJOVIPEgluDjeQFMFK/basvv3GOumWwaUlsLbJsdwZl5pZ2lwFMTxw5g==
+  version "1.0.50"
+  resolved "https://registry.yarnpkg.com/soshnikov-writing/-/soshnikov-writing-1.0.50.tgz#81e6bb59b62b15eeaaa7f2bffa085f996912cd2f"
+  integrity sha512-h7L5bwEyBtEtqKQTzSNhK9uJJUhERxw2xfHp3N1CL4imjGxmhRnLDyAktcHsnOrjoLBe4r9fWMeGUcMCdN0Fzg==
 
 source-list-map@^2.0.0:
   version "2.0.1"
