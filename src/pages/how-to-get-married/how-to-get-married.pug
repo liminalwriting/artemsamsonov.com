@@ -1,0 +1,21 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+include ../../components/related-items/related-items
+include ../../components/go-back/go-back
+doctype html
+html
+    +head(
+      'психотерапия под маской комедии',
+      'артём сошников — о неожиданно хорошей попытке привить русским сериалам психотерапевтический опыт',
+      'https://s2.cdn.teleprogramma.pro/wp-content/uploads/2019/04/f45856cbf5ba6244ab22ca84c33ea730.jpg',
+      'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('Психотерапия под маской комедии')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../../soshnikov-writing/publications/review/how-to-get-married.md
+    +footer()

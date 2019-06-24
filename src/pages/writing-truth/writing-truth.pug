@@ -1,0 +1,21 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+include ../../components/related-items/related-items
+include ../../components/go-back/go-back
+doctype html
+html
+    +head(
+      'артём сошников / о прозе и правде',
+      'черри-эссе о том, что не каждая правда может перекорчевать в прозу',
+      'http://sayocean.me/img/default.jpg',
+      'article'
+    )
+body.body_light
+    +header()
+    div.content
+        +article-header('О прозе и правде')
+        div.article
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../../soshnikov-writing/publications/esse/writing-truth.md
+    +footer()

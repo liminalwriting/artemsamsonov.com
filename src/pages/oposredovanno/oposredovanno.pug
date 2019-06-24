@@ -18,16 +18,4 @@ body.body_light
         +article-header('Вылизан, но')
         div.article
             include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/review/oposredovanno.md
-            +relatedItems('Почитайте ещё:')
-                p О том, почему Алексей Сальников казался мне
-                    =" "
-                    a(href="http://sayocean.me/department.html") Бенджамином Баттоном русской литературы.
-                p
-                    a(href="http://sayocean.me/department.html") О первом романе Сальникова «Отдел»,
-                    = " "
-                    span который удивительным образом вышел только после второго.
-                p
-                    a(href="http://sayocean.me/department.html") О трёх достойных романах 2017-го года
-                    span , среди которых книга Сальникова «Петровы в гриппе и вокруг него».
-                +goBack
     +footer()
