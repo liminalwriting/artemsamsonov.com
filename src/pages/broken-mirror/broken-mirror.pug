@@ -1,0 +1,32 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/page-header/page-header
+include ../../components/page-description/page-description
+include ../../components/list-header/list-header
+include ../../components/list-row/list-row
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / разбитое зеркало',
+    '',
+    '../../img/broken-mirror-og.jpg',
+    'book'
+    )
+body.body_dark
+    +header()
+    div.content
+        +page-header('Разбитое зеркало')
+        div.annotation
+            div.annotation__image
+                img(src="../../img/broken-mirror.jpg")
+            div.annotation__description
+                p Сценарист «Чёрного зеркала» Чарли Брукер придумал захватывающую историю, но в России она примет совершенно иные очертания. Правительство начнёт разводить питерские мосты днём, рейтинг граждан будут оценивать электронные реплики Юрия Дудя, а от смерти не спрячешься даже в тёмном лесу.
+                p Что с нами будет? Читайте.
+        div.data
+            div.list
+                div.list__section
+                    +list-header('содержание')
+                    +list-row('hopper.html', 'хоппер', '', '', '')
+                    +list-row('interview.html', 'интервью', '', '', '')
+    +footer()
