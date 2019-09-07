@@ -1,0 +1,30 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/page-header/page-header
+include ../../components/page-description/page-description
+include ../../components/list-header/list-header
+include ../../components/list-row/list-row
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+    'артём сошников / чужие беды',
+    '',
+    '../../img/selfie.jpg',
+    'book'
+    )
+body.body_dark
+    +header()
+    div.content
+        +page-header('Чужие беды')
+        div.annotation
+            div.annotation__image
+                img(src="http://sayocean.me/img/someone-else-cover.jpg")
+            div.annotation__description
+        div.data
+            div.list
+                div.list__section
+                    +list-header('содержание')
+                    +list-row('uroboros.html', 'уроборос', '', '', '')
+                    +list-row('wonderful-day.html', 'прекрасный день, чтобы стать мужчиной', '', '')
+    +footer()
