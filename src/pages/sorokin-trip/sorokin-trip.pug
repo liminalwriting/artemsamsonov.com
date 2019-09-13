@@ -5,15 +5,16 @@ include ../../components/footer/footer
 doctype html
 html
     +head(
-    'исход из внутреннего кызыла',
-    'артём cошников — о новом сборнике рассказов романа сенчина, в котором автор пробует раскрыться с иной стороны, но…',
-    'http://sayocean.me/img/senchin-stories.jpg',
-    'article'
+      'пленительное обаяние аристократизма',
+      'артём cошников — о о новом фильме про владимира сорокина, его визуальной красоте и ' +
+      'мелочах, спрятанных за фигурой писателя',
+      'http://muzlifemagazine.ru/wp-content/uploads/2019/09/40_10-1.jpg',
+      'article'
     )
 body.body_light
     +header()
     div.content
-        +article-header('Исход из внутреннего Кызыла')
+        +article-header('Пленительное обаяние аристократизма')
         div.article
-            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/review/senchin-stories.md
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/publications/review/sorokin-trip.md
     +footer()
