@@ -1,5 +1,6 @@
 .article {
   width: 768px;
+  margin-top: 64px;
   font: $fontArticle;
   
   @include respond(mobile) {
@@ -7,8 +8,8 @@
     font-size: $fontSmall;
   }
   
-  &__headline {
-    @include col100(0);
+  &__info {
+    @include col100(32px 0 0 0);
   }
   
   &__cover {
@@ -16,12 +17,24 @@
     
   }
   
+  &__annotation {
+    @include col80(0 64px 0 0, column);
+    font: $fontArticle;
+    
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+  
   &__connotation {
-    @include col80(0, column);
-    font: $fontSmall;
+    @include col100(24px 0 0 0, column);
+    
+    &-headline {
+      @include col100(8px 0 32px 0, column);
+    }
     
     &-section {
-      @include col100(0 0 12px 0, column);
+      @include col100(4px 0 32px 0, column);
     }
     
     &-link {
@@ -31,9 +44,20 @@
   }
   
   &__story {
-    margin: 48px 0 0 0;
-    @include col100(8px 0 0 0, column);
-    border-top: 4px solid $black;
+    @include col100(96px 0 0 0, column);
+    
+    &-headline {
+      @include col100(8px 0 24px 0, column);
+      border-top: 4px solid $black;
+    }
+  }
+  
+  &__next {
+    @include col100(48px 0 0 0, row, flex-end);
+    
+    a {
+      color: $milanoRed;
+    }
   }
   
   &_poetry {

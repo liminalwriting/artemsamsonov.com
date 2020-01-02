@@ -1,0 +1,24 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/article-breadcrumb/article-breadcrumb
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+      '',
+      '',
+      'http://sayocean.me/img/default.jpg',
+      'article'
+    )
+body.body_light
+    +header().header_light
+    div.content
+        div.article
+            +article-breadcrumb('Рассказы разных бед', 'misfortunes')
+            +article-header('Купе')
+            div
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/misfortunes/coupe.md
+            div.article__next
+                a(href="coffins.html") Читать следующий рассказ «Гробы» →
+        +footer()

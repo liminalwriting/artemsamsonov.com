@@ -1,0 +1,38 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+doctype html
+html
+    +head(
+      'Рассказы разных бед',
+      '',
+      'http://sayocean.me/img/misfortunes.jpg',
+      'article'
+    )
+body.body_light
+    +header().header_light
+    div.content
+        div.article
+            +article-header('Рассказы разных бед')
+            div.article__info
+                div.article__annotation
+                    p «Когда студенты не могут снимать жизнь другого, это значит, что они поглощены чем-то, собственной драмой. Как правило, это отношения с родителями, с мамой. И тут все устоявшиеся метафоры о святом имени мамы выполняют роль убийцы.
+                    p Тогда я прошу все отбросить и рассказать об этой истории, пусть она очень личная, пусть это пока только мир твоей семьи. Но тебе необходимо рассказать о своих страданиях, раз они не дают тебе двигаться дальше: снять об этом кино или написать книгу».
+                    p
+                        i Марина Разбежкина, из интервью «Горькому»
+                div.article__cover
+                    img(src="../../img/misfortunes-cover.jpg")
+            div.article__connotation
+                div.article__connotation-headline
+                    h2 Содержание
+                div.article__connotation-section
+                    h5 Свои беды
+                    a(href="coupe.html").article__connotation-link Купе
+                    a(href="coffins.html").article__connotation-link Гробы
+                    a(href="").article__connotation-link Витрины
+                div.article__connotation-section
+                    h5 Чужие
+                    a(href="").article__connotation-link Уроборос
+                    a(href="").article__connotation-link Вингер
+        +footer()

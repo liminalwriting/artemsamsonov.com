@@ -3,7 +3,7 @@
 @import "../../scss/typo";
 
 .article-header {
-  @include col100(64px 0 32px 0, row);
+  @include col100(0 0 16px 0, row);
   width: 768px;
   word-break: break-word;
   text-align: center;

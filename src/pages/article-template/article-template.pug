@@ -16,19 +16,23 @@ body.body_light
         +article-header('Заголовок')
         div.article
             div.article__headline
-                div.article__connotation
-                    div.article__connotation-section
-                        h5 ЗАГОЛОВОК
-                        a(href="").article__connotation-link Раз
-                        a(href="").article__connotation-link Два
-                    div.article__connotation-section
-                        h5 ЗАЛОГОВОК
-                        a(href="").article__connotation-link Раз
-                        a(href="").article__connotation-link Два
+                div.article__annotation
+                    p текст
                 div.article__cover
                     img(src="../../img/misfortunes-cover.jpg")
-            div.article__story
-                h2 Заголовок
+            div.article__connotation
+                div.article__connotation-headline
+                    h2 Содержание
+                div.article__connotation-section
+                    h5 заголовок
+                    a(href="#").article__connotation-link пример
+                    a(href="").article__connotation-link пример
+                div.article__connotation-section
+                    h5 заголовок
+                    a(href="").article__connotation-link пример
+            div.article__story#coupe
+                div.article__story-headline
+                    h2 заголовок
                 div
-                    include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/misfortunes/shop-windows.md
-    +footer()
+                    include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/misfortunes/coupe.md
+        +footer()
