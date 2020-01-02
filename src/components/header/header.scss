@@ -57,7 +57,7 @@
     }
     
     &-elem {
-      @include colauto(0 0 0 12px);
+      @include colauto(0 0 0 48px);
       color: $chromeYellow;
       
       &_disabled {
