@@ -1,0 +1,76 @@
+.article {
+  width: 768px;
+  font: $fontArticle;
+  
+  @include respond(mobile) {
+    @include col100(0 32px, column);
+    font-size: $fontSmall;
+  }
+  
+  &__headline {
+    @include col100(0);
+  }
+  
+  &__cover {
+    @include col20(0);
+    
+  }
+  
+  &__connotation {
+    @include col80(0, column);
+    font: $fontSmall;
+    
+    &-section {
+      @include col100(0 0 12px 0, column);
+    }
+    
+    &-link {
+      font: $fontArticle;
+      color: $milanoRed;
+    }
+  }
+  
+  &__story {
+    margin: 48px 0 0 0;
+    @include col100(8px 0 0 0, column);
+    border-top: 4px solid $black;
+  }
+  
+  &_poetry {
+    width: auto;
+    margin: 0 auto;
+  }
+  
+  &__lead {
+    font: $fontMain;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 32px 32px 32px;
+    
+    @include respond(mobile) {
+      width: 100%;
+      margin: 0 0 12px 0;
+      font-size: 14px;
+    }
+  }
+  
+  &__image {
+    margin: 24px 0 0 0;
+    
+    @include respond(mobile) {
+      margin: 14px -32px 0 -32px;
+    }
+    
+    &-caption {
+      margin: 4px 0 24px 0;
+      font: $fontSmall;
+      color: $gray;
+      
+      @include respond(mobile) {
+        margin: 4px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+  }
+}

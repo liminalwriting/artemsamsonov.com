@@ -15,7 +15,6 @@
   
   &__headline {
     margin: 0;
-    font: $fontHeadlineMedium;
     
     @include respond(mobile) {
       margin: 0;

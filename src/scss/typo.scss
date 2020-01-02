@@ -6,7 +6,7 @@ $fontSizeMedium: 24px;
 $fontSizeLarge: 32px;
 $fontSizeBig: 56px;
 
-$fontMicro: 12px/18px "Roboto";
+$fontMicro: 12px/18px "Montserrat";
 $fontSmall: normal 400 14px/21px "Montserrat";
 $fontMain: 1em/1.3em "Montserrat";
 
@@ -23,7 +23,7 @@ a {
 }
 
 h1 {
-  font: $fontHeadline;
+  font: 700 48px/1.3em "Montserrat";
   margin: 0;
   
   @include respond(mobile) {
@@ -37,6 +37,12 @@ h2 {
 
 h3 {
   font: $fontHeadlineMicro;
+}
+
+h5 {
+  font-size: $fontMicro;
+  letter-spacing: 1px;
+  margin: 0;
 }
 
 strong {

@@ -15,5 +15,20 @@ body.body_light
     div.content
         +article-header('Заголовок')
         div.article
-            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/misfortunes/shop-windows.md
+            div.article__headline
+                div.article__connotation
+                    div.article__connotation-section
+                        h5 ЗАГОЛОВОК
+                        a(href="").article__connotation-link Раз
+                        a(href="").article__connotation-link Два
+                    div.article__connotation-section
+                        h5 ЗАЛОГОВОК
+                        a(href="").article__connotation-link Раз
+                        a(href="").article__connotation-link Два
+                div.article__cover
+                    img(src="../../img/misfortunes-cover.jpg")
+            div.article__story
+                h2 Заголовок
+                div
+                    include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/misfortunes/shop-windows.md
     +footer()
