@@ -16,6 +16,18 @@
     height: 48px;
   }
   
+  a {
+    color: $chromeYellow;
+  }
+  
+  &_light {
+    background-color: $soapStone;
+    
+    a {
+      color: $black;
+    }
+  }
+  
   & svg {
     fill: $white;
   }
@@ -28,7 +40,7 @@
     }
     
     &-link {
-      color: $chromeYellow;
+      color: inherit;
     }
   }
   

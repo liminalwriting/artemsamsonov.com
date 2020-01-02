@@ -45,9 +45,8 @@ body {
 }
 
 .article {
-  width: 600px;
-  font: $fontMain;
-  line-height: 1.65;
+  width: 768px;
+  font: $fontArticle;
   
   @include respond(mobile) {
     @include col100(0 32px, column);

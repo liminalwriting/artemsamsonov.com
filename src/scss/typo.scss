@@ -9,10 +9,13 @@ $fontSizeBig: 56px;
 $fontMicro: 12px/18px "Roboto";
 $fontSmall: normal 400 14px/21px "Montserrat";
 $fontMain: 1em/1.3em "Montserrat";
+
 $fontHeadline: 700 4em/1.3em "Montserrat";
 $fontHeadlineMedium: 700 32px/48px "Montserrat";
 $fontHeadlineSmall: 700 1.8em/1.3em "Montserrat";
 $fontHeadlineMicro: 700 20px/26px "Montserrat";
+
+$fontArticle: normal 20px/33px "Kazimir Text Book", Georgia, serif;
 
 a {
   text-decoration: none;
@@ -38,4 +41,15 @@ h3 {
 
 strong {
   font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Kazimir Text Book';
+  src: url('../../type/Kazimir-Text-Book-Web.eot');
+    src:
+      url('../../type/Kazimir-Text-Book-Web.eot?#iefix') format('embedded-opentype'),
+      url('../../type/Kazimir-Text-Book-Web.woff2') format('woff2'),
+      url('../../type/Kazimir-Text-Book-Web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
