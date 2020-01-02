@@ -1,5 +1,5 @@
 .index {
-  @include col100(0 24px 48px 24px, column, space-between);
+  @include col100(0 24px 48px 24px, column);
   height: 100vh;
   
   &__main-info {
