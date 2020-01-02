@@ -1,0 +1,11 @@
+mixin bookCard(name, description, href)
+    div.book-card
+        div.book-card__name
+            a(href=href)
+                h3=name
+        div.book-card__description=description
+        div.book-card__links
+            if block
+                block
+            else
+                p No content provided

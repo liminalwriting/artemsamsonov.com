@@ -1,60 +1,45 @@
 include ../../components/head/head
 include ../../components/header/header
-include ../../components/page-header/page-header
-include ../../components/list-header/list-header
-include ../../components/list-row/list-row
 include ../../components/footer/footer
-doctype html
+include ../../components/page-header/page-header
+include ../../components/book-card/book-card
+include ../../components/book-link/book-link
+doctype html(prefix="og: http://ogp.me/ns#")
 html
     +head(
-      'артём сошников / проза',
-      'короткие рассказы и повести… ладно, повестей пока нет — читайте рассказы',
+      'артём сошников / обозреватель прозы, рассказчик',
+      'пишу и обозреваю прозу, веду телеграм-канал о реализме «чернотроп»',
       'http://sayocean.me/img/default.jpg',
-      'book'
+      ''
     )
 body.body_dark
     +header()
     div.content
-        +page-header('Проза')
-        div.data
-            div.list
-                div.list__section
-                    +list-header('рассказы разных бед')
-                    +list-row('coupe.html', 'купе', '', '')
-                    +list-row('coffins.html', 'гробы', '', '')
-                    +list-row('shop-windows.html', 'витрины', '', '')
-                    +list-row('uroboros.html', 'уроборос', '', '')
-                    //+list-row('wonderful-day.html', 'прекрасный день, чтобы стать мужчиной', '', '')
-                div.list__section
-                    +list-header('разбитое зеркало')
-                    +list-row('hopper.html', 'хоппер', '', '')
-                    +list-row('interview.html', 'интервью', '', '')
-                div.list__section
-                    +list-header('вот мои селфи')
-                    +list-row('pomegranade.html', 'гранаты', '', '', '')
-                    +list-row('clump.html', 'клок', '', 'взмах-4')
-                    +list-row('suite.html', 'костюм', '', 'взмах-4')
-                    +list-row('run-tema-run.html', 'эстафеты', '', 'взмах-4')
-                    +list-row('not-chav.html', 'ни пацан, ни мацан', '', '')
-                    +list-row('park.html', 'парк', '', 'взмах-4')
-                    +list-row('bag.html', 'пакет', '', 'взмах-4')
-                    +list-row('debut.html', 'дебют', '', '')
-                    //+list-row('alien.html', 'инопланетянин', '', '')
-                div.list__section
-                    +list-header('разное')
-                    +list-row('https://ru.bookmate.com/books/li8yAn4W', 'инсайд', '', '', 'blank')
-                    +list-row('thai.html', 'в тае снег растаял', '', 'взмах-3')
-                div.list__section
-                    +list-header('чужие снимки')
-                    +list-row('serega.html', 'сосед серёга', '', '', '')
-                    +list-row('watermelon.html', 'арбуз', '', '', '')
-                    +list-row('bookkeeper.html', 'бухгалтер', '', '', '')
-                    +list-row('fatfob.html', 'фэтфоб', '', '', '')
-                    +list-row('boss.html', 'начальник', '', '', '')
-                    +list-row('hobby.html', 'хобби', '', '', '')
-                    +list-row('marmelade.html', 'сонечка marmelade', '', '', '')
-                    +list-row('deputy.html', 'депутат елистратыч', '', '', '')
-                    +list-row('susi.html', 'доставщик суси', '', '', '')
-                    +list-row('hustle.html', 'хаслер', '', '', '')
-                    +list-row('brush.html', 'кисточка', '', '', '')
-    +footer()
+        +page-header('Рассказы', 'dark')
+        +bookCard('Рассказы разных бед', 'Грубая реалистическая проза о людях, их демонах и окружающей нас боли', 'index.html')
+            +bookLink('Bookmate', 'http://bookmate.com/')
+            +bookLink('Онлайн на сайте', 'http://bookmate.com/')
+            +bookLink('PDF', 'http://bookmate.com/')
+            +bookLink('EPUB', 'http://bookmate.com/')
+        +bookCard('Инсайд', 'Плутовская повесть о двух московских авантюристах и полусумасшедшем профессоре, которые случайно раскручивают инсайдерский канал в Телеграме', 'index.html')
+            +bookLink('Bookmate', 'http://bookmate.com/')
+            +bookLink('Онлайн на сайте', 'http://bookmate.com/')
+            +bookLink('PDF', 'http://bookmate.com/')
+            +bookLink('EPUB', 'http://bookmate.com/')
+        +bookCard('Вот мои селфи', 'Цикл короткой прозы о мальчике Тёме и его детстве в провинциальном криминальном городе 90-х', 'index.html')
+            +bookLink('Bookmate', 'http://bookmate.com/')
+            +bookLink('Онлайн на сайте', 'http://bookmate.com/')
+            +bookLink('PDF', 'http://bookmate.com/')
+            +bookLink('EPUB', 'http://bookmate.com/')
+        +bookCard('Чужие снимки', 'Цикл короткой прозы о добрых, наивных и смешных людях', 'index.html')
+            +bookLink('Bookmate', 'http://bookmate.com/')
+            +bookLink('Онлайн на сайте', 'http://bookmate.com/')
+            +bookLink('PDF', 'http://bookmate.com/')
+            +bookLink('EPUB', 'http://bookmate.com/')
+        +page-header('Поэзия', 'dark')
+        +bookCard('Мне не стыдно', 'Сборник плохих стихотворений', 'index.html')
+            +bookLink('Bookmate', 'http://bookmate.com/')
+            +bookLink('Онлайн на сайте', 'http://bookmate.com/')
+            +bookLink('PDF', 'http://bookmate.com/')
+            +bookLink('EPUB', 'http://bookmate.com/')
+

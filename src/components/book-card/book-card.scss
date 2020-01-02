@@ -1,0 +1,26 @@
+.book-card {
+  @include col100(8px 24px 48px 24px, row, space-between);
+  color: $white;
+  font: $fontSmall;
+  border-top: 1px solid $codGray;
+  
+  &__name {
+    @include col25(0);
+    
+    a {
+      color: $white;
+    }
+    
+    h3 {
+      margin: 0;
+    }
+  }
+  
+  &__description {
+    @include col25(0);
+  }
+  
+  &__links {
+    @include col15(0, column);
+  }
+}

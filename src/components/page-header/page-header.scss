@@ -3,8 +3,7 @@
 @import "../../scss/typo";
 
 .page-header {
-  @include col100(24px 0, row, center);
-  width: 600px;
+  @include col100(32px 24px, row);
   word-break: break-word;
   color: $white;
   
