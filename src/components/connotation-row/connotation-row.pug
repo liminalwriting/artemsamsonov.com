@@ -1,6 +1,7 @@
-mixin connotationRow(name, href, source='Неопубликован')
+mixin connotationRow(name, href, source='не публиковался', sourceLink)
     div.connotation-row
         div.connotation-row__name
             a(href=href+'.html')=name
         div.connotation-row__line
-        div.connotation-row__source=source
+        div(class='connotation-row__source')
+            a(href=sourceLink, target='blank', class='connotation-row__sourceLink' +`${source === 'не публиковался' ? '_disabled' : ''}`)=source

@@ -1,0 +1,40 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+include ../../components/connotation-row/connotation-row
+doctype html
+html
+    +head(
+      'сошников — вот мои селфи',
+      '',
+      'http://sayocean.me/img/selfie.jpg',
+      'article'
+    )
+body.body_light
+    +header().header_light
+    div.content
+        div.article
+            +article-header('вот мои селфи')
+            div.article__info
+                div.article__annotation
+                    p Пять лет назад, уезжая с концами из родного поволжского городка в Петербург, я случайно выбросил коробку с семейными фотографиями. Не осталось ничего: ни свадебных снимков родителей, ни моих детских фотокарточек, где я стою в колготах на деревянном стульчике.
+                    p Спустя три года после переезда я решил собрать новый фотоальбом. Он получился не таким наглядным, как раньше, но искренним. В нём нет натянутых улыбок и фальшивого благополучия.
+                    p Вот они, мои селфи.
+                div.article__cover
+                    img(src="../../img/selfie-cover.jpg")
+            div.article__connotation
+                div.article__connotation-headline
+                    h2 содержание
+                div.article__connotation-section
+                    +connotationRow('гранаты', 'pomegranade')
+                    +connotationRow('клок', 'clump', 'взмах-4', 'https://www.labirint.ru/books/720532/')
+                    +connotationRow('костюм', 'suite', 'взмах-4', 'https://www.labirint.ru/books/720532/')
+                    +connotationRow('эстафеты', 'run-tema-run', 'взмах-4', 'https://www.labirint.ru/books/720532/')
+                    +connotationRow('ни пацан, ни мацан', 'not-chav')
+                    +connotationRow('парк', 'park', 'взмах-4', 'https://www.labirint.ru/books/720532/')
+                    +connotationRow('пакет', 'bag', 'взмах-4', 'https://www.labirint.ru/books/720532/')
+                    +connotationRow('дебют', 'debut')
+                    +connotationRow('татами', 'tatami')
+                    +connotationRow('инопланетянин', 'alien', 'рукопожатие кирпича', 'https://planeta.ru/campaigns/121172')
+        +footer()
