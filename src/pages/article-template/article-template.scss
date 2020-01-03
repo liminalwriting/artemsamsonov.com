@@ -2,14 +2,26 @@
   width: 768px;
   margin-top: 32px;
   
+  @include respond(mobile) {
+    @include col100(0, column);
+  }
+  
   &__info {
     @include col100(12px 0 0 0);
     text-transform: lowercase;
+    
+    @include respond(mobile) {
+      @include col100(24px 0 0 0);
+    }
   }
   
   &__annotation {
     @include col80(0 64px 0 0, column);
     font: $groteskMain;
+    
+    @include respond(mobile) {
+      @include col100(0 0 0 0, column);
+    }
     
     p:first-child {
       margin-top: 0;
@@ -23,6 +35,10 @@
   &__cover {
     @include col20(0);
     
+    @include respond(mobile) {
+      display: none;
+    }
+    
   }
   
   &__connotation {
@@ -30,6 +46,10 @@
     
     &-headline {
       @include col100(8px 0 24px 0, column);
+      
+      @include respond(mobile) {
+        @include col100(0 0 12px 0, column);
+      }
     }
     
     &-section {
@@ -39,14 +59,27 @@
   
   &__content {
     font: $antiquaMain;
+    
+    @include respond(mobile) {
+      margin: 12px 0 0 0;
+      font: $antiquaSmall;
+    }
   }
   
   &__next {
     @include col100(48px 0 0 0, row, space-between);
     font: $groteskMain;
     
+    @include respond(mobile) {
+      @include col100(24px 0 24px 0, column);
+    }
+    
     a {
       color: $milanoRed;
+      
+      @include respond(mobile) {
+        margin: 0 0 24px 0;
+      }
     }
   }
   

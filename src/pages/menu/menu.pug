@@ -4,17 +4,17 @@ include ../../components/footer/footer
 doctype html(prefix="og: http://ogp.me/ns#")
 html
     +head(
-    'артём сошников / литературный критик, начинающий писатель',
-    'пишу прозу, рецензирую книги, веду в телеграм-канал о литературе «автономный хипстер»',
-    'http://sayocean.me/img/default.jpg',
-    ''
+      'сошников — меню',
+      'пишу и обозреваю прозу, веду телеграм-канал о реализме «чернотроп»',
+      'http://sayocean.me/img/default.jpg',
+      ''
     )
 body.body_dark
     +header('active')
-    div.content_mobile-menu
+    div.content
         div.menu
+            a(href="index.html").menu_mobile главная
             a(href="writing.html").menu_mobile проза
-            a(href="articles.html").menu_mobile публицистика
-            a(href="archieve.html").menu_mobile архив
+            a(href="diary.html").menu_mobile писательский дневник
             a(href="contacts.html").menu_mobile контакты
     +footer()

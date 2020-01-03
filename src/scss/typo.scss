@@ -3,9 +3,10 @@
 $groteskExtraLarge: 48px/56px "PT Root UI Bold";
 $groteskLarge: 32px/40px "PT Root UI Bold";
 $groteskMain: 16px/23px "PT Root UI Regular";
-$groteskSmall: 12px/20px "PT Root UI Regular";
+$groteskSmall: 14px/20px "PT Root UI Regular";
 
 $antiquaMain: 20px/34px "KTB", Georgia, serif;
+$antiquaSmall: 16px/24px "KTB", Georgia, serif;
 
 a {
   text-decoration: none;
@@ -15,6 +16,10 @@ a {
 h1 {
   font: $groteskExtraLarge;
   margin: 0;
+  
+  @include respond(mobile) {
+    font: $groteskLarge;
+  }
 }
 
 h2 {

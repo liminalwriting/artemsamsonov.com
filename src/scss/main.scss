@@ -11,6 +11,7 @@ body {
   margin: 0;
   
   @include respond(mobile) {
+    padding: 24px;
     height: 100vh;
   }
 }
@@ -28,8 +29,11 @@ body {
 .content {
   @include col100(64px 0 0 0, column, flex-start, center);
   
+  @include respond(mobile) {
+    @include col100(12px 0 0 0, column, flex-start, center);
+  }
+  
   &_mobile-menu {
-    height: 100vh;
     @include col100(48px 12px 64px 12px, column, center, center);
   }
 }
@@ -69,7 +73,7 @@ body {
   @include col100(24px 0, row);
   
   @include respond(mobile) {
-    @include col100(0 0 32px 0, row, center);
+    @include col100(32px 0 24px 0, row);
   }
 }
 

@@ -8,7 +8,7 @@
   color: $white;
   
   @include respond(mobile) {
-    @include col100(32px 24px 24px 24px, row, center);
+    @include col100(32px 0, row);
     text-align: center;
   }
 }

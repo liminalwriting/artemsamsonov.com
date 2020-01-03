@@ -8,8 +8,7 @@
   word-break: break-word;
   
   @include respond(mobile) {
-    @include col100(32px 32px 24px 32px, row, center);
-    text-align: center;
+    @include col100(0, row);
   }
   
   &__headline {

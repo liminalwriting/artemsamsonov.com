@@ -5,8 +5,16 @@
   text-transform: lowercase;
   border-top: 1px solid $codGray;
   
+  @include respond(mobile) {
+    @include col100(8px 0 24px 0, column);
+  }
+  
   &__name {
     @include col25(0);
+    
+    @include respond(mobile) {
+      @include col100(0);
+    }
     
     a {
       color: $white;
@@ -19,10 +27,20 @@
   
   &__description {
     @include col25(0);
+    
+    @include respond(mobile) {
+      @include col100(12px 0);
+      color: $gray;
+    }
   }
   
   &__links {
     @include col15(0 0 0 0, column);
     align-items: flex-end;
+    
+    @include respond(mobile) {
+      @include col100(12px 0 0 0, column);
+      align-items: flex-end;
+    }
   }
 }

@@ -9,23 +9,13 @@
   left: 0;
   height: 48px;
   font: $groteskMain;
-  background-color: $darkGray;
   
   @include respond(mobile) {
     @include col100(0 12px, row, flex-start, center);
-    height: 48px;
   }
   
   a {
     color: $chromeYellow;
-  }
-  
-  &_light {
-    background-color: $soapStone;
-    
-    a {
-      color: $black;
-    }
   }
   
   & svg {
@@ -41,6 +31,7 @@
     
     &-link {
       color: inherit;
+      line-height: 1;
     }
   }
   
@@ -63,8 +54,12 @@
       }
       
       @include respond(mobile) {
-        display: flex;
-        @include col10(0, column, center, flex-end);
+        @include colauto(0, column, center, flex-end);
+        
+        a {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
     
@@ -76,6 +71,23 @@
         color: $gray;
         cursor: not-allowed;
       }
+    }
+  }
+  
+  &_light {
+    background-color: $soapStone;
+    border-bottom: 1px solid darken($soapStone, 20%);
+    
+    #modeValue {
+      a {
+        svg {
+          fill: $black;
+        }
+      }
+    }
+    
+    a {
+      color: $black;
     }
   }
 }

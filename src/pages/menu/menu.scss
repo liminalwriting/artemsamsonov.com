@@ -3,11 +3,12 @@
 @import "../../scss/typo";
 
 .menu {
-  @include col100(48px 12px 64px 12px, column, flex-start, center);
+  @include col100(48px 12px 64px 12px, column, center);
+  height: 80vh;
   
   &_mobile {
     @include col100(0, column, center, center);
     height: 48px;
-    font: $groteskSmall;
+    font: $groteskMain;
   }
 }
