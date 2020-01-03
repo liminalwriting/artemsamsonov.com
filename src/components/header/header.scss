@@ -9,6 +9,7 @@
   left: 0;
   height: 48px;
   font: $groteskMain;
+  background-color: $darkGray;
   
   @include respond(mobile) {
     @include col100(0 12px, row, flex-start, center);
