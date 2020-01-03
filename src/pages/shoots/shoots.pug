@@ -1,0 +1,41 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+include ../../components/connotation-row/connotation-row
+doctype html
+html
+    +head(
+      'сошников — чужие снимки',
+      '',
+      'http://sayocean.me/img/selfie.jpg',
+      'article'
+    )
+body.body_light
+    +header().header_light
+    div.content
+        div.article
+            +article-header('чужие снимки')
+            div.article__info
+                div.article__annotation
+                    p Сборник короткой прозы о смешных, наивных, но в целом замечательных людях. Большинство историй написаны и опубликованы в самиздат-сообществе
+                        =" "
+                        a(href="https://vk.com/drudder" target="blank") «Dutch Rudder».
+                div.article__cover
+                    img(src="../../img/shoots-cover.jpg")
+            div.article__connotation
+                div.article__connotation-headline
+                    h2 содержание
+                div.article__connotation-section
+                    +connotationRow('сосед серёга', 'serega')
+                    +connotationRow('арбуз', 'watermelon')
+                    +connotationRow('бухгалтер', 'bookkeeper')
+                    +connotationRow('фэтфоб', 'fatfob')
+                    +connotationRow('начальник', 'boss')
+                    +connotationRow('хобби', 'hobby')
+                    +connotationRow('сонечка marmelade', 'marmelade')
+                    +connotationRow('депутат елистратыч', 'deputy')
+                    +connotationRow('доставщик суси', 'susi')
+                    +connotationRow('хаслер', 'hustle')
+                    +connotationRow('кисточка', 'brush')
+        +footer()
