@@ -19,10 +19,6 @@
     color: $chromeYellow;
   }
   
-  & svg {
-    fill: $white;
-  }
-  
   &__logo {
     @include col20(0);
     
@@ -47,45 +43,14 @@
       display: none;
     }
     
-    &_mobile {
-      display: none;
-      
-      @include respond(tablet) {
-        display: none;
-      }
-      
-      @include respond(mobile) {
-        @include colauto(0, column, center, flex-end);
-        
-        a {
-          width: 24px;
-          height: 24px;
-        }
-      }
-    }
-    
     &-elem {
       @include colauto(0 0 0 48px);
-      color: $chromeYellow;
-      
-      &_disabled {
-        color: $gray;
-        cursor: not-allowed;
-      }
     }
   }
   
   &_light {
     background-color: $soapStone;
     border-bottom: 1px solid darken($soapStone, 20%);
-    
-    #modeValue {
-      a {
-        svg {
-          fill: $black;
-        }
-      }
-    }
     
     a {
       color: $black;
