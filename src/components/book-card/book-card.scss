@@ -1,5 +1,5 @@
 .book-card {
-  @include col100(8px 24px 24px 24px, row, space-between);
+  @include col100(8px 0 24px 0, row, space-between);
   color: $white;
   font: $groteskMain;
   text-transform: lowercase;
@@ -22,6 +22,7 @@
   }
   
   &__links {
-    @include col15(0, column);
+    @include col15(0 0 0 0, column);
+    align-items: flex-end;
   }
 }

@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  padding: 0;
+  padding: 32px;
   margin: 0;
   
   @include respond(mobile) {
@@ -26,11 +26,7 @@ body {
 }
 
 .content {
-  @include col100(48px 12px 64px 12px, column, flex-start, center);
-  
-  @include respond(mobile) {
-    @include col100(48px 0 48px 0, column);
-  }
+  @include col100(64px 0 0 0, column, flex-start, center);
   
   &_mobile-menu {
     height: 100vh;

@@ -1,9 +1,9 @@
 .index {
-  @include col100(0 24px 48px 24px, column);
+  @include col100(0 0 48px 0, column);
   height: 100vh;
   
   &__main-info {
-    margin: 84px 0 72px 0;
+    margin: 64px 0 72px 0;
     font: 5em/1.2em "PT Root UI Bold";
     font-weight: 700;
     color: $white;
