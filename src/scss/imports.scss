@@ -4,18 +4,14 @@
 @import "typo";
 
 @import "../components/article-breadcrumb/article-breadcrumb";
+@import "../components/article-headline/article-headline";
 @import "../components/footer/footer";
 @import "../components/header/header";
 @import "../components/icon/icon";
 @import "../components/list-header/list-header";
-@import "../components/year/year";
-@import "../components/related-items/related-items";
-@import "../components/go-back/go-back";
 @import "../components/book-card/book-card";
 
 @import "article";
 @import "profile";
-@import "list";
 @import "../pages/index/index";
 @import "../pages/fuji/fuji";
-@import "../pages/menu/menu";

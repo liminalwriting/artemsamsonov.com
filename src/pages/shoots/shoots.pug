@@ -1,40 +1,31 @@
 include ../../components/head/head
 include ../../components/header/header
 include ../../components/article-headline/article-headline
+include ../../components/article-breadcrumb/article-breadcrumb
 include ../../components/footer/footer
-
 doctype html
 html
     +head(
       'сошников — чужие снимки',
       '',
-      'http://sayocean.me/img/selfie.jpg',
+      'http://sayocean.me/img/shoots.jpg',
       'article'
     )
 body.body_light
     +header()
-    div.profile
-        div.profile__title
-            h1 чужие снимки
-        div.profile__annotation
-            p Сборник короткой прозы о смешных, наивных, но в целом замечательных людях. Большинство историй написаны и опубликованы в самиздат-сообществе
-                =" "
-                a(href="https://vk.com/drudder" target="blank") «Dutch Rudder».
-        div.profile__cover
-            img(src="../../img/shoots-cover.jpg")
-        div.profile__connotation-title
-            h1 содержание
-        div.profile__connotation-contents
-            div.profile__connotation-section
-                a.profile__connotation-link(href='serega.html') сосед серёга
-                a.profile__connotation-link(href='watermelon.html') арбуз
-                a.profile__connotation-link(href='bookkeeper.html') бухгалтер
-                a.profile__connotation-link(href='fatfob.html') фэтфоб
-                a.profile__connotation-link(href='boss.html') начальник
-                a.profile__connotation-link(href='hobby.html') хобби
-                a.profile__connotation-link(href='marmelade.html') сонечка marmelade
-                a.profile__connotation-link(href='deputy.html') депутат елистратыч
-                a.profile__connotation-link(href='susi.html') доставщик суси
-                a.profile__connotation-link(href='hustle.html') хаслер
-                a.profile__connotation-link(href='brush.html') кисточка
-    +footer()
+    div.content
+        div.article
+            +articleHeadline('чужие снимки')
+            div.article__content
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/serega.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/watermelon.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/bookkeeper.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/fatfob.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/boss.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/hobby.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/marmelade.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/deputy.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/susi.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/hustle.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/brush.md
+        +footer()

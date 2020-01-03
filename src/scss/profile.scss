@@ -29,7 +29,7 @@
     }
     
     p:first-child {
-      margin-top: 12px;
+      margin-top: 8px;
     }
     
   }
@@ -75,7 +75,7 @@
     
     &-link {
       color: $milanoRed;
-      font: $groteskExtraLarge;
+      font: $groteskLarge;
       margin-bottom: 12px;
       
       @include respond(mobile) {

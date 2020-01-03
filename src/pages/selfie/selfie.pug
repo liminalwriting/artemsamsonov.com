@@ -1,8 +1,8 @@
 include ../../components/head/head
 include ../../components/header/header
 include ../../components/article-headline/article-headline
+include ../../components/article-breadcrumb/article-breadcrumb
 include ../../components/footer/footer
-
 doctype html
 html
     +head(
@@ -13,27 +13,18 @@ html
     )
 body.body_light
     +header()
-    div.profile
-        div.profile__title
-            h1 вот мои селфи
-        div.profile__annotation
-            p Пять лет назад, уезжая с концами из родного поволжского городка в Петербург, я случайно выбросил коробку с семейными фотографиями. Не осталось ничего: ни свадебных снимков родителей, ни моих детских фотокарточек, где я стою в колготах на деревянном стульчике.
-            p Спустя три года после переезда я решил собрать новый фотоальбом. Он получился не таким наглядным, как раньше, но искренним. В нём нет натянутых улыбок и фальшивого благополучия.
-            p Вот они, мои селфи.
-        div.profile__cover
-            img(src="../../img/selfie-cover.jpg")
-        div.profile__connotation-title
-            h1 содержание
-        div.profile__connotation-contents
-            div.profile__connotation-section
-                a.profile__connotation-link(href='pomegranade.html') гранаты
-                a.profile__connotation-link(href='clump.html') клок
-                a.profile__connotation-link(href='suite.html') костюм
-                a.profile__connotation-link(href='run-tema-run.html') эстафеты
-                a.profile__connotation-link(href='not-chav.html') ни пацан, ни мацан
-                a.profile__connotation-link(href='park.html') парк
-                a.profile__connotation-link(href='bag.html') пакет
-                a.profile__connotation-link(href='debut.html') дебют
-                a.profile__connotation-link(href='tatami.html') татами
-                a.profile__connotation-link(href='alien.html') инопланетянин
-    +footer()
+    div.content
+        div.article
+            +articleHeadline('вот мои селфи')
+            div.article__content
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/selfie/pomegranade.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/selfie/clump.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/selfie/suite.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/selfie/run-tema-run.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/selfie/not-chav.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/selfie/park.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/selfie/bag.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/selfie/debut.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/selfie/tatami.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/selfie/alien.md
+        +footer()

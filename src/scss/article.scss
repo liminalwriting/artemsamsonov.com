@@ -8,18 +8,6 @@
     @include col100(0, column);
   }
   
-  &__headline {
-    margin: 0 0 24px 0;
-  }
-  
-  &__years {
-    @include col100(0 0 24px 0, row);
-    
-    @include respond(mobile) {
-      @include col100(32px 0 24px 0, row);
-    }
-  }
-  
   &__content {
     font: $antiquaMain;
     margin: 0 0 48px 0;
@@ -27,6 +15,14 @@
     @include respond(mobile) {
       margin: 0 0 48px 0;
       font: $antiquaSmall;
+    }
+    
+    h2 {
+      margin: 64px 0 0 0;
+      
+      &:first-child {
+        margin-top: 24px;
+      }
     }
   }
   

@@ -1,8 +1,8 @@
 include ../../components/head/head
 include ../../components/header/header
 include ../../components/article-headline/article-headline
+include ../../components/article-breadcrumb/article-breadcrumb
 include ../../components/footer/footer
-
 doctype html
 html
     +head(
@@ -13,19 +13,11 @@ html
     )
 body.body_light
     +header()
-    div.profile
-        div.profile__title
-            h1 инсайд
-        div.profile__annotation
-            p Два московских авантюриста и полусумасшедший профессор случайно раскручивают инсайдерский канал в Телеграме. Жажда денег бросает бывших субкультурщиков в диджитал-болото анонимных публикаций и экстремистов, московской реновации и либеральных университетов, маргинальной политики и ютуб-блогов.
-            p Смогут ли повзрослевшие миллениалы ужиться с новым миром?
-        div.profile__cover
-            img(src="../../img/inside-cover.jpg")
-        div.profile__connotation-title
-            h1 содержание
-        div.profile__connotation-contents
-            div.profile__connotation-section
-                a.profile__connotation-link(href='bald.html') лысый
-                a.profile__connotation-link(href='berserk.html') берсерк
-                a.profile__connotation-link(href='eklmn.html') еклм(н)
-    +footer()
+    div.content
+        div.article
+            +articleHeadline('инсайд')
+            div.article__content
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/inside/bald.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/inside/berserk.md
+                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/inside/eklmn.md
+        +footer()
