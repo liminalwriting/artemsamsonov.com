@@ -7,8 +7,7 @@
   z-index: 2;
   top: 0;
   height: 48px;
-  font: $fontMain;
-  line-height: 1;
+  font: $groteskMain;
   background-color: $darkGray;
   
   @include respond(mobile) {

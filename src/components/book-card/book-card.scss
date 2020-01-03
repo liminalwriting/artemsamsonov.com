@@ -1,7 +1,8 @@
 .book-card {
-  @include col100(8px 24px 48px 24px, row, space-between);
+  @include col100(8px 24px 24px 24px, row, space-between);
   color: $white;
-  font: $fontSmall;
+  font: $groteskMain;
+  text-transform: lowercase;
   border-top: 1px solid $codGray;
   
   &__name {

@@ -1,15 +1,19 @@
 .article {
   width: 768px;
   margin-top: 64px;
-  font: $fontArticle;
-  
-  @include respond(mobile) {
-    @include col100(0 32px, column);
-    font-size: $fontSmall;
-  }
   
   &__info {
-    @include col100(32px 0 0 0);
+    @include col100(12px 0 0 0);
+    text-transform: lowercase;
+  }
+  
+  &__annotation {
+    @include col80(0 64px 0 0, column);
+    font: $groteskMain;
+    
+    p:first-child {
+      margin-top: 0;
+    }
   }
   
   &__cover {
@@ -17,43 +21,25 @@
     
   }
   
-  &__annotation {
-    @include col80(0 64px 0 0, column);
-    font: $fontArticle;
-    
-    p:first-child {
-      margin-top: 0;
-    }
-  }
-  
   &__connotation {
     @include col100(24px 0 0 0, column);
     
     &-headline {
-      @include col100(8px 0 32px 0, column);
+      @include col100(8px 0 24px 0, column);
     }
     
     &-section {
       @include col100(4px 0 32px 0, column);
     }
-    
-    &-link {
-      font: $fontArticle;
-      color: $milanoRed;
-    }
   }
   
-  &__story {
-    @include col100(96px 0 0 0, column);
-    
-    &-headline {
-      @include col100(8px 0 24px 0, column);
-      border-top: 4px solid $black;
-    }
+  &__content {
+    font: $antiquaMain;
   }
   
   &__next {
-    @include col100(48px 0 0 0, row, flex-end);
+    @include col100(48px 0 0 0, row, space-between);
+    font: $groteskMain;
     
     a {
       color: $milanoRed;
@@ -66,7 +52,7 @@
   }
   
   &__lead {
-    font: $fontMain;
+    font: $groteskMain;
     font-size: 14px;
     text-align: center;
     margin: 0 32px 32px 32px;
@@ -87,7 +73,6 @@
     
     &-caption {
       margin: 4px 0 24px 0;
-      font: $fontSmall;
       color: $gray;
       
       @include respond(mobile) {

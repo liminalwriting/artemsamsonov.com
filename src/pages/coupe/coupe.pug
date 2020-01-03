@@ -15,10 +15,11 @@ body.body_light
     +header().header_light
     div.content
         div.article
-            +article-breadcrumb('Рассказы разных бед', 'misfortunes')
-            +article-header('Купе')
-            div
+            +article-breadcrumb('рассказы разных бед', 'misfortunes')
+            +article-header('купе')
+            div.article__content
                 include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/misfortunes/coupe.md
             div.article__next
-                a(href="coffins.html") Читать следующий рассказ «Гробы» →
+                a(href="misfortunes.html") ← вернуться в содержание
+                a(href="coffins.html") читать следующий рассказ «гробы» →
         +footer()

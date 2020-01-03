@@ -92,7 +92,7 @@ body {
   
   &__row {
     @include col100(4px 0, row, space-between, baseline);
-    font: $fontMain;
+    font: $groteskMain;
     
     @include respond(mobile) {
       @include col100(8px 0, column);
@@ -104,7 +104,6 @@ body {
       
       @include respond(mobile) {
         @include colauto(4px 0 0 0);
-        font: $fontSmall;
       }
     }
   }
@@ -125,7 +124,6 @@ figure {
 }
 
 p {
-  margin: 24px 0;
   
   @include respond(mobile) {
     margin: 12px 0;
@@ -175,7 +173,6 @@ code {
   &__description {
     flex: 4;
     padding: 0 0 0 24px;
-    font: $fontSmall;
     color: $gray;
     
     @include respond(mobile) {

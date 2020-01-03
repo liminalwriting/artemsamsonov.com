@@ -4,18 +4,10 @@
   
   &__main-info {
     margin: 84px 0 72px 0;
-    font: $fontHeadline;
+    font: 5em/1.2em "PT Root UI Bold";
+    font-weight: 700;
     color: $white;
     
-    @include respond(tablet) {
-      margin: 108px 0 0 0;
-      font: $fontHeadlineMedium;
-    }
-    
-    @include respond(mobile) {
-      margin: 64px 0 0 0;
-      font: $fontHeadlineSmall;
-    }
     p {
       margin: 24px 0;
     }
@@ -23,14 +15,9 @@
   
   &__secondary-info {
     @include col100(8px 0 0 0, row, space-between);
-    font: $fontSmall;
+    font: $groteskMain;
     border-top: 4px solid $codGray;
     color: $gray;
-    
-    @include respond(tablet) {
-      @include col100(8px 0 0 0, row, space-between);
-      font: $fontMicro;
-    }
     
     @include respond(mobile) {
       display: none;

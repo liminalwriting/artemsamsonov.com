@@ -11,13 +11,4 @@
     @include col100(32px 24px 24px 24px, row, center);
     text-align: center;
   }
-  
-  &__headline {
-    margin: 0;
-    font: $fontHeadlineMedium;
-    
-    @include respond(mobile) {
-      margin: 0;
-    }
-  }
 }

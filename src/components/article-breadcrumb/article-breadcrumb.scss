@@ -1,6 +1,7 @@
 .article-breadcrumb {
   @include col100(0 0 8px 0);
-  font: $fontSmall;
+  font: $groteskMain;
+  text-transform: lowercase;
   
   &__link {
     color: $milanoRed;

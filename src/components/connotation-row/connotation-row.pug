@@ -1,0 +1,6 @@
+mixin connotationRow(name, href, source='Неопубликован')
+    div.connotation-row
+        div.connotation-row__name
+            a(href=href+'.html')=name
+        div.connotation-row__line
+        div.connotation-row__source=source

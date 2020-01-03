@@ -1,21 +1,11 @@
 @import "colors";
 
-$fontSizeSmall: 14px;
-$fontSizeMain: 16px;
-$fontSizeMedium: 24px;
-$fontSizeLarge: 32px;
-$fontSizeBig: 56px;
+$groteskExtraLarge: 48px/64px "PT Root UI Bold";
+$groteskLarge: 32px/40px "PT Root UI Bold";
+$groteskMain: 16px/23px "PT Root UI Regular";
+$groteskSmall: 12px/20px "PT Root UI Regular";
 
-$fontMicro: 12px/18px "Montserrat";
-$fontSmall: normal 400 14px/21px "Montserrat";
-$fontMain: 1em/1.3em "Montserrat";
-
-$fontHeadline: 700 4em/1.3em "Montserrat";
-$fontHeadlineMedium: 700 32px/48px "Montserrat";
-$fontHeadlineSmall: 700 1.8em/1.3em "Montserrat";
-$fontHeadlineMicro: 700 12px/20px "Montserrat";
-
-$fontArticle: 22px/38px "KTB", Georgia, serif;
+$antiquaMain: 20px/34px "KTB", Georgia, serif;
 
 a {
   text-decoration: none;
@@ -23,41 +13,51 @@ a {
 }
 
 h1 {
-  font: 700 48px/1.3em "Montserrat";
+  font: $groteskExtraLarge;
   margin: 0;
-  
-  @include respond(mobile) {
-    font: $fontSizeSmall;
-  }
 }
 
 h2 {
-  font: $fontHeadlineSmall;
-}
-
-h3 {
-  font: $fontHeadlineMicro;
+  font: $groteskLarge;
 }
 
 h5 {
-  font: $fontHeadlineMicro;
-  font-size: $fontMicro;
+  font: $groteskSmall;
   letter-spacing: 1px;
   margin: 0 0 4px 0;
   text-transform: uppercase;
 }
 
-strong {
-  font-weight: 500;
+h1, h2, h5 {
+  font-weight: bold;
 }
 
 @font-face {
   font-family: 'KTB';
-  src: url('../../type/type.eot');
-    src:
-      url('../../type/type.eot?#iefix') format('embedded-opentype'),
-      url('../../type/type.woff2') format('woff2'),
-      url('../../type/type.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  src: url('../../fonts/antiqua/type.eot');
+  src: url('../../fonts/antiqua/type.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/antiqua/type.woff2') format('woff2'),
+  url('../../fonts/antiqua/type.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Root UI Regular';
+  src: url('../../fonts/pt-root/pt-root-ui-regular/pt-root-ui-regular.eot');
+  src: url('../../fonts/pt-root/pt-root-ui-regular/pt-root-ui-regular.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/pt-root/pt-root-ui-regular/pt-root-ui-regular.woff2') format('woff2'),
+  url('../../fonts/pt-root/pt-root-ui-regular/pt-root-ui-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Root UI Bold';
+  src: url('../../fonts/pt-root/pt-root-ui-bold/pt-root-ui-bold.eot');
+  src: url('../../fonts/pt-root/pt-root-ui-bold/pt-root-ui-bold.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/pt-root/pt-root-ui-bold/pt-root-ui-bold.woff2') format('woff2'),
+  url('../../fonts/pt-root/pt-root-ui-bold/pt-root-ui-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }

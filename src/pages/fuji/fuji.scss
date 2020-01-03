@@ -34,7 +34,7 @@
       margin: 0 0 70px 0;
       text-align: center;
       height: 56px;
-      font: $fontSmall;
+      font: $groteskSmall;
       color: white;
       
       & span {
@@ -53,7 +53,7 @@
       & h1 {
         margin: 0;
         font-size: 64px;
-        font: $fontHeadline;
+        font: $groteskLarge;
         
         @include respond(mobile) {
           font-size: 32px;
@@ -88,7 +88,7 @@
     font-family: 'Lora', serif;
     
     @include respond(mobile) {
-      font: $fontMain;
+      font: $groteskMain;
       line-height: 1.6;
     }
     
@@ -210,7 +210,7 @@
           
           @include respond(mobile) {
             font-size: 14px;
-            font: $fontMain;
+            font: $groteskMain;
           }
         }
       }
