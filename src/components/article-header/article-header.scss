@@ -6,7 +6,6 @@
   @include col100(0 0 16px 0, row);
   width: 768px;
   word-break: break-word;
-  text-align: center;
   
   @include respond(mobile) {
     @include col100(32px 32px 24px 32px, row, center);

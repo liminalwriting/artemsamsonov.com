@@ -144,6 +144,11 @@ code {
   color: darken($milanoRed, 10%);
 }
 
+hr {
+  width: 24px;
+  border-bottom: 4px dotted $milanoRed;
+}
+
 .annotation {
   @include col100(24px 0 24px 0);
   max-width: 600px;
