@@ -1,7 +1,7 @@
 include ../../components/head/head
 include ../../components/header/header
 include ../../components/footer/footer
-include ../../components/page-header/page-header
+include ../../components/list-header/list-header
 include ../../components/book-card/book-card
 include ../../components/book-link/book-link
 doctype html(prefix="og: http://ogp.me/ns#")
@@ -15,23 +15,26 @@ html
 body.body_dark
     +header()
     div.content
-        +page-header('повести', 'dark')
-        +bookCard('Инсайд', 'два московских авантюриста и полусумасшедший профессор случайно раскручивают инсайдерский канал в Телеграме', 'inside.html')
-            +bookLink('читать онлайн', 'inside.html')
-        +page-header('циклы рассказов', 'dark')
-        +bookCard('Рассказы разных бед', 'Строгая реалистическая проза о людях, их демонах и окружающей нас боли', 'misfortunes.html')
-            +bookLink('читать онлайн', 'misfortunes.html')
-        +bookCard('Вот мои селфи', 'Цикл короткой прозы о мальчике Тёме и его детстве в криминальном городе 90-х', 'selfie.html')
-            +bookLink('читать онлайн', 'selfie.html')
-        +bookCard('Чужие снимки', 'Цикл короткой прозы о добрых, наивных и смешных людях', 'shoots.html')
-            +bookLink('читать онлайн', 'shoots.html')
-        +bookCard('Разбитое зеркало', 'Сценарист «Чёрного зеркала» Чарли Брукер придумал захватывающую историю, но в России, как вы понимаете, она примет совершенно иные очертания.', 'broken-mirror.html')
-            +bookLink('читать онлайн', 'broken-mirror.html')
-        +page-header('раннее', 'dark')
-        +bookCard('Хоппер', 'Рассказ о любви в авторитарной России ближайшего будущего', 'hopper.html')
-            +bookLink('читать онлайн', 'hopper.html')
-        +bookCard('В Тае снег растаял', 'Первая бумажная публикация в альманахе «взмах-3»', 'thai.html')
-            +bookLink('читать онлайн', 'thai.html')
-        +bookCard('добро пожаловать в коммунар', 'один из первых рассказов', 'kommunar.html')
-            +bookLink('читать онлайн', 'kommunar.html')
+        div.list__section
+            +list-header('повести', 'dark')
+            +bookCard('Инсайд', 'два московских авантюриста и полусумасшедший профессор случайно раскручивают инсайдерский канал в Телеграме', 'inside.html')
+                +bookLink('читать онлайн', 'inside.html')
+        div.list__section
+            +list-header('циклы рассказов', 'dark')
+            +bookCard('Рассказы разных бед', 'Строгая реалистическая проза о людях, их демонах и окружающей нас боли', 'misfortunes.html')
+                +bookLink('читать онлайн', 'misfortunes.html')
+            +bookCard('Вот мои селфи', 'Цикл короткой прозы о мальчике Тёме и его детстве в криминальном городе 90-х', 'selfie.html')
+                +bookLink('читать онлайн', 'selfie.html')
+            +bookCard('Чужие снимки', 'Цикл короткой прозы о добрых, наивных и смешных людях', 'shoots.html')
+                +bookLink('читать онлайн', 'shoots.html')
+            +bookCard('Разбитое зеркало', 'Сценарист «Чёрного зеркала» Чарли Брукер придумал захватывающую историю, но в России, как вы понимаете, она примет совершенно иные очертания.', 'broken-mirror.html')
+                +bookLink('читать онлайн', 'broken-mirror.html')
+        div.list__section
+            +list-header('раннее', 'dark')
+            +bookCard('Хоппер', 'Рассказ о любви в авторитарной России ближайшего будущего', 'hopper.html')
+                +bookLink('читать онлайн', 'hopper.html')
+            +bookCard('В Тае снег растаял', 'Первая бумажная публикация в альманахе «взмах-3»', 'thai.html')
+                +bookLink('читать онлайн', 'thai.html')
+            +bookCard('добро пожаловать в коммунар', 'один из первых рассказов', 'kommunar.html')
+                +bookLink('читать онлайн', 'kommunar.html')
 

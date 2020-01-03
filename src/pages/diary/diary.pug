@@ -1,6 +1,6 @@
 include ../../components/head/head
 include ../../components/header/header
-include ../../components/article-header/article-header
+include ../../components/list-header/list-header
 include ../../components/article-breadcrumb/article-breadcrumb
 include ../../components/footer/footer
 include ../../components/year/year
@@ -16,8 +16,9 @@ body.body_light
     +header().header_light
     div.content
         div.article
-            +article-header('писательский дневник')
-            div.years
+            div.article__headline
+                h1 писательский дневник
+            div.article__years
                 +year('2020').year_active
                 +year('2019')
                 +year('2018')

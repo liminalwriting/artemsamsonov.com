@@ -3,12 +3,11 @@
 @import "main";
 @import "typo";
 
-@import "../components/article-header/article-header";
 @import "../components/article-breadcrumb/article-breadcrumb";
 @import "../components/footer/footer";
 @import "../components/header/header";
 @import "../components/icon/icon";
-@import "../components/page-header/page-header";
+@import "../components/list-header/list-header";
 @import "../components/year/year";
 @import "../components/related-items/related-items";
 @import "../components/go-back/go-back";
@@ -16,6 +15,7 @@
 
 @import "article";
 @import "profile";
+@import "list";
 @import "../pages/index/index";
 @import "../pages/fuji/fuji";
 @import "../pages/menu/menu";

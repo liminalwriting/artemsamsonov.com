@@ -33,7 +33,6 @@ body {
 
 .content {
   @include col100(0, column, flex-start, center);
-  background-color: lightgrey;
   
   @include respond(mobile) {
     @include col100(0, column, flex-start, center);
@@ -74,14 +73,6 @@ body {
       margin: 14px 0;
     }
   }
-
-.years {
-  @include col100(24px 0, row);
-  
-  @include respond(mobile) {
-    @include col100(32px 0 24px 0, row);
-  }
-}
 
 figure {
   margin: 0;

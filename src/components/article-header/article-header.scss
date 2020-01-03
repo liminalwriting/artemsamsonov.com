@@ -1,8 +1,0 @@
-@import "../../scss/grid";
-@import "../../scss/colors";
-@import "../../scss/typo";
-
-.article-header {
-  @include col100(0, row);
-  word-break: break-word;
-}

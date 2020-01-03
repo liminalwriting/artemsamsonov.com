@@ -1,7 +1,7 @@
 include ../../components/head/head
 include ../../components/header/header
 include ../../components/footer/footer
-include ../../components/page-header/page-header
+include ../../components/list-header/list-header
 include ../../components/book-card/book-card
 include ../../components/book-link/book-link
 doctype html(prefix="og: http://ogp.me/ns#")
@@ -15,7 +15,7 @@ html
 body.body_dark
     +header()
     div.content
-        +page-header('контактная информация', 'dark')
+        +list-header('контактная информация', 'dark')
         +bookCard('telegram', 'отвечаю быстрее всего', 'http://ttttt.me/sayocean')
             +bookLink('@sayocean', 'http://ttttt.me/sayocean')
         +bookCard('facebook', 'делюсь важными новостями и бытовыми зарисовками', 'http://facebook.com/sayocean450')
