@@ -1,6 +1,6 @@
 include ../../components/head/head
 include ../../components/header/header
-include ../../components/article-header/article-header
+include ../../components/article-headline/article-headline
 include ../../components/footer/footer
 doctype html
 html
@@ -13,7 +13,7 @@ html
 body.body_light
     +header().header_light
     div.content
-        +article-header('Заголовок')
+        +articleHeadline('Заголовок')
         div.article
             div.article__headline
                 div.article__annotation

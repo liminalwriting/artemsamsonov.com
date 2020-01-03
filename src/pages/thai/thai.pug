@@ -1,6 +1,6 @@
 include ../../components/head/head
 include ../../components/header/header
-include ../../components/article-header/article-header
+include ../../components/article-headline/article-headline
 include ../../components/article-breadcrumb/article-breadcrumb
 include ../../components/footer/footer
 doctype html
@@ -15,7 +15,7 @@ body.body_light
     +header().header_light
     div.content
         div.article
-            +article-header('в тае снег растаял')
+            +articleHeadline('в тае снег растаял')
             div.article__content
                 include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/_other/thai.md
             div.article__next

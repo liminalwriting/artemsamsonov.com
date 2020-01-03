@@ -1,6 +1,6 @@
 include ../../components/head/head
 include ../../components/header/header
-include ../../components/article-header/article-header
+include ../../components/article-headline/article-headline
 include ../../components/article-breadcrumb/article-breadcrumb
 include ../../components/footer/footer
 doctype html
@@ -16,7 +16,7 @@ body.body_light
     div.content
         div.article
             +article-breadcrumb('чужие снимки', 'shoots')
-            +article-header('бухгалтер')
+            +articleHeadline('бухгалтер')
             div.article__content
                 include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/shoots/bookkeeper.md
             div.article__next
