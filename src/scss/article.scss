@@ -2,6 +2,7 @@
   @include colauto(0, column);
   align-content: center;
   max-width: 768px;
+  text-transform: none;
   
   @include respond(mobile) {
     @include col100(0, column);
@@ -42,6 +43,26 @@
       
       @include respond(mobile) {
         margin: 0 0 24px 0;
+      }
+    }
+  }
+  
+  &__image {
+    margin: 24px 0 0 0;
+    
+    @include respond(mobile) {
+      margin: 14px -32px 0 -32px;
+    }
+    
+    &-caption {
+      margin: 4px 0 24px 0;
+      font: $groteskSmall;
+      color: $gray;
+      
+      @include respond(mobile) {
+        margin: 4px 0;
+        text-align: center;
+        font-size: 12px;
       }
     }
   }
