@@ -1,47 +1,67 @@
 .index {
-  @include col100(0 0 48px 0, column);
-  height: 100vh;
+  //parent
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: 50% auto;
   
-  &__main-info {
-    margin: 64px 0 72px 0;
-    font: 5em/1.2em "PT Root UI Bold";
-    font-weight: 700;
-    color: $white;
-    
-    @include respond(mobile) {
-      @include col100(0);
-      font: 2em/1.2em "PT Root UI Bold";
-    }
-    
-    p {
-      margin: 0;
-    }
+  grid-template-areas: "main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info" "secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info";
+  
+  @include respond(mobile) {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+}
+
+#main-info {
+  grid-area: main-info;
+  
+  font: 5em/1.2em "PT Root UI Bold";
+  font-weight: 700;
+  color: $white;
+  margin-bottom: 64px;
+  
+  @include respond(mobile) {
+    @include col100(0);
+    font: 2em/1.2em "PT Root UI Bold";
   }
   
-  &__secondary-info {
-    @include col100(8px 0 0 0, row, space-between);
-    font: $groteskMain;
-    border-top: 4px solid $codGray;
-    color: $gray;
-    
-    @include respond(mobile) {
-      display: none;
-    }
-    
-    &-fact {
-      max-width: 220px;
-      
-      @include respond(tablet) {
-        padding: 0 24px;
-        
-        &:first-child {
-          padding-left: 0;
-        }
-        
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-    }
+  p {
+    margin: 0;
+  }
+}
+
+#secondary-info {
+  grid-area: secondary-info;
+  
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: "fact-1 . fact-2 . fact-3 . fact-4";
+  
+  font: $groteskMain;
+  border-top: 4px solid $codGray;
+  color: $gray;
+  padding: 8px 0 0 0;
+  
+  @include respond(mobile) {
+    display: none;
+  }
+}
+
+#fact {
+  &-1 {
+    grid-area: fact-1;
+  }
+  
+  &-2 {
+    grid-area: fact-2;
+  }
+  
+  &-3 {
+    grid-area: fact-3;
+  }
+  
+  &-4 {
+    grid-area: fact-4;
   }
 }
