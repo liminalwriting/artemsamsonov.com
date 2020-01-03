@@ -1,5 +1,5 @@
 .book-card {
-  @include col100(8px 0 24px 0, row, space-between);
+  @include col100(4px 0 16px 0, row, space-between);
   color: $white;
   font: $groteskMain;
   text-transform: lowercase;

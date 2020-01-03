@@ -1,37 +1,29 @@
-.index {
+#index {
   //parent
   display: grid;
   grid-template-columns: repeat(20, 5%);
-  grid-template-rows: 50% auto;
-  
-  grid-template-areas: "main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info main-info" "secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info secondary-info";
-  
-  @include respond(mobile) {
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-  }
+  grid-template-rows: repeat(3, auto);
 }
 
 #main-info {
-  grid-area: main-info;
+  grid-column-start: 1;
+  grid-column-end: 21;
+  grid-row-start: 1;
   
-  font: 5em/1.2em "PT Root UI Bold";
+  @include col80(64px 0);
+  font: 3em/1.2em "PT Root UI Bold";
   font-weight: 700;
   color: $white;
-  margin-bottom: 64px;
-  
-  @include respond(mobile) {
-    @include col100(0);
-    font: 2em/1.2em "PT Root UI Bold";
-  }
   
   p {
     margin: 0;
   }
 }
 
-#secondary-info {
-  grid-area: secondary-info;
+/* #secondary-info {
+  grid-column-start: 1;
+  grid-column-end: 21;
+  grid-row-start: 2;
   
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
@@ -39,13 +31,11 @@
   grid-template-areas: "fact-1 . fact-2 . fact-3 . fact-4";
   
   font: $groteskMain;
-  border-top: 4px solid $codGray;
+  border-top: 1px solid $codGray;
+  border-bottom: 1px solid $codGray;
   color: $gray;
-  padding: 8px 0 0 0;
-  
-  @include respond(mobile) {
-    display: none;
-  }
+  padding: 4px 0 8px 0;
+  margin-bottom: 64px;
 }
 
 #fact {
@@ -63,5 +53,38 @@
   
   &-4 {
     grid-area: fact-4;
+  }
+} */
+
+#writing {
+  grid-column-start: 1;
+  grid-column-end: 21;
+  grid-row-start: 2;
+  
+  @include col100(64px 0 0 0, column);
+}
+
+.writing {
+  &__section {
+    @include col100(0 0 16px 0, column);
+  }
+}
+
+#contacts {
+  grid-column-start: 1;
+  grid-column-end: 21;
+  grid-row-start: 3;
+  
+  @include col100(128px 0 0 0);
+  font: $groteskExtraLarge;
+  font-weight: 700;
+  color: $gray;
+  
+  a {
+    color: darken($chromeYellow, 30%);
+  }
+  
+  p {
+    margin-bottom: 0;
   }
 }
