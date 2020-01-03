@@ -1,0 +1,32 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+include ../../components/connotation-row/connotation-row
+doctype html
+html
+    +head(
+      'сошников — инсайд',
+      '',
+      'http://sayocean.me/img/inside.jpg',
+      'article'
+    )
+body.body_light
+    +header().header_light
+    div.content
+        div.article
+            +article-header('инсайд')
+            div.article__info
+                div.article__annotation
+                    p Два московских авантюриста и полусумасшедший профессор случайно раскручивают инсайдерский канал в Телеграме. Жажда денег бросает бывших субкультурщиков в диджитал-болото анонимных публикаций и экстремистов, московской реновации и либеральных университетов, маргинальной политики и ютуб-блогов.
+                    p Смогут ли повзрослевшие миллениалы ужиться с новым миром?
+                div.article__cover
+                    img(src="../../img/inside-cover.jpg")
+            div.article__connotation
+                div.article__connotation-headline
+                    h2 содержание
+                div.article__connotation-section
+                    +connotationRow('Лысый', 'bald')
+                    +connotationRow('Берсерк', 'berserk')
+                    +connotationRow('ЕКЛМ(н)', 'eklmn')
+        +footer()
