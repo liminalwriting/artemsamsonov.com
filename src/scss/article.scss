@@ -24,7 +24,7 @@
     margin: 0 0 48px 0;
     
     @include respond(mobile) {
-      margin: 12px 0 0 0;
+      margin: 0 0 48px 0;
       font: $antiquaSmall;
     }
   }
@@ -32,6 +32,10 @@
   &__next {
     @include col100(0 0 24px 0, row, space-between);
     font: $groteskMain;
+    
+    @include respond(mobile) {
+      @include col100(0 0 24px 0, column, space-between);
+    }
     
     a {
       color: $milanoRed;

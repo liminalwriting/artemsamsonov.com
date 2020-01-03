@@ -11,7 +11,7 @@
   
   &_active {
     background-color: darken($soapStone, 20%);
-    color: $black;
     cursor: default;
+    color: $black !important;
+    }
   }
-}
