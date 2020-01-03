@@ -24,10 +24,6 @@ body {
   
   &_light {
     background-color: $soapStone;
-    
-    a {
-      color: $milanoRed;
-    }
   }
 }
 
@@ -37,23 +33,7 @@ body {
   @include respond(mobile) {
     @include col100(0, column, flex-start, center);
   }
-  
-  &_mobile-menu {
-    @include col100(48px 12px 64px 12px, column, center, center);
-  }
 }
-  
-  h2 {
-    margin: 0;
-  }
-  
-  a {
-    color: $milanoRed;
-  }
-  
-  img {
-    width: 100%;
-  }
   
   blockquote {
     color: darken($milanoRed, 10%);
@@ -73,27 +53,3 @@ body {
       margin: 14px 0;
     }
   }
-
-figure {
-  margin: 0;
-  padding: 0;
-}
-
-pre {
-  @include col100(0);
-  padding: 12px 24px 16px 24px;
-  background-color: lighten($soapStone, 3%);
-  border-radius: 4px;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-code {
-  font-family: 'PT Mono';
-  color: darken($milanoRed, 10%);
-}
-
-hr {
-  width: 24px;
-  border-bottom: 4px dotted $milanoRed;
-}

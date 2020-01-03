@@ -43,6 +43,10 @@
     @include respond(mobile) {
       display: none;
     }
+    
+    img {
+      width: 100%;
+    }
   }
   
   &__connotation {
