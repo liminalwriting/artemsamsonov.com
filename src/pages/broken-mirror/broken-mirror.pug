@@ -1,0 +1,29 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-header/article-header
+include ../../components/footer/footer
+include ../../components/connotation-row/connotation-row
+doctype html
+html
+    +head(
+      'сошников — разбитое зеркало',
+      '',
+      'http://sayocean.me/img/broken-mirror.jpg',
+      'article'
+    )
+body.body_light
+    +header().header_light
+    div.content
+        div.article
+            +article-header('разбитое зеркало')
+            div.article__info
+                div.article__annotation
+                    p Сценарист «Чёрного зеркала» Чарли Брукер придумал захватывающую историю, но в России, как вы понимаете, она примет совершенно иные очертания.
+                div.article__cover
+                    img(src="../../img/broken-mirror-cover.jpg")
+            div.article__connotation
+                div.article__connotation-headline
+                    h2 содержание
+                div.article__connotation-section
+                    +connotationRow('интервью', 'interview')
+        +footer()
