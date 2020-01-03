@@ -2,15 +2,16 @@
 @import "../../scss/typo";
 
 .year {
-  @include colauto(0 24px, column, center);
-  height: 24px;
+  @include colauto(0 24px 2px 24px, column, center);
+  align-items: center;
   border-radius: 50px;
-  line-height: 1;
-  color: $chromeYellow;
+  color: $milanoRed;
+  font: $groteskMain;
+  letter-spacing: 1px;
   
   &_active {
-    background-color: $gray;
-    color: $white;
+    background-color: darken($soapStone, 20%);
+    color: $black;
     cursor: default;
   }
 }

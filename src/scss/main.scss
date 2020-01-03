@@ -33,16 +33,6 @@ body {
     @include col100(48px 12px 64px 12px, column, center, center);
   }
 }
-
-.data {
-  position: relative;
-  width: 600px;
-  
-  @include respond(mobile) {
-    width: 100%;
-    padding: 0 24px;
-  }
-}
   
   h2 {
     margin: 0;
@@ -75,39 +65,8 @@ body {
     }
   }
 
-.list {
-  @include col100(24px 0 0 0, column, flex-start, center);
-  
-  @include respond(mobile) {
-    @include col100(0 0 0 0, column, flex-start, center);
-  }
-  
-  &__section {
-    @include col100(0 0 48px 0, column);
-  }
-  
-  &__row {
-    @include col100(4px 0, row, space-between, baseline);
-    font: $groteskMain;
-    
-    @include respond(mobile) {
-      @include col100(8px 0, column);
-    }
-    
-    &-source {
-      @include colauto(0 0 0 8px);
-      color: $gray;
-      
-      @include respond(mobile) {
-        @include colauto(4px 0 0 0);
-      }
-    }
-  }
-}
-
 .years {
-  @include col100(0 0 12px 0, row, center);
-  margin: 0 8px 0 0;
+  @include col100(24px 0, row);
   
   @include respond(mobile) {
     @include col100(0 0 32px 0, row, center);
@@ -117,13 +76,6 @@ body {
 figure {
   margin: 0;
   padding: 0;
-}
-
-p {
-  
-  @include respond(mobile) {
-    margin: 12px 0;
-  }
 }
 
 pre {
@@ -143,46 +95,4 @@ code {
 hr {
   width: 24px;
   border-bottom: 4px dotted $milanoRed;
-}
-
-.annotation {
-  @include col100(24px 0 24px 0);
-  max-width: 600px;
-  
-  @include respond(mobile) {
-    @include col100(24px 0 24px 0, column);
-    align-items: center;
-    width: 100%;
-    padding: 0 24px 24px 24px;
-    font-size: 11px;
-  }
-  
-  &__image {
-    flex: 2;
-    
-    & img {
-      max-width: 240px;
-      border-radius: 2px;
-      box-shadow: $darkBgShadow;
-      
-      @include respond(mobile) {
-        max-width: 120px;
-      }
-    }
-  }
-  
-  &__description {
-    flex: 4;
-    padding: 0 0 0 24px;
-    color: $gray;
-    
-    @include respond(mobile) {
-      padding: 24px 12px 0 12px;
-      text-align: left;
-    }
-    
-    & p:first-child {
-      margin-top: 0;
-    }
-  }
 }
