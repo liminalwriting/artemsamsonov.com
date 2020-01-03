@@ -1,0 +1,86 @@
+.profile {
+  display: grid;
+  grid-template-columns: auto 10% auto 10% 15%;
+  grid-template-rows: auto 64px auto;
+  
+  @include respond(mobile) {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  &__title {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    
+    @include respond(mobile) {
+      margin: 0 0 24px 0;
+    }
+  }
+  
+  &__annotation {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    font: $groteskMain;
+    
+    @include respond(mobile) {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      margin: 0 0 24px 0;
+    }
+    
+    p:first-child {
+      margin-top: 12px;
+    }
+    
+  }
+  
+  &__cover {
+    grid-column-start: 5;
+    grid-row-start: 1;
+    justify-self: end;
+    @include col100(0, column);
+    
+    @include respond(mobile) {
+      display: none;
+    }
+  }
+  
+  &__connotation {
+    &-title {
+      grid-column-start: 1;
+      grid-row-start: 3;
+      
+      @include respond(mobile) {
+        margin: 0 0 24px 0;
+      }
+    }
+    
+    &-contents {
+      grid-column-start: 3;
+      grid-row-start: 3;
+      
+      @include respond(mobile) {
+        grid-column-start: 1;
+        grid-row-start: 4;
+      }
+    }
+    
+    &-section {
+      @include col100(0 0 48px 0, column);
+      
+      @include respond(mobile) {
+        @include col100(0 0 16px 0, column);
+      }
+    }
+    
+    &-link {
+      color: $milanoRed;
+      font: $groteskExtraLarge;
+      margin-bottom: 12px;
+      
+      @include respond(mobile) {
+        font: $groteskLarge;
+      }
+    }
+  }
+}

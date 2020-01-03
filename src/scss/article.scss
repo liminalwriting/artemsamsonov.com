@@ -1,60 +1,10 @@
 .article {
-  width: 768px;
-  margin-top: 32px;
+  @include colauto(0, column);
+  align-content: center;
+  max-width: 768px;
   
   @include respond(mobile) {
     @include col100(0, column);
-  }
-  
-  &__info {
-    @include col100(12px 0 0 0);
-    text-transform: lowercase;
-    
-    @include respond(mobile) {
-      @include col100(24px 0 0 0);
-    }
-  }
-  
-  &__annotation {
-    @include col80(0 64px 0 0, column);
-    font: $groteskMain;
-    
-    @include respond(mobile) {
-      @include col100(0 0 0 0, column);
-    }
-    
-    p:first-child {
-      margin-top: 0;
-    }
-    
-    a {
-      color: $milanoRed;
-    }
-  }
-  
-  &__cover {
-    @include col20(0);
-    
-    @include respond(mobile) {
-      display: none;
-    }
-    
-  }
-  
-  &__connotation {
-    @include col100(24px 0 0 0, column);
-    
-    &-headline {
-      @include col100(8px 0 24px 0, column);
-      
-      @include respond(mobile) {
-        @include col100(0 0 12px 0, column);
-      }
-    }
-    
-    &-section {
-      @include col100(4px 0 32px 0, column);
-    }
   }
   
   &__content {

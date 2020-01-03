@@ -13,27 +13,24 @@ html
     )
 body.body_light
     +header().header_light
-    div.content
-        div.article
-            +article-header('рассказы разных бед')
-            div.article__info
-                div.article__annotation
-                    p «Когда студенты не могут снимать жизнь другого, это значит, что они поглощены чем-то, собственной драмой. Как правило, это отношения с родителями, с мамой. И тут все устоявшиеся метафоры о святом имени мамы выполняют роль убийцы.
-                    p Тогда я прошу все отбросить и рассказать об этой истории, пусть она очень личная, пусть это пока только мир твоей семьи. Но тебе необходимо рассказать о своих страданиях, раз они не дают тебе двигаться дальше: снять об этом кино или написать книгу».
-                    p
-                        i Марина Разбежкина, из интервью «Горькому»
-                div.article__cover
-                    img(src="../../img/misfortunes-cover.jpg")
-            div.article__connotation
-                div.article__connotation-headline
-                    h2 содержание
-                div.article__connotation-section
-                    h5 Свои беды
-                    +connotationRow('Купе', 'coupe')
-                    +connotationRow('Гробы', 'coffins')
-                    +connotationRow('Витрины', 'shop-windows')
-                div.article__connotation-section
-                    h5 Чужие
-                    +connotationRow('Уроборос', 'uroboros')
-                    +connotationRow('Вингер', 'winger')
-        +footer()
+    div.profile
+        div.profile__title
+            h1 рассказы разных бед
+        div.profile__annotation
+            p «Когда студенты не могут снимать жизнь другого, это значит, что они поглощены чем-то, собственной драмой. Как правило, это отношения с родителями, с мамой. И тут все устоявшиеся метафоры о святом имени мамы выполняют роль убийцы.
+            p Тогда я прошу все отбросить и рассказать об этой истории, пусть она очень личная, пусть это пока только мир твоей семьи. Но тебе необходимо рассказать о своих страданиях, раз они не дают тебе двигаться дальше: снять об этом кино или написать книгу».
+            p
+                i Марина Разбежкина, из интервью «Горькому»
+        div.profile__cover
+            img(src="../../img/misfortunes-cover.jpg")
+        div.profile__connotation-title
+            h1 содержание
+        div.profile__connotation-contents
+            div.profile__connotation-section
+                a.profile__connotation-link(href='coupe.html') купе
+                a.profile__connotation-link(href='coffins.html') гробы
+                a.profile__connotation-link(href='shop-windows.html') витрины
+            div.profile__connotation-section
+                a.profile__connotation-link(href='uroboros.html') Уроборос
+                a.profile__connotation-link(href='winger.html') Вингер
+    +footer()

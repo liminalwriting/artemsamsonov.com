@@ -13,9 +13,9 @@
 @import "../components/related-items/related-items";
 @import "../components/go-back/go-back";
 @import "../components/book-card/book-card";
-@import "../components/connotation-row/connotation-row";
 
-@import "../pages/article-template/article-template";
+@import "article";
+@import "profile";
 @import "../pages/index/index";
 @import "../pages/fuji/fuji";
 @import "../pages/menu/menu";

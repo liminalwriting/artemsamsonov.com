@@ -13,17 +13,16 @@ html
     )
 body.body_light
     +header().header_light
-    div.content
-        div.article
-            +article-header('разбитое зеркало')
-            div.article__info
-                div.article__annotation
-                    p Сценарист «Чёрного зеркала» Чарли Брукер придумал захватывающую историю, но в России, как вы понимаете, она примет совершенно иные очертания.
-                div.article__cover
-                    img(src="../../img/broken-mirror-cover.jpg")
-            div.article__connotation
-                div.article__connotation-headline
-                    h2 содержание
-                div.article__connotation-section
-                    +connotationRow('интервью', 'interview')
-        +footer()
+    div.profile
+        div.profile__title
+            h1 разбитое зеркало
+        div.profile__annotation
+            p Сценарист «Чёрного зеркала» Чарли Брукер придумал захватывающую историю, но в России, как вы понимаете, она примет совершенно иные очертания.
+        div.profile__cover
+            img(src="../../img/broken-mirror-cover.jpg")
+        div.profile__connotation-title
+            h1 содержание
+        div.profile__connotation-contents
+            div.profile__connotation-section
+                a.profile__connotation-link(href='interview.html') интервью
+    +footer()

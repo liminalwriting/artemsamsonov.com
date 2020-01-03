@@ -13,29 +13,28 @@ html
     )
 body.body_light
     +header().header_light
-    div.content
-        div.article
-            +article-header('чужие снимки')
-            div.article__info
-                div.article__annotation
-                    p Сборник короткой прозы о смешных, наивных, но в целом замечательных людях. Большинство историй написаны и опубликованы в самиздат-сообществе
-                        =" "
-                        a(href="https://vk.com/drudder" target="blank") «Dutch Rudder».
-                div.article__cover
-                    img(src="../../img/shoots-cover.jpg")
-            div.article__connotation
-                div.article__connotation-headline
-                    h2 содержание
-                div.article__connotation-section
-                    +connotationRow('сосед серёга', 'serega')
-                    +connotationRow('арбуз', 'watermelon')
-                    +connotationRow('бухгалтер', 'bookkeeper')
-                    +connotationRow('фэтфоб', 'fatfob')
-                    +connotationRow('начальник', 'boss')
-                    +connotationRow('хобби', 'hobby')
-                    +connotationRow('сонечка marmelade', 'marmelade')
-                    +connotationRow('депутат елистратыч', 'deputy')
-                    +connotationRow('доставщик суси', 'susi')
-                    +connotationRow('хаслер', 'hustle')
-                    +connotationRow('кисточка', 'brush')
-        +footer()
+    div.profile
+        div.profile__title
+            h1 чужие снимки
+        div.profile__annotation
+            p Сборник короткой прозы о смешных, наивных, но в целом замечательных людях. Большинство историй написаны и опубликованы в самиздат-сообществе
+                =" "
+                a(href="https://vk.com/drudder" target="blank") «Dutch Rudder».
+        div.profile__cover
+            img(src="../../img/shoots-cover.jpg")
+        div.profile__connotation-title
+            h1 содержание
+        div.profile__connotation-contents
+            div.profile__connotation-section
+                a.profile__connotation-link(href='serega.html') сосед серёга
+                a.profile__connotation-link(href='watermelon.html') арбуз
+                a.profile__connotation-link(href='bookkeeper.html') бухгалтер
+                a.profile__connotation-link(href='fatfob.html') фэтфоб
+                a.profile__connotation-link(href='boss.html') начальник
+                a.profile__connotation-link(href='hobby.html') хобби
+                a.profile__connotation-link(href='marmelade.html') сонечка marmelade
+                a.profile__connotation-link(href='deputy.html') депутат елистратыч
+                a.profile__connotation-link(href='susi.html') доставщик суси
+                a.profile__connotation-link(href='hustle.html') хаслер
+                a.profile__connotation-link(href='brush.html') кисточка
+    +footer()

@@ -7,11 +7,12 @@ html {
 }
 
 body {
-  padding: 32px;
+  padding: 80px 32px 32px 32px;
   margin: 0;
+  text-transform: lowercase;
   
   @include respond(mobile) {
-    padding: 24px;
+    padding: 80px 24px 24px 24px;
     height: 100vh;
   }
 }
@@ -23,14 +24,19 @@ body {
   
   &_light {
     background-color: $soapStone;
+    
+    a {
+      color: $milanoRed;
+    }
   }
 }
 
 .content {
-  @include col100(64px 0 0 0, column, flex-start, center);
+  @include col100(0, column, flex-start, center);
+  background-color: lightgrey;
   
   @include respond(mobile) {
-    @include col100(12px 0 0 0, column, flex-start, center);
+    @include col100(0, column, flex-start, center);
   }
   
   &_mobile-menu {
