@@ -1,7 +1,7 @@
 .article {
   @include colauto(0, column);
   align-content: center;
-  max-width: 768px;
+  max-width: 700px;
   text-transform: none;
   
   @include respond(mobile) {
@@ -19,6 +19,7 @@
     
     h2 {
       margin: 64px 0 0 0;
+      text-transform: lowercase;
       
       &:first-child {
         margin-top: 24px;
@@ -45,6 +46,11 @@
   
   &__image {
     margin: 24px 0 0 0;
+    width: 50%;
+    
+    img {
+      width: 50%;
+    }
     
     @include respond(mobile) {
       margin: 14px -32px 0 -32px;

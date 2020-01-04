@@ -34,22 +34,23 @@ body {
     @include col100(0, column, flex-start, center);
   }
 }
+
+blockquote {
+  color: darken($milanoRed, 10%);
   
-  blockquote {
-    color: darken($milanoRed, 10%);
-    
-    @include respond(mobile) {
-      margin: 4px 12px;
-    }
+  @include respond(mobile) {
+    margin: 4px 12px;
   }
-  
-  hr {
-    border-color: $soapStone;
-    border-style: dashed;
-    margin: 48px 0;
-    
-    @include respond(mobile) {
-      width: 100%;
-      margin: 14px 0;
-    }
-  }
+}
+
+code {
+  @include colauto(8px 16px);
+  border-radius: 4px;
+  background-color: darken($soapStone, 5%);
+  font: $groteskMain;
+  margin: 0 0 8px 0;
+}
+
+.code_right {
+  justify-content: end;
+}
