@@ -11,57 +11,26 @@
   grid-row-start: 1;
   
   @include col80(64px 0);
-  font: 3em/1.2em "PT Root UI Bold";
+  font: $groteskExtraLarge;
   font-weight: 700;
   color: $white;
+  
+  @include respond(mobile) {
+    @include col100(0);
+    font: $groteskLarge;
+  }
   
   p {
     margin: 0;
   }
 }
 
-/* #secondary-info {
-  grid-column-start: 1;
-  grid-column-end: 21;
-  grid-row-start: 2;
-  
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
-  grid-template-rows: auto;
-  grid-template-areas: "fact-1 . fact-2 . fact-3 . fact-4";
-  
-  font: $groteskMain;
-  border-top: 1px solid $codGray;
-  border-bottom: 1px solid $codGray;
-  color: $gray;
-  padding: 4px 0 8px 0;
-  margin-bottom: 64px;
-}
-
-#fact {
-  &-1 {
-    grid-area: fact-1;
-  }
-  
-  &-2 {
-    grid-area: fact-2;
-  }
-  
-  &-3 {
-    grid-area: fact-3;
-  }
-  
-  &-4 {
-    grid-area: fact-4;
-  }
-} */
-
 #writing {
   grid-column-start: 1;
   grid-column-end: 21;
   grid-row-start: 2;
   
-  @include col100(64px 0 0 0, column);
+  @include col100(72px 0 0 0, column);
 }
 
 .writing {
@@ -75,16 +44,25 @@
   grid-column-end: 21;
   grid-row-start: 3;
   
-  @include col100(128px 0 0 0);
+  @include col100(120px 0 0 0);
   font: $groteskExtraLarge;
   font-weight: 700;
   color: $gray;
   
+  @include respond(mobile) {
+    @include col100(32px 0 24px 0);
+    font: $groteskMain;
+  }
+  
   a {
     color: darken($chromeYellow, 30%);
+    
+    @include respond(mobile) {
+      color: darken($chromeYellow, 15%);
+    }
   }
   
   p {
-    margin-bottom: 0;
+    margin: 0;
   }
 }

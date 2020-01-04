@@ -40,11 +40,15 @@
     }
     
     @include respond(mobile) {
-      display: none;
+      @include col50(0 12px, row, flex-end);
     }
     
     &-elem {
       @include colauto(0 0 0 48px);
+      
+      @include respond(mobile) {
+        @include colauto(0 0 0 24px);
+      }
     }
   }
   
