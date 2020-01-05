@@ -14,6 +14,7 @@
   @include respond(mobile) {
     margin: 0 0 48px 0;
     font: $antiquaSmall;
+    line-height: 1.7;
   }
   
   h1 {
@@ -66,10 +67,16 @@
     
     img {
       width: 50%;
+      
+      @include respond(mobile) {
+        margin: 0;
+        width: 100%;
+      }
     }
     
     @include respond(mobile) {
-      margin: 14px -32px 0 -32px;
+      margin: 14px -32px 0 0;
+      width: 100%;
     }
     
     &-caption {

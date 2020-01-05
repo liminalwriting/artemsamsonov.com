@@ -19,6 +19,10 @@ body {
 
 p {
   margin: 0 0 32px 0;
+  
+  @include respond(mobile) {
+    margin: 0 0 24px 0;
+  }
 }
 
 .body {
