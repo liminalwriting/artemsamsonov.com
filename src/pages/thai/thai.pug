@@ -15,9 +15,7 @@ body.body_light
     +header()
     div.content
         div.article
-            +articleHeadline('в тае снег растаял')
-            div.article__content
-                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/_other/thai.md
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/_other/thai.md
             div.article__next
                 a(href="index.html#writing") ← вернуться в содержание
     +footer()

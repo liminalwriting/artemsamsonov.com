@@ -8,23 +8,39 @@
     @include col100(0, column);
   }
   
-  &__content {
-    font: $antiquaMain;
+  font: $antiquaMain;
+  margin: 0 0 48px 0;
+  
+  @include respond(mobile) {
     margin: 0 0 48px 0;
+    font: $antiquaSmall;
+  }
+  
+  h1 {
+    margin: 0 0 48px 0;
+    text-transform: lowercase;
     
-    @include respond(mobile) {
-      margin: 0 0 48px 0;
-      font: $antiquaSmall;
+    + .article__annotation {
+      margin: -24px 0 48px 0;
     }
+  }
+  
+  h2 {
+    margin: 24px 0 32px 0;
+    text-transform: lowercase;
     
-    h2 {
-      margin: 64px 0 0 0;
-      text-transform: lowercase;
-      
-      &:first-child {
-        margin-top: 24px;
-      }
+    + .article__annotation {
+      margin: -16px 0 32px 0;
     }
+  }
+  
+  a {
+    color: $milanoRed;
+  }
+  
+  &__annotation {
+    font: $groteskSmall;
+    text-transform: lowercase;
   }
   
   &__next {

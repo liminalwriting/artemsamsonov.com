@@ -16,9 +16,7 @@ body.body_light
     div.content
         div.article
             +article-breadcrumb('рассказы разных бед', 'misfortunes')
-            +articleHeadline('витрины')
-            div.article__content
-                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/misfortunes/shop-windows.md
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/misfortunes/shop-windows.md
             div.article__next
                 a(href="misfortunes.html") ← вернуться в содержание
                 a(href="coffins.html") читать предыдущий рассказ «гробы» →

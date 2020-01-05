@@ -16,9 +16,7 @@ body.body_light
     div.content
         div.article
             +article-breadcrumb('рассказы разных бед', 'misfortunes')
-            +articleHeadline('вингер')
-            div.article__content
-                include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/misfortunes/winger.md
+            include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/misfortunes/winger.md
             div.article__next
                 a(href="misfortunes.html") ← вернуться в содержание
                 a(href="uroboros.html") читать предыдущий рассказ «уроборос» →
