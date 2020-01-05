@@ -6285,9 +6285,9 @@ sockjs@0.3.19:
     uuid "^3.0.1"
 
 soshnikov-writing@^1.0.21:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/soshnikov-writing/-/soshnikov-writing-1.1.4.tgz#000bebb92e2027394b9137b7362d67aff8fbdd9d"
-  integrity sha512-bBfxfvE712lzZo6Ej5MWeOXf6/0zbn9PXTlYAQp2dwgIXeaEiiNszBU1sIiOahRRfuSYu3dxGlQ15ONqFhRc8g==
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/soshnikov-writing/-/soshnikov-writing-1.1.5.tgz#e1d560c2c466b3c494a212713e14b44483e4ab63"
+  integrity sha512-iuloJ7CY0tfxAIE5qOORXlT4vs+kDIn5aXovg+69z6tjNi87YxAmoUIvV62M5Pe9AMFsZ6SXeZ1xQGtKi+mp6g==
 
 source-list-map@^2.0.0:
   version "2.0.1"
