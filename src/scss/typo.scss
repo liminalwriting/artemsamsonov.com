@@ -40,30 +40,30 @@ h1, h2, h5 {
 
 @font-face {
   font-family: 'KTB';
-  src: url('../../fonts/antiqua/type.eot');
-  src: url('../../fonts/antiqua/type.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/antiqua/type.woff2') format('woff2'),
-  url('../../fonts/antiqua/type.ttf') format('truetype');
+  src: url('../fonts/type.eot');
+  src: url('../fonts/type.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/type.woff2') format('woff2'),
+  url('../fonts/type.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Root UI Regular';
-  src: url('../../fonts/pt-root/pt-root-ui-regular/pt-root-ui-regular.eot');
-  src: url('../../fonts/pt-root/pt-root-ui-regular/pt-root-ui-regular.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/pt-root/pt-root-ui-regular/pt-root-ui-regular.woff2') format('woff2'),
-  url('../../fonts/pt-root/pt-root-ui-regular/pt-root-ui-regular.ttf') format('truetype');
+  src: url('../fonts/pt-root-ui-regular.eot');
+  src: url('../fonts/pt-root-ui-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/pt-root-ui-regular.woff2') format('woff2'),
+  url('../fonts/pt-root-ui-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Root UI Bold';
-  src: url('../../fonts/pt-root/pt-root-ui-bold/pt-root-ui-bold.eot');
-  src: url('../../fonts/pt-root/pt-root-ui-bold/pt-root-ui-bold.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/pt-root/pt-root-ui-bold/pt-root-ui-bold.woff2') format('woff2'),
-  url('../../fonts/pt-root/pt-root-ui-bold/pt-root-ui-bold.ttf') format('truetype');
+  src: url('../fonts/pt-root-ui-bold.eot');
+  src: url('../fonts/pt-root-ui-bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/pt-root-ui-bold.woff2') format('woff2'),
+  url('../fonts/pt-root-ui-bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

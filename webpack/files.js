@@ -21,7 +21,7 @@ module.exports = function (paths) {
               loader:  'file-loader',
               options: {
                 name:       '[name].[ext]',
-                outputPath: 'type/'
+                outputPath: paths
               }
             }
           ]

@@ -14,11 +14,13 @@ const pugToHtml = require('./webpack/pug-to-html');
 
 /* ПУТИ */
 const PATHS = {
-  dist:    path.join(__dirname, './docs'),
-  distImg: path.join(__dirname, './docs/img'),
-  src:     path.join(__dirname, './src'),
-  img:     path.join(__dirname, './src/img'),
-  styles:  path.join(__dirname, 'src/scss')
+  dist:      path.join(__dirname, './docs'),
+  distImg:   path.join(__dirname, './docs/img'),
+  src:       path.join(__dirname, './src'),
+  img:       path.join(__dirname, './src/img'),
+  styles:    path.join(__dirname, 'src/scss'),
+  fonts:     path.join(__dirname, 'src/fonts'),
+  distFonts: path.join(__dirname, './docs/fonts')
 };
 
 /* ПЛАГИНЫ */
@@ -31,6 +33,12 @@ let plugins = [
     {
       from: PATHS.img,
       to:   PATHS.distImg
+    }
+  ]),
+  new CopyWebpackPlugin([
+    {
+      from: PATHS.fonts,
+      to:   PATHS.distFonts
     }
   ])
 ];
