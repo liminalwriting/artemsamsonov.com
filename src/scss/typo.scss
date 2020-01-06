@@ -1,9 +1,9 @@
 @import "colors";
 
-$groteskExtraLarge: 48px/56px "PT Root UI Bold";
-$groteskLarge: 32px/40px "PT Root UI Bold";
-$groteskMain: 16px/23px "PT Root UI Regular";
-$groteskSmall: 14px/20px "PT Root UI Regular";
+$groteskExtraLarge: 48px/56px "PT Root UI Bold", 'PT Sans', Arial, sans-serif;
+$groteskLarge: 32px/40px "PT Root UI Bold", 'PT Sans', Arial, sans-serif;
+$groteskMain: 16px/23px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+$groteskSmall: 14px/20px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
 
 $antiquaMain: 20px/34px "KTB", Georgia, serif;
 $antiquaSmall: 16px/24px "KTB", Georgia, serif;
