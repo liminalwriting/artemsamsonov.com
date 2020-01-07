@@ -2,7 +2,7 @@ include ../../components/head/head
 include ../../components/header/header
 include ../../components/article-headline/article-headline
 include ../../components/article-breadcrumb/article-breadcrumb
-include ../../components/footer/footer
+
 doctype html
 html
     +head(
@@ -18,4 +18,4 @@ body.body_light
             include:markdown-it(plugins=['markdown-it-attrs']) ../../../node_modules/soshnikov-writing/writing/stories/_other/thai.md
             div.article__next
                 a(href="index.html#writing") ← вернуться в содержание
-    +footer()
+
