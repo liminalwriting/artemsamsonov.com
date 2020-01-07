@@ -6,7 +6,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const merge = require('webpack-merge');
-const files = require('./webpack/files');
 const pug = require('./webpack/pug');
 const script = require('./webpack/script');
 const scss = require('./webpack/scss');
@@ -14,12 +13,12 @@ const pugToHtml = require('./webpack/pug-to-html');
 
 /* ПУТИ */
 const PATHS = {
-  dist:      path.join(__dirname, './docs'),
-  distImg:   path.join(__dirname, './docs/img'),
   src:       path.join(__dirname, './src'),
+  dist:      path.join(__dirname, './docs'),
   img:       path.join(__dirname, './src/img'),
-  styles:    path.join(__dirname, 'src/scss'),
-  fonts:     path.join(__dirname, 'src/fonts'),
+  distImg:   path.join(__dirname, './docs/img'),
+  styles:    path.join(__dirname, './src/scss'),
+  fonts:     path.join(__dirname, './src/fonts'),
   distFonts: path.join(__dirname, './docs/fonts')
 };
 
@@ -33,12 +32,15 @@ let plugins = [
     {
       from: PATHS.img,
       to:   PATHS.distImg
-    }
-  ]),
-  new CopyWebpackPlugin([
+    },
     {
       from: PATHS.fonts,
       to:   PATHS.distFonts
+    },
+    {
+      from:   './CNAME',
+      to:     'CNAME',
+      toType: 'file'
     }
   ])
 ];
@@ -62,7 +64,6 @@ const common = merge([
       hints: false
     }
   },
-  files(),
   pug(),
   script(),
   scss()
