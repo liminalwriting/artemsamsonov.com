@@ -38,8 +38,8 @@ let plugins = [
       to:   PATHS.distFonts
     },
     {
-      from:   './CNAME',
-      to:     'CNAME',
+      from:   './.htaccess',
+      to:     '.htaccess',
       toType: 'file'
     }
   ])
