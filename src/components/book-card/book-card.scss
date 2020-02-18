@@ -25,7 +25,7 @@
   }
   
   &__description {
-    @include col25(0);
+    @include col30(0);
     
     @include respond(mobile) {
       @include col100(12px 0);

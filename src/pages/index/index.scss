@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(20, 5%);
   grid-template-rows: repeat(3, auto);
+  padding: 96px 0 0 0;
 }
 
 #main-info {
@@ -10,10 +11,13 @@
   grid-column-end: 21;
   grid-row-start: 1;
   
-  @include col80(64px 0);
-  font: $groteskExtraLarge;
-  font-weight: 700;
+  @include col45(0 16px 64px 0, column);
+  font: $groteskLarge;
   color: $white;
+  
+  p {
+    padding: 0 0 24px 0;
+  }
   
   @include respond(mobile) {
     @include col100(0);
@@ -22,6 +26,12 @@
   
   p {
     margin: 0;
+  }
+}
+
+.main-info {
+  &__wrike-link {
+    color: $wrike;
   }
 }
 
@@ -55,10 +65,10 @@
   }
   
   a {
-    color: darken($chromeYellow, 30%);
+    color: $coldBlue;
     
     @include respond(mobile) {
-      color: darken($chromeYellow, 15%);
+      color: darken($coldBlue, 15%);
     }
   }
   
