@@ -37,7 +37,9 @@ p {
 }
 
 .content {
-  @include col100(0, column, flex-start, center);
+  @include col100(0, flex-start);
+  max-width: 1080px;
+  margin: 0 auto;
   
   @include respond(mobile) {
     @include col100(0, column, flex-start, center);
