@@ -40,7 +40,7 @@
     }
     
     @include respond(mobile) {
-      @include col50(0 12px, row, flex-end);
+      display: none;
     }
     
     &-elem {

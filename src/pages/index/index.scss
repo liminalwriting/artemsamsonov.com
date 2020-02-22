@@ -4,6 +4,10 @@
   grid-template-columns: repeat(20, 5%);
   grid-template-rows: repeat(3, auto);
   padding: 96px 0 0 0;
+  
+  @include respond(mobile) {
+    padding: 32px 0 0 0;
+  }
 }
 
 #main-info {
@@ -20,8 +24,8 @@
   }
   
   @include respond(mobile) {
-    @include col100(0);
-    font: $groteskLarge;
+    @include col100(0, column);
+    font: $groteskMain;
   }
   
   p {
@@ -68,7 +72,7 @@
     color: $coldBlue;
     
     @include respond(mobile) {
-      color: darken($coldBlue, 15%);
+      color: $coldBlue;
     }
   }
   

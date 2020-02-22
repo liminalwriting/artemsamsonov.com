@@ -38,6 +38,19 @@
   &__list {
     @include colauto(0, column);
     font: $groteskMain;
+    
+    a {
+      margin: 0 0 8px 0;
+      
+      @include respond(mobile) {
+        margin: 0 0 16px 0;
+      }
+    }
+    
+    @include respond(mobile) {
+      font: 16px/20px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+      
+    }
   }
   
   &__text {
@@ -46,11 +59,20 @@
     margin: 0 auto;
     font: $groteskMedium;
     
+    @include respond(mobile) {
+      width: auto;
+      font: 18px/30px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+    }
+    
     span {
       font: $groteskExtraSmall;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       margin: 48px 0 8px 0;
+      
+      @include respond(mobile) {
+        margin: 24px 0 8px 0;
+      }
     }
     
     ul {
@@ -93,7 +115,7 @@
     }
     
     @include respond(mobile) {
-      margin: 14px -32px 0 0;
+      margin: 14px -32px 32px 0;
       width: 100%;
     }
     
