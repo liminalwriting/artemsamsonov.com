@@ -1,5 +1,5 @@
 .article {
-  @include col100(0 10% 0 0, column);
+  @include col100(48px 10% 0 0, column);
   text-transform: none;
   
   @include respond(mobile) {
@@ -15,7 +15,6 @@
   
   h1 {
     margin: 0 0 48px 0;
-    text-transform: lowercase;
     
     + .article__annotation {
       margin: -24px 0 48px 0;
@@ -23,9 +22,8 @@
   }
   
   h2 {
-    margin: 0 0 24px 0;
-    text-transform: lowercase;
-    
+    margin: 24px 0 24px 0;
+
     + .article__annotation {
       margin: -16px 0 32px 0;
     }
@@ -95,11 +93,16 @@
       }
       
     }
+
+    &_secondary {
+      @include col100(0 0 8px 24px);
+      border-left: 4px solid $coldBlue;
+    }
   }
   
   &__image {
     @include col100(0, column);
-    margin: 16px 0 48px 0;
+    margin: 0 0 24px 0;
     
     &-auto {
       width: 320px !important;
