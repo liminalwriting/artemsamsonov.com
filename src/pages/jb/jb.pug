@@ -22,12 +22,12 @@ body.body_light
                     br
                     a(href="https://www.figma.com/proto/kpT8Qve3Dmq7KySXzt6RIq/Jet-Brains?node-id=99%3A47&viewport=313%2C46%2C0.125&scaling=scale-down") Figma clickable prototype
                 h2 Which way I decided to follow
-                p When I read the test task, I immediately thought about the "Paradox of the active user". According to the article "
+                p When I read the design exercise, I immediately thought about the "Paradox of the active user". According to the article "
                     a(href="https://www.nngroup.com/articles/complex-application-design/") 8 Design Guidelines for Complex Applications
                     |" by Nielsen Norman Group, users are more motivated to begin their tasks than spend time-consuming tutorials, documentation, or other types of help or setup content.
-                p Based on this research, I tried to embed the "Productivity Guide" features to the code editor. I assumed that we can define most of the loss of productivity's cases and prompt a user to use a concrete feature, not the long list of different features.
+                p Based on this research, I tried to embed the "Productivity Guide" features to the code editor. I assumed that we can define most of the cases connected to the productivity losses and prompt a user to use a concrete feature, not the long list of different features.
                 p For example, we can track multiple typing of the same variables, functions, etc. and prompt a user to use a "Basic code completion" or "Camel prefixes in code completion" features.
-                p.article__text_secondary Code completion looks like the easiest category to catching productivity losses. I hope that we can design a lot of rules for other categories. For example, we might track copying of code elements. If user copies element but doesn't paste it inside the IDEA, we can assume that he pastes it to the browser to search some documentation. Then we suggest trying to press Shift+F1 hotkey ("Browse external documentation" feature).
+                p.article__text_secondary "Code completion" looks like the easiest category to catch productivity losses. I hope that we can design a lot of rules for other categories. For example, we might track copying of code elements. If user copies element but doesn't paste it inside the IDEA, we can assume that he pastes it to the browser to search some documentation. Then we suggest trying to press Shift+F1 hotkey ("Browse external documentation" feature).
                 h2 How we're gonna show it in the interface
                 p Firstly I decided to use the same hint as Quick Fixes' component:
                 figure.article__image
@@ -37,48 +37,48 @@ body.body_light
                 p It would be a perspective hypothesis, but the importunity of this decision was confusing me. IDEA has a lot of close to the code features (for example, quick fixes hint's, intention bulbs, colour highlighting). One more tip near the code can annoy users:
                 figure.article__image
                     iframe(width="640" height="380" src="https://www.youtube.com/embed/jNE6T4oaRNE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                p So, I'd started to search for another place for showing the tips. Then I remembered about Event Log notifications and tried to place "Productivity Guide" functionality to the IDE's footer.
-                figure.article__image
-                    iframe(width="640" height="380" src="https://www.youtube.com/embed/E60TJW7wdTo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                p So, I'd started to search for another place to show the tips. Then I remembered about "Event Log" notifications and tried to place "Productivity Guide" to the IDE's footer:
                 figure.article__image
                     a(href="../../img/jb-004.jpg" target="blank")
                         img(src="../../img/jb-004.jpg")
+                figure.article__image
+                    iframe(width="640" height="380" src="https://www.youtube.com/embed/E60TJW7wdTo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
                 p As for me, this way is a good compromise between saving the context and unobtrusiveness. We prompt the user concrete way to boost his productivity as quickly as possible and suggest to learn more features.
-                p Of course, the user can disable this hints in Settings:
+                p Of course, the user can disable this hints in the "Settings":
                 figure.article__image
                     a(href="../../img/jb-002.jpg" target="blank")
                         img(src="../../img/jb-002.jpg")
-                p Also, I suggest to add "Productivity boost" panel for analyzing possible ways to increase user's productivity. I made this interface based on "Problems" panel:
+                p Also, I suggest adding "Productivity boost" panel to analyze possible ways to increase user's productivity. I made this interface based on "Problems" panel:
                 figure.article__image
                     a(href="../../img/jb-003.jpg" target="blank")
                         img(src="../../img/jb-003.jpg")
-                p Hints in the right panel are available:
+                p Hints in the right panel are available too:
                 figure.article__image
                     iframe(width="640" height="380" src="https://www.youtube.com/embed/bwRMHduwszQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
                 h2 How we can level up this solution
-                p Time is the best resource for the modern era and "Productivity Guide" has perfect info about saving it. We can make this metric predictable and tell users about lost savings. For example, we can analyze current document and show the places where user can save the time if he uses our productivity features:
+                p Time is the best resource for the modern era and "Productivity Guide" should have info about saving it. We can make this metric predictable and tell users about lost savings. For example, we can analyze a document and show the places where user can save time if he uses our productivity features:
                 figure.article__image
                     a(href="../../img/jb-005.jpg" target="blank")
                         img(src="../../img/jb-005.jpg")
-                p Also, we can add functionality for completing known issues:
+                p Also, we can add "Mark as read" button for completing known issues...
                 figure.article__image
                     a(href="../../img/jb-006.jpg" target="blank")
                         img(src="../../img/jb-006.jpg")
-                p We should mark features as known in the Productivity Boost modal:
+                p ... and mark features as known in the "Productivity Guide" modal:
                 figure.article__image
                     a(href="../../img/jb-007.jpg" target="blank")
                         img(src="../../img/jb-007.jpg")
-                p If user mark a feature as a known, we don't show tips in footer and Productivity Boost panel.
+                p If user marks a feature as a known, we don't show tips in the footer and "Productivity Boost" panel.
                 h2 How we can check the decision
-                p Firstly I thought we can track the count of Community Boost panels' and modal's opening before release and after. Also, we can track the growth of marking features as known.
-                p.article__text_secondary In this case we should add hide-option. Otherwise, users can mark unnecessary features as known.
+                p Firstly I thought we can track the count of "Community Boost" panel's and "Community Guide" modal's openings before release and after. Also, we can track the growth of features marking as known.
+                p.article__text_secondary In this case, we should add the "Hide" option. Otherwise, users can mark unnecessary features as known.
                 figure.article__image
                     a(href="../../img/jb-008.jpg" target="blank")
                         img(src="../../img/jb-008.jpg")
-                p But I think it isn't the main goal for us. Why are you developing Community Guide? As for me, you want to improve work efficiency. If we decide to analyze spent time for every case, we can get we difference between average spending time before and after using the feature.
-                p.article__text_secondary For example, get the "Editor delete line" feature. Let's compare the average time what users spent before using Cmd+Del and after.
+                p But I think these aren't the main goals for us. Why are you developing "Community Guide"? As for me, you want to improve work efficiency. If we decide to analyze spent time for every case, we can get we difference between average spending time before and after using the feature.
+                p.article__text_secondary Let's take the "Editor delete line" feature. We can compare the average time what users spent before using Cmd+Del and after.
                 p I understand, that we can't track all of the features. For example, I can't image how we can measure "Directory Diff" efficiency (comparison "didn't use/using now" is unreliable). In such cases, we can use user testing.
                 h2 A couple of things which confuse me in this decision
-                p I don't know your analytics possibilities. Maybe some metrics look like overengineering or you can't analyze all of the user data into the big projects. Anyway, I am sure that we shouldn't improve the attendance of the Community Guide modal, we should try to increase user efficiency. Community Guide modal is just an instrument for it.
-                p All of designed cases might be worked out in depth. I didn't pay attention for keyboard navigation or narrow cases. If you want to look at the some of it in details or discuss my decisions, lemme know.
+                p I don't know your analytics possibilities. Maybe some metrics look like overengineering or you can't analyze all of the user data into the big projects. Anyway, I am sure that we shouldn't only improve the attendance of the "Community Guide" modal, we should try to increase user productivity in general. "Community Guide" modal is just an instrument for it.
+                p All of the designed cases might be worked out in-depth. I didn't pay attention for keyboard navigation or narrow cases. If you want to look at the some of it in details or discuss my decisions, lemme know.
                 p Thanks for attention!
