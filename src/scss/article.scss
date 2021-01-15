@@ -58,7 +58,7 @@
     font: $groteskMedium;
     
     @include respond(mobile) {
-      width: auto;
+      @include col100(0, column);
       font: 18px/30px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
     }
     
