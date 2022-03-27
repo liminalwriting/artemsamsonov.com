@@ -1,50 +1,85 @@
 @import "colors";
 
-$groteskExtraLarge: 48px/64px "PT Root UI Bold", 'PT Sans', Arial, sans-serif;
-$groteskLarge: 24px/34px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
-$groteskMedium: 20px/34px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
-$groteskMain: 18px/27px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
-$groteskSmall: 14px/20px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
-$groteskExtraSmall: 12px/18px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+// Desktop Fonts
+$desktopH1: 40px/56px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
+$desktopH2: 32px/44px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
+$desktopH3: 20px/32px "Gotham Bold", 'Dela Gothic One', Arial, sans-serif;
+$desktopMain: 19px/30px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+$desktopSmall: 16px/24px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+
+// Mobile Fonts
+$mobileH1: 40px/56px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
+$mobileH2: 20px/30px "Gotham Bold", 'Dela Gothic One', Arial, sans-serif;
+$mobileH3: 16px/24px "Gotham Medium", 'Dela Gothic One', Arial, sans-serif;
+$mobileMain: 19px/30px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+$mobileSmall: 16px/24px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
 
 a {
   text-decoration: none;
   color: $coldBlue;
 }
 
+h1, h2, h3 {
+  font-weight: bold;
+}
+
 h1 {
-  font: $groteskExtraLarge;
+  font: $desktopH1;
   margin: 0;
-  
+
   @include respond(mobile) {
-    font: $groteskLarge;
+    font: $mobileH1;
   }
 }
 
 h2 {
-  font: $groteskLarge;
+  font: $desktopH2;
   margin: 0;
-  line-height: 1.5;
-}
-h5 {
-  font: $groteskSmall;
-  letter-spacing: 1px;
-  margin: 0 0 4px 0;
-  text-transform: uppercase;
+
+  @include respond(mobile) {
+    font: $mobileH2;
+  }
 }
 
-h1, h2, h5 {
+h3 {
+  font: $desktopH3;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+
+  @include respond(mobile) {
+    font: $mobileH3;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0 0 8px 0;
+    list-style-type: square;
+  }
+}
+
+@font-face {
+  font-family: 'Gotham Black';
+  src: url('../fonts/gotham-black.ttf');
+  font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'KTB';
-  src: url('../fonts/type.eot');
-  src: url('../fonts/type.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/type.woff2') format('woff2'),
-  url('../fonts/type.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Gotham Bold';
+  src: url('../fonts/gotham-bold.ttf');
   font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('../fonts/gotham-medium.ttf');
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
@@ -53,16 +88,6 @@ h1, h2, h5 {
   src: url('../fonts/pt-root-ui-regular.eot?#iefix') format('embedded-opentype'),
   url('../fonts/pt-root-ui-regular.woff2') format('woff2'),
   url('../fonts/pt-root-ui-regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PT Root UI Bold';
-  src: url('../fonts/pt-root-ui-bold.eot');
-  src: url('../fonts/pt-root-ui-bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/pt-root-ui-bold.woff2') format('woff2'),
-  url('../fonts/pt-root-ui-bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

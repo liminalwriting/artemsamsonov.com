@@ -2,28 +2,27 @@
 @import "../../scss/typo";
 
 .header {
-  @include col100(0 48px, row, flex-start, center);
+  @include col90(0, row, flex-start, center);
   position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
   height: 64px;
-  font: $groteskMain;
+  font: $desktopSmall;
   background-color: $darkGray;
-  
-  @include respond(mobile) {
-    @include col100(0 12px, row, flex-start, center);
-  }
+  margin: 0 5%;
+  border-bottom: 1px solid $codGray;
   
   a {
-    color: $coldBlue;
+    color: $white;
   }
   
   &__logo {
-    @include col20(0);
+    @include col20(0, column, center);
+    height: 100%;
     
     @include respond(mobile) {
-      @include col90(0 12px, row, flex-start);
+      @include col50(0, column, center);
     }
     
     &-link {
@@ -33,10 +32,10 @@
   }
   
   &__menu {
-    @include col80(0, row, flex-end);
+    @include col80(0, row, flex-end, center);
     
     @include respond(tablet) {
-      @include col80(0, row, flex-end);
+      @include col50(0, row, flex-end);
     }
     
     @include respond(mobile) {
@@ -44,7 +43,8 @@
     }
     
     &-elem {
-      @include colauto(0 0 0 48px);
+      @include colauto(0 0 0 48px, column, center);
+      height: 100%;
       
       @include respond(mobile) {
         @include colauto(0 0 0 24px);

@@ -1,8 +1,9 @@
 mixin header(theme='light', modeValue='inactive')
     include ../icon/icon
-    div.header(class='header_' + theme)
+    header.header(class='header_' + theme)
         div.header__logo
-            a.header__logo-link(href="index.html") артём самсонов
-        div.header__menu
-            a.header__menu-elem(href="http://artemsamsonov.com/my-experience") портфолио
-            a.header__menu-elem(href="http://artemsamsonov.com/#contacts") контакты
+            a.header__logo-link(href="index.html") Артём Самсонов
+        //div.header__menu
+            a.header__menu-elem(href="http://artemsamsonov.com/skills") Навыки
+            a.header__menu-elem(href="http://artemsamsonov.com/my-experience") Работы
+            a.header__menu-elem(href="http://artemsamsonov.com/#contacts") Контакты

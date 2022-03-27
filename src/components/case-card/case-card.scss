@@ -1,7 +1,7 @@
-.book-card {
+.case-card {
   @include col100(4px 0 16px 0, row, space-between);
   color: $white;
-  font: $groteskMain;
+  font: $desktopSmall;
   border-top: 1px solid $codGray;
   
   @include respond(mobile) {

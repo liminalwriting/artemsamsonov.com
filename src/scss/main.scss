@@ -7,9 +7,9 @@ html {
 }
 
 body {
-  padding: 80px 48px 32px 48px;
+  padding: 0 5%;
   margin: 0;
-  text-transform: lowercase;
+  //text-transform: lowercase;
   scroll-behavior: smooth;
   
   @include respond(mobile) {
@@ -19,11 +19,7 @@ body {
 }
 
 p {
-  margin: 0 0 32px 0;
-  
-  @include respond(mobile) {
-    margin: 0 0 24px 0;
-  }
+  margin: 0 0 24px 0;
 }
 
 .body {
@@ -58,7 +54,7 @@ code {
   @include colauto(8px 16px);
   border-radius: 4px;
   background-color: darken($soapStone, 5%);
-  font: $groteskMain;
+  font: $desktopSmall;
   margin: 0 0 8px 0;
 }
 

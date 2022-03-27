@@ -1,6 +1,6 @@
 .article-breadcrumb {
   @include col100(0 0 8px 0);
-  font: $groteskMain;
+  font: $desktopSmall;
   text-transform: lowercase;
   
   &__link {
