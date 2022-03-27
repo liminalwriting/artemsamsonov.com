@@ -13,7 +13,7 @@ body {
   scroll-behavior: smooth;
   
   @include respond(mobile) {
-    padding: 80px 24px 24px 24px;
+    padding: 96px 5% 24px 5%;
     height: 100vh;
   }
 }

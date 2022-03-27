@@ -15,7 +15,7 @@ body.body_light
     +header()
     div.content
         div.article
-            h2 Как мы проектировали нотификации для MS Teams
+            h1 Как мы проектировали нотификации для MS Teams
             p Во
                 =" "
                 a(href="msteams-rebuild.html") вводной статье
@@ -33,7 +33,8 @@ body.body_light
             p После интервью мы уже знали, что нашей интеграцией пользуются юзеры с разными ролями — и, что более важно, им важны разные виды нотификаций.
             p Пообщавшись с пользователями ещё раз, мы определили основные типы полезных нотификаций для каждой роли:
             p.article__image
-                img(src="../../img/msteams-02.jpg")
+                a(href="../img/msteams-04.jpg" target="_blank")
+                    img(src="../../img/msteams-04.jpg")
             p Так как в новой стратегии мы фокусировались прежде всего на Работниках, в первой итерации мы решили уведомлять пользователей, если:
             ul
                 li
@@ -43,22 +44,24 @@ body.body_light
             h2 Шаг 2. Проектируем необходимые нотификации
             p Дизайн-система MS Teams позволяет нам отправлять не только текстовые сообщения, но и карточки с более сложной структурой. Мы разработали карточки для каждого типа нотификаций:
             p.article__image
-                img(src="../../img/msteams-07.jpg")
+                a(href="../img/msteams-05.jpg" target="_blank")
+                    img(src="../../img/msteams-05.jpg")
             p.article__image
-                img(src="../../img/msteams-08.jpg")
+                a(href="../img/msteams-06.jpg" target="_blank")
+                    img(src="../../img/msteams-06.jpg")
             p#step3 Мы намеренно исключили из уведомлений ситуацию, при которой человек назначал задачу сам на себя или упоминал себя в комментариях.
             h2 Шаг 3. Повышаем взаимодействие
             p Помимо карточек, дизайн-паттерны MS Teams позволяли нам добавить в карточки дополнительное взаимодействие. Мы решили тестово реализовать возможность быстро отвечать на сообщения с упоминаниями:
             p.article__image
-                iframe(width="560" height="315" src="https://www.youtube.com/embed/QIW3uzlukgE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                iframe(src="https://www.youtube.com/embed/QIW3uzlukgE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             p#step4 Вместо того, чтобы открывать задачу в Wrike и пролистывать ленту комментариев до нужного места, пользователи смогли отвечать на срочные вопросы, не переключая контекст.
             h2 Шаг 4. Проектируем подключение и отключение нотификаций
             p Мы понимали, что не все пользователи захотят получать уведомления по умолчанию. Именно поэтому мы спроектировали сценарии подключения и отключения нотификаций:
             p.article__image
-                iframe(width="560" height="315" src="https://www.youtube.com/embed/pnWBrte-l5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                iframe(src="https://www.youtube.com/embed/pnWBrte-l5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             p На данном этапе мы очень вдумчиво работали вместе с командой UX-писателей для того, чтобы сделать тексты понятными и прозрачными, а также учесть всевозможные ошибки при авторизации:
             p.article__image#step5
-                iframe(width="560" height="315" src="https://www.youtube.com/embed/hQVzmGMA9BU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                iframe(src="https://www.youtube.com/embed/hQVzmGMA9BU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             h2 Итоги первой итерации
             p Протестировав изменения на группе активных пользователей, мы получили позитивную обратную связь и поняли, что двигаемся в нужном направлении.
             p Чаще всего, пользователи просили добавить в нотификации дополнительный функционал. Лидерами стали:

@@ -1,41 +1,24 @@
 .article {
-  @include colauto(88px 0 48px 0, column);
+  @include colauto(120px 0 48px 0, column);
   width: 640px;
   margin: 0 auto;
   font: $desktopMain;
 
   @include respond(mobile) {
     @include col100(0, column);
-    font: 18px/30px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+    font: $mobileMain;
   }
 
   a {
     color: $coldBlue;
   }
 
-  &-annotation {
-    margin: 0 0 32px 0;
-  }
-
-  &__list {
-    @include colauto(16px 16px 24px 16px, column);
-    width: 640px;
-    margin: 0 auto;
-    margin-bottom: 16px;
-    font: $desktopSmall;
-    background-color: darken($soapStone, 3%);
-
-    & h4 {
-      margin: 0 0 8px 0;
-    }
-
-    & a {
-      margin: 0 0 6px 0;
-    }
+  h1 {
+    margin: 0 0 24px 0;
   }
 
   h2 {
-    margin: 16px 0 16px 0;
+    margin: 24px 0 16px 0;
   }
 
   ul {
@@ -58,9 +41,39 @@
     }
   }
 
+  &-annotation {
+    margin: 0 0 32px 0;
+  }
+
+  &__list {
+    @include colauto(16px 16px 24px 16px, column);
+    width: 640px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    font: $desktopSmall;
+    background-color: darken($soapStone, 3%);
+
+    @include respond(mobile) {
+      @include col100(16px 16px 24px 16px, column);
+    }
+
+    & h4 {
+      margin: 0 0 8px 0;
+    }
+
+    & a {
+      margin: 0 0 6px 0;
+    }
+  }
+
   &__image {
     @include col100(0, column);
     margin: 8px 0 24px 0;
+
+    @include respond(mobile) {
+      margin: 0 0 24px 0;
+      width: 100%;
+    }
 
     &-auto {
       width: 320px !important;
@@ -76,20 +89,24 @@
       }
     }
 
-    @include respond(mobile) {
-      margin: 14px -32px 32px 0;
+    iframe {
       width: 100%;
+      height: 300px;
+
+      @include respond(mobile) {
+        width: 100%;
+        height: 200px;
+      }
     }
 
     &-caption {
       font: $desktopSmall;
       color: $darkGray;
-      margin: 8px 0 0 0;
+      margin: 8px 0 0 p0;
 
       @include respond(mobile) {
-        margin: 4px 0;
-        text-align: center;
-        font-size: 12px;
+        margin: 6px 0 0 2px;
+        font: $mobileSmall;
       }
     }
   }

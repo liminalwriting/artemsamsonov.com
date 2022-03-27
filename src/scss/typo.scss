@@ -8,11 +8,11 @@ $desktopMain: 19px/30px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
 $desktopSmall: 16px/24px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
 
 // Mobile Fonts
-$mobileH1: 40px/56px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
+$mobileH1: 24px/36px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
 $mobileH2: 20px/30px "Gotham Bold", 'Dela Gothic One', Arial, sans-serif;
 $mobileH3: 16px/24px "Gotham Medium", 'Dela Gothic One', Arial, sans-serif;
-$mobileMain: 19px/30px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
-$mobileSmall: 16px/24px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+$mobileMain: 16px/24px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+$mobileSmall: 14px/20px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
 
 a {
   text-decoration: none;
@@ -29,6 +29,7 @@ h1 {
 
   @include respond(mobile) {
     font: $mobileH1;
+    margin: 0 0 16px 0;
   }
 }
 
