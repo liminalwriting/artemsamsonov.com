@@ -6,8 +6,4 @@
   @include col100(0 0 16px 0, row);
   word-break: break-word;
   color: $white;
-  
-  @include respond(mobile) {
-    @include col100(0 0 24px 0, row);
-  }
 }

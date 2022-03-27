@@ -20,7 +20,7 @@
   grid-template-columns: repeat(20, 5%);
   grid-template-rows: repeat(1, auto);
 
-  margin: 32px 0 72px 0;
+  margin: 32px 0 96px 0;
 
   @include respond(mobile) {
     grid-template-rows: repeat(2, auto);

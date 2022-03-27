@@ -3,8 +3,3 @@ mixin caseCard(name, description, href)
         div.case-card__name
             a(href=href)=name
         div.case-card__description=description
-        div.case-card__links
-            if block
-                block
-            else
-                p No content provided

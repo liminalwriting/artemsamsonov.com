@@ -1,22 +1,27 @@
 .case-card {
-  @include col100(4px 0 16px 0, row, space-between);
-  color: $white;
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: repeat(1, auto);
   font: $desktopSmall;
   border-top: 1px solid $codGray;
-  
+  padding: 4px 0 24px 0;
+
   @include respond(mobile) {
-    @include col100(2px 0 24px 0, column);
+    grid-template-rows: repeat(2, auto);
   }
   
   &__name {
-    @include col25(0);
-    
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+
     @include respond(mobile) {
-      @include col100(0);
+      grid-column-end: 21;
+      padding: 0 0 8px 0;
     }
     
     a {
-      color: $white;
+      color: $coldBlue;
     }
     
     h3 {
@@ -25,21 +30,18 @@
   }
   
   &__description {
-    @include col30(0);
-    
+    grid-column-start: 8;
+    grid-column-end: 14;
+    grid-row-start: 1;
+
     @include respond(mobile) {
-      @include col100(12px 0);
-      color: $gray;
+      grid-column-start: 1;
+      grid-column-end: 21;
+      grid-row-start: 2;
+
+      padding: 0 0 16px 0;
     }
-  }
-  
-  &__links {
-    @include col15(0 0 0 0, column);
-    align-items: flex-end;
-    
-    @include respond(mobile) {
-      @include col100(12px 0 0 0, column);
-      align-items: flex-end;
-    }
+
+    color: $gray;
   }
 }
