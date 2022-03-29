@@ -4,12 +4,12 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Артём Самсонов • Продуктовый дизайнер"/>
-    <meta property="og:description" content="Кейс: Wrike-нотификации в MS Teams"/>
+    <meta property="og:title" content="Как мы проектировали уведомления для MS Teams • Артём Самсонов • Продуктовый дизайнер"/>
+    <meta property="og:description" content="Рассказываю о проблемах, с которыми мы столкнулись в процессе проектирования и как мы решали их с помощью пользователей"/>
     <meta property="og:image" content="http://artemsamsonov.com/img/default.jpg"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link rel="stylesheet"/><!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(57652780, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/57652780" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
-    <title>Артём Самсонов • Продуктовый дизайнер</title>
+    <title>Как мы проектировали уведомления для MS Teams • Артём Самсонов • Продуктовый дизайнер</title>
   <link href="./css/style.bundle.css" rel="stylesheet"></head>
 </html>
 <body class="body_light">
@@ -23,29 +23,29 @@
   </header>
   <div class="content">
     <div class="article">
-      <h1>Как мы проектировали нотификации для MS Teams</h1>
+      <h1>Как мы проектировали уведомления для MS Teams</h1>
       <p>Во <a href="msteams-rebuild.html">вводной статье</a> я рассказывал, как мы перестали блуждать в тумане и перешли к планомерной работе над приложением Wrike для MS Teams.
       </p>
-      <p class="article__text-annotation">Опираясь на новую стратегию, первым делом мы решили добавить нотификации в чаты MS Teams. Сегодня я расскажу о проблемах, с которыми мы столкнулись в процессе проектирования и как мы решали их с помощью наших активных пользователей.</p>
+      <p class="article__text-annotation">Опираясь на новую стратегию, первым делом мы решили добавить уведомления в чаты MS Teams. Сегодня я расскажу о проблемах, с которыми мы столкнулись в процессе проектирования и как мы решали их с помощью наших активных пользователей.</p>
       <div class="article__list">
-        <h4>Содержание статьи</h4><a href="#step1">Шаг 1. Узнаём, что нужно пользователям</a><a href="#step2">Шаг 2. Проектируем необходимые нотификации</a><a href="#step3">Шаг 3. Повышаем взаимодействие</a><a href="#step4">Шаг 4. Проектируем подключение и отключение нотификаций</a><a href="#step5" id="step1">Итоги первой итерации</a>
+        <h4>Содержание статьи</h4><a href="#step1">Шаг 1. Узнаём, что нужно пользователям</a><a href="#step2">Шаг 2. Проектируем необходимые уведомления</a><a href="#step3">Шаг 3. Улучшаем взаимодействие</a><a href="#step4">Шаг 4. Проектируем подключение и отключение уведомлений</a><a href="#step5" id="step1">Итоги первой итерации</a>
       </div>
       <h2>Шаг 1. Узнаём, что нужно пользователям</h2>
-      <p>После интервью мы уже знали, что нашей интеграцией пользуются юзеры с разными ролями — и, что более важно, им важны разные виды нотификаций.</p>
-      <p>Пообщавшись с пользователями ещё раз, мы определили основные типы полезных нотификаций для каждой роли:</p>
+      <p>Из интервью мы уже знали, что нашей интеграцией пользуются пользователи с разными ролями — и, что более важно, им важны разные виды уведомлений.</p>
+      <p>Пообщавшись с пользователями ещё раз, мы определили основные типы полезных уведомлений для каждой роли:</p>
       <p class="article__image"><a href="../img/msteams-04.jpg" target="_blank"><img src="img/msteams-04.jpg"></a></p>
       <p>Так как в новой стратегии мы фокусировались прежде всего на Работниках, в первой итерации мы решили уведомлять пользователей, если:</p>
       <ul>
         <li><span>Кто-то назначил на них задачу</span></li>
         <li><span id="step2">Кто-то упомянул их в комментарии</span></li>
       </ul>
-      <h2>Шаг 2. Проектируем необходимые нотификации</h2>
-      <p>Дизайн-система MS Teams позволяет нам отправлять не только текстовые сообщения, но и карточки с более сложной структурой. Мы разработали карточки для каждого типа нотификаций:</p>
-      <p class="article__image"><a href="../img/msteams-05.jpg" target="_blank"><img src="img/msteams-05.jpg"></a></p>
-      <p class="article__image"><a href="../img/msteams-06.jpg" target="_blank"><img src="img/msteams-06.jpg"></a></p>
-      <p id="step3">Мы намеренно исключили из уведомлений ситуацию, при которой человек назначал задачу сам на себя или упоминал себя в комментариях.</p>
+      <h2>Шаг 2. Проектируем необходимые уведомления</h2>
+      <p>Дизайн-система MS Teams позволяет нам отправлять не только текстовые сообщения, но и карточки с более сложной структурой. Мы разработали карточки для каждого типа уведомлений:</p>
+      <p class="article__image"><a href="../img/msteams-05.jpg" target="_blank"><img src="img/msteams-05.jpg"></a><span class="article__image-caption">Такая карточка придёт в чат, если кто-то упомянет пользователя в комментариях</span></p>
+      <p class="article__image"><a href="../img/msteams-06.jpg" target="_blank"><img src="img/msteams-06.jpg"><span class="article__image-caption">А такая — если кто-то назначит на него задачу</span></a></p>
+      <p id="step3">Мы намеренно решили не присылать уведомление, если человек назначал задачу сам на себя или упоминал себя в комментариях.</p>
       <h2>Шаг 3. Повышаем взаимодействие</h2>
-      <p>Помимо карточек, дизайн-паттерны MS Teams позволяли нам добавить в карточки дополнительное взаимодействие. Мы решили тестово реализовать возможность быстро отвечать на сообщения с упоминаниями:</p>
+      <p>Дизайн-паттерны MS Teams позволяют пользователям взаимодействовать с карточками. Мы решили добавить возможность быстро отвечать на упоминания:</p>
       <p class="article__image">
         <iframe src="https://www.youtube.com/embed/QIW3uzlukgE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </p>
@@ -60,12 +60,11 @@
         <iframe src="https://www.youtube.com/embed/hQVzmGMA9BU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </p>
       <h2>Итоги первой итерации</h2>
-      <p>Протестировав изменения на группе активных пользователей, мы получили позитивную обратную связь и поняли, что двигаемся в нужном направлении.</p>
-      <p>Чаще всего, пользователи просили добавить в нотификации дополнительный функционал. Лидерами стали:</p>
+      <p>Протестировав изменения на группе активных пользователей, мы получили позитивную обратную связь и поняли, что двигаемся в нужном направлении. Чаще всего пользователи просили добавить больше функционала. Они хотели:</p>
       <ul>
-        <li><span>Кастомная настройка типов нотификаций (в частности, многие хотели добавить уведомления о переходе задач в определённый статус; например, тестировщикам важно было знать о переходе задач в статус «Ready for test»)</span></li>
-        <li><span>Возможность переназначить задачу, не выходя из чата</span></li>
-        <li><span>Группировка нотификаций в дневные дайджесты</span></li>
+        <li><span>Тонко настраивать присылаемые уведомления (например, тестировщикам важно было знать о переходе задач в статус «Ready for test»)</span></li>
+        <li><span>Переназначать задачи, не выходя из чата</span></li>
+        <li><span>Получать дайджесты по нотификациям по запросу или в конце рабочего дня</span></li>
       </ul>
     </div>
   </div>

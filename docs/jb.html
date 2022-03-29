@@ -33,38 +33,38 @@
         <p class="article__text_secondary">"Code completion" looks like the easiest category to catch productivity losses. I hope that we can design a lot of rules for other categories. For example, we might track copying of code elements. If user copies element but doesn't paste it inside the IDEA, we can assume that he pastes it to the browser to search some documentation. Then we suggest trying to press Shift+F1 hotkey ("Browse external documentation" feature).</p>
         <h2>How we're gonna show it in the interface</h2>
         <p>Firstly I decided to use the same hint as Quick Fixes' component:</p>
-        <figure class="article__image"><a href="../../img/jb-001.jpg" target="blank"><img src="img/jb-001.jpg">
+        <figure class="article__image"><a href="../../img/jb-01.jpg" target="blank"><img src="img/jb-01.jpg">
             <imgcaption class="article__image-caption">Click to the img to see full size version</imgcaption></a></figure>
         <p>It would be a perspective hypothesis, but the importunity of this decision was confusing me. IDEA has a lot of close to the code features (for example, quick fixes hint's, intention bulbs, colour highlighting). One more tip near the code can annoy users:</p>
         <figure class="article__image">
           <iframe width="100%" height="380" src="https://www.youtube.com/embed/jNE6T4oaRNE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </figure>
         <p>So, I'd started to search for another place to show the tips. Then I remembered about "Event Log" notifications and tried to place "Productivity Guide" to the IDE's footer:</p>
-        <figure class="article__image"><a href="../../img/jb-004.jpg" target="blank"><img src="img/jb-004.jpg"></a></figure>
+        <figure class="article__image"><a href="../../img/jb-02.jpg" target="blank"><img src="img/jb-02.jpg"></a></figure>
         <figure class="article__image">
           <iframe width="100%" height="380" src="https://www.youtube.com/embed/E60TJW7wdTo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </figure>
         <p>As for me, this way is a good compromise between saving the context and unobtrusiveness. We prompt the user concrete way to boost his productivity as quickly as possible and suggest to learn more features.</p>
         <p>Of course, the user can disable this hints in the "Settings":</p>
-        <figure class="article__image"><a href="../../img/jb-002.jpg" target="blank"><img src="img/jb-002.jpg"></a></figure>
+        <figure class="article__image"><a href="../../img/jb-03.jpg" target="blank"><img src="img/jb-03.jpg"></a></figure>
         <p>Also, I suggest adding "Productivity boost" panel to analyze possible ways to increase user's productivity. I made this interface based on "Problems" panel:</p>
-        <figure class="article__image"><a href="../../img/jb-003.jpg" target="blank"><img src="img/jb-003.jpg"></a></figure>
+        <figure class="article__image"><a href="../../img/jb-04.jpg" target="blank"><img src="img/jb-04.jpg"></a></figure>
         <p>Hints in the right panel are available too:</p>
         <figure class="article__image">
           <iframe width="640" height="380" src="https://www.youtube.com/embed/bwRMHduwszQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </figure>
         <h2>How we can level up this solution</h2>
         <p>Time is the best resource for the modern era and "Productivity Guide" should have info about saving it. We can make this metric predictable and tell users about lost savings. For example, we can analyze a document and show the places where user can save time if he uses our productivity features:</p>
-        <figure class="article__image"><a href="../../img/jb-005.jpg" target="blank"><img src="img/jb-005.jpg"></a></figure>
+        <figure class="article__image"><a href="../../img/jb-05.jpg" target="blank"><img src="img/jb-05.jpg"></a></figure>
         <p>Also, we can add "Mark as read" button for completing known issues...</p>
-        <figure class="article__image"><a href="../../img/jb-006.jpg" target="blank"><img src="img/jb-006.jpg"></a></figure>
+        <figure class="article__image"><a href="../../img/jb-06.jpg" target="blank"><img src="img/jb-06.jpg"></a></figure>
         <p>... and mark features as known in the "Productivity Guide" modal:</p>
-        <figure class="article__image"><a href="../../img/jb-007.jpg" target="blank"><img src="img/jb-007.jpg"></a></figure>
+        <figure class="article__image"><a href="../../img/jb-07.jpg" target="blank"><img src="img/jb-07.jpg"></a></figure>
         <p>If user marks a feature as a known, we don't show tips in the footer and "Productivity Boost" panel.</p>
         <h2>How we can check the decision</h2>
         <p>Firstly I thought we can track the count of "Community Boost" panel's and "Community Guide" modal's openings before release and after. Also, we can track the growth of features marking as known.</p>
         <p class="article__text_secondary">In this case, we should add the "Hide" option. Otherwise, users can mark unnecessary features as known.</p>
-        <figure class="article__image"><a href="../../img/jb-008.jpg" target="blank"><img src="img/jb-008.jpg"></a></figure>
+        <figure class="article__image"><a href="../../img/jb-08.jpg" target="blank"><img src="img/jb-08.jpg"></a></figure>
         <p>But I think these aren't the main goals for us. Why are you developing "Community Guide"? As for me, you want to improve work efficiency. If we decide to analyze spent time for every case, we can get we difference between average spending time before and after using the feature.</p>
         <p class="article__text_secondary">Let's take the "Editor delete line" feature. We can compare the average time what users spent before using Cmd+Del and after.</p>
         <p>I understand, that we can't track all of the features. For example, I can't image how we can measure "Directory Diff" efficiency (comparison "didn't use/using now" is unreliable). In such cases, we can use user testing.</p>

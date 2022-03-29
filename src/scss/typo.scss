@@ -4,8 +4,9 @@
 $desktopH1: 40px/56px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
 $desktopH2: 32px/44px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
 $desktopH3: 20px/32px "Gotham Bold", 'Dela Gothic One', Arial, sans-serif;
+$desktopH4: 18px/30px "Gotham Bold", 'Dela Gothic One', Arial, sans-serif;
 $desktopMain: 19px/30px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
-$desktopSmall: 16px/24px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+$desktopSmall: 15px/22px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
 
 // Mobile Fonts
 $mobileH1: 24px/36px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
@@ -45,6 +46,15 @@ h2 {
 h3 {
   font: $desktopH3;
   line-height: 1.4;
+  margin: 0 0 8px 0;
+
+  @include respond(mobile) {
+    font: $mobileH3;
+  }
+}
+
+h4 {
+  font: $desktopH4;
   margin: 0 0 8px 0;
 
   @include respond(mobile) {
