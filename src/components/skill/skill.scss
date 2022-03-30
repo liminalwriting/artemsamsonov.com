@@ -12,8 +12,9 @@
   }
 
   &__icon {
-    font-size: 32px;
-
+    & img {
+      width: 64px;
+    }
     @include respond(mobile) {
       display: none;
     }
