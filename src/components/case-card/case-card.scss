@@ -5,6 +5,7 @@
   font: $desktopSmall;
   border-top: 1px solid $codGray;
   padding: 4px 0 24px 0;
+  width: 100%;
 
   @include respond(mobile) {
     grid-template-rows: repeat(2, auto);

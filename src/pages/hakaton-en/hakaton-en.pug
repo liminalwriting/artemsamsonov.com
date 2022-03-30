@@ -1,0 +1,52 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-headline/article-headline
+include ../../components/article-breadcrumb/article-breadcrumb
+
+doctype html
+html
+    +head(
+      'Дизайн-хакатон: домашняя страница сервиса Wrike • Артём Самсонов • Продуктовый дизайнер',
+      'Краткая презентация того, как я визуализировал минималистичный концепт домашнего экрана',
+      'http://artemsamsonov.com/img/default.jpg',
+      'article'
+    )
+body.body_light
+    +header()
+    div.content
+        div.article
+            h1 Дизайн-хакатон: домашняя страница сервиса Wrike
+            p.article__annotation Краткая презентация того, как я визуализировал минималистичный концепт домашнего экрана для продукта Wrike
+            h2 Clean and minimalistic
+            p This concept based on the two-colours logo’s metaphor. Functionality has a look of the primary black and additional accent colours from our new brand book. Borders and shadows are used only for applications as a special part of our product.
+            p The bottom right part we can use for Wroodle :) —  intermittently changed illustration.
+            p.article__image
+                a(href="../img/hakaton-01.jpg" target="_blank")
+                    img(src="../../img/hakaton-01.jpg")
+                //span.article__image-caption
+            h2 Two modes
+            p The interface has two modes: viewing and editing. If you want to move sections to another area, click to the pen icon. You can switch primary sections (Spaces or Starred) to the secondary area and vice versa. I visualized it on the "Column-view-editing" artboard.
+            p.article__image
+                a(href="../img/hakaton-02.jpg" target="_blank")
+                    img(src="../../img/hakaton-02.jpg")
+                //span.article__image-caption
+            h2 Section’s replacing
+            p You can replace every section to every place. Sections are changed view after replacing.
+            p.article__image
+                iframe(src="https://www.youtube.com/embed/RCoqb1qo-X4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            h2 Useful actions
+            p I thought a lot about useful actions. For example, for spaces. We can navigate from the home screen to the most related folders or projects — most related for you or most related for other teammates. And you can create a task in these folders. I think it will make Wrike more quickly.
+            p.article__image
+                a(href="../img/hakaton-03.jpg" target="_blank")
+                    img(src="../../img/hakaton-03.jpg")
+                //span.article__image-caption
+            h2 Dark theme
+            p Just dark theme. Based on our new brand colours.
+            p.article__image
+                a(href="../img/hakaton-04.jpg" target="_blank")
+                    img(src="../../img/hakaton-04.jpg")
+                //span.article__image-caption
+            p.article__image
+                a(href="../img/hakaton-05.jpg" target="_blank")
+                    img(src="../../img/hakaton-05.jpg")
+                //span.article__image-caption
