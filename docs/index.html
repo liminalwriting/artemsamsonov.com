@@ -14,64 +14,62 @@
 </html>
 <body class="body_dark">
   <header class="header header_dark">
-    <div class="header__logo"><a class="header__logo-link" href="index.html">Артём Самсонов</a></div>
-    <!--div.header__menu
-    a.header__menu-elem(href="http://artemsamsonov.com/skills") Навыки
-    a.header__menu-elem(href="http://artemsamsonov.com/my-experience") Работы
-    a.header__menu-elem(href="http://artemsamsonov.com/#contacts") Контакты
-    -->
+    <div class="header__logo"><a href="index.html">Артём Самсонов</a></div>
   </header>
   <div id="index">
     <div id="main-info">
-      <div class="main-info" id="main-info-text">Привет! Меня зовут Артём, я продуктовый дизайнер из Петербурга. Больше десяти лет я проектирую цифровые продукты и помогаю выводить их на новый уровень</div>
+      <div class="main-info" id="main-info-text">Продуктовый дизайнер из Петербурга. Больше десяти лет я проектирую цифровые enterprise-продукты и помогаю выводить их на новый уровень</div>
       <div id="main-info-pic"><img src="img/profile-pic.jpg"/></div>
     </div>
     <div id="skills">
       <div class="list-header">
         <h2>Я готов:</h2>
       </div>
-      <div class="skills-row">
-        <div class="skill">
-          <p class="skill__icon"><img src="img/icon-01.png"/></p>
-          <h3 class="skill__headline">Сделать ваш интерфейс консистентным</h3>
-          <p class="skill__description">Я работаю с дизайн-системами больше трёх лет. Полтора года я улучшал большую и многоуровневую дизайн-систему в компании Wrike</p>
-        </div>
-        <div class="skill">
-          <p class="skill__icon"><img src="img/icon-02.png"/></p>
-          <h3 class="skill__headline">Сфокусироваться на проблемах юзеров</h3>
-          <p class="skill__description">В Wrike я проводил интервью и юзабилити-тесты совместно с UX-ресёрчерами и проджект-менеджерами</p>
-        </div>
-        <div class="skill">
-          <p class="skill__icon"><img src="img/icon-03.png"/></p>
-          <h3 class="skill__headline">Улучшить дизайн-процессы</h3>
-          <p class="skill__description">Больше полутора лет я работал в большой интернациональной команде дизайнеров. Вместе мы научились взаимодействовать друг с другом и организовывать кросс-командные инициативы</p>
-        </div>
-        <div class="skill">
-          <p class="skill__icon"><img src="img/icon-04.png"/></p>
-          <h3 class="skill__headline">Найти общий язык с разработчиками</h3>
-          <p class="skill__description">В компании PropellerAds я учил JavaScript и React, пробовал сблизить дизайн и разработку, создавая быстрые прототипы</p>
-        </div>
+      <div class="skill-card">
+        <div class="skill-card__name">Сделать ваш интерфейс консистентным</div>
+        <div class="skill-card__description">Я работаю с дизайн-системами больше трёх лет. Полтора года я улучшал большую и многоуровневую дизайн-систему в компании Wrike</div>
+        <div class="skill-card__digit">01</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__name">Сфокусироваться на проблемах юзеров</div>
+        <div class="skill-card__description">В Wrike я проводил интервью и юзабилити-тесты совместно с UX-ресёрчерами и проджект-менеджерами</div>
+        <div class="skill-card__digit">02</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__name">Улучшить дизайн-процессы</div>
+        <div class="skill-card__description">Больше полутора лет я работал в большой интернациональной команде дизайнеров. Вместе мы научились взаимодействовать друг с другом и организовывать кросс-командные инициативы</div>
+        <div class="skill-card__digit">03</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__name">Найти общий язык с разработчиками</div>
+        <div class="skill-card__description">В компании PropellerAds я учил JavaScript и React, пробовал сблизить дизайн и разработку, создавая быстрые прототипы</div>
+        <div class="skill-card__digit">04</div>
       </div>
     </div>
     <div id="cases">
       <div class="list-header">
         <h2>Портфолио</h2>
       </div>
-      <div class="case-card">
-        <div class="case-card__name"><a href="msteams-rebuild.html">Как перестать блуждать ёжиком в тумане и улучшать продукт разумно</a></div>
-        <div class="case-card__description">Рассказываю на примере интеграции Wrike for MS Teams, как перестать делать лишнюю работу и реально помогать пользователям</div>
-      </div>
-      <div class="case-card">
-        <div class="case-card__name"><a href="msteams-notifications.html">Как мы проектировали уведомления из Wrike в MS Teams</a></div>
-        <div class="case-card__description">Рассказываю о проблемах, с которыми мы столкнулись в процессе проектирования и как мы решали их с помощью пользователей</div>
-      </div>
-      <div class="case-card">
-        <div class="case-card__name"><a href="calendar-from-hell.html">Почему дизайнерам компонентов нужно доплачивать за вредность</a></div>
-        <div class="case-card__description">Рассказываю на примере компонента «Календарь», как типичная на первый взгляд задача способна довести продуктового дизайнера до слёз</div>
-      </div>
-      <div class="case-card">
-        <div class="case-card__name"><a href="hakaton.html">Дизайн-хакатон: домашняя страница сервиса Wrike</a></div>
-        <div class="case-card__description">Краткая презентация того, как я визуализировал минималистичный концепт домашнего экрана</div>
+      <div class="cases__content"><a class="case-card" href="msteams-rebuild.html">
+          <div class="case-card__cover"><img src="img/case-01.jpg"/></div>
+          <div class="case-card__headline">
+            <h3>Как перестать блуждать ёжиком в тумане и улучшать продукт разумно</h3>
+          </div>
+          <div class="case-card__description">Рассказываю на примере интеграции Wrike for MS Teams, как перестать делать лишнюю работу и реально помогать пользователям</div>
+          <div class="case-card__button"></div></a><a class="case-card" href="msteams-notifications.html">
+          <div class="case-card__cover"><img src="img/case-02.jpg"/></div>
+          <div class="case-card__headline">
+            <h3>Как мы проектировали уведомления из Wrike в MS Teams</h3>
+          </div>
+          <div class="case-card__description">Рассказываю о проблемах, с которыми мы столкнулись в процессе проектирования и как мы решали их с помощью пользователей</div>
+          <div class="case-card__button"></div></a><a class="case-card" href="calendar-from-hell.html">
+          <div class="case-card__cover"><img src="img/case-03.jpg"/></div>
+          <div class="case-card__headline">
+            <h3>Почему дизайнерам компонентов нужно доплачивать за вредность</h3>
+          </div>
+          <div class="case-card__description">Рассказываю на примере компонента «Календарь», как типичная на первый взгляд задача способна довести продуктового дизайнера до слёз</div>
+          <div class="case-card__button"></div></a>
+        <!--+caseCard('case-01', 'Дизайн-хакатон: домашняя страница сервиса Wrike', 'Краткая презентация того, как я визуализировал минималистичный концепт домашнего экрана', 'hakaton.html')-->
       </div>
     </div>
   </div>

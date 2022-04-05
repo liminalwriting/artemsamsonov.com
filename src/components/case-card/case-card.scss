@@ -1,48 +1,31 @@
 .case-card {
-  display: grid;
-  grid-template-columns: repeat(20, 5%);
-  grid-template-rows: repeat(1, auto);
-  font: $desktopSmall;
-  border-top: 1px solid $codGray;
-  padding: 4px 0 24px 0;
-  width: 100%;
+  @include col30(0, column);
+  color: inherit;
 
   @include respond(mobile) {
-    grid-template-rows: repeat(2, auto);
+    @include col100(0, column);
+    margin: 0 0 32px 0;
   }
-  
-  &__name {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 1;
+
+  &__cover {
+    margin: 0 0 16px 0;
 
     @include respond(mobile) {
-      grid-column-end: 21;
-      padding: 0 0 8px 0;
+      margin: 0 0 8px 0;
     }
-    
-    a {
-      color: $coldBlue;
-    }
-    
-    h3 {
-      margin: 0;
+
+    img {
+      width: 100%;
+      border: 1px solid $codGray;
     }
   }
-  
+
+  &__headline {
+    color: $coldBlue;
+  }
+
   &__description {
-    grid-column-start: 8;
-    grid-column-end: 14;
-    grid-row-start: 1;
-
-    @include respond(mobile) {
-      grid-column-start: 1;
-      grid-column-end: 21;
-      grid-row-start: 2;
-
-      padding: 0 0 16px 0;
-    }
-
+    font: $desktopSmall;
     color: $gray;
   }
 }

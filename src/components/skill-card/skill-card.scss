@@ -1,0 +1,55 @@
+.skill-card {
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: repeat(1, auto);
+  font: $desktopSmall;
+  border-top: 1px solid $codGray;
+  padding: 4px 0 8px 0;
+  width: 100%;
+  color: $gray;
+
+  @include respond(mobile) {
+    grid-template-rows: repeat(2, auto);
+    padding: 4px 0 0 0;
+  }
+  
+  &__name {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+
+    @include respond(mobile) {
+      grid-column-end: 17;
+      padding: 0 0 8px 0;
+      font: $mobileH3;
+    }
+  }
+  
+  &__description {
+    grid-column-start: 8;
+    grid-column-end: 14;
+    grid-row-start: 1;
+
+    @include respond(mobile) {
+      grid-column-start: 1;
+      grid-column-end: 17;
+      grid-row-start: 2;
+
+      padding: 0 0 16px 0;
+      color: darken($gray, 10%);
+    }
+  }
+
+  &__digit {
+    grid-column-start: 15;
+    grid-column-end: 21;
+    grid-row-start: 1;
+    @include col100(0 8px 0 0, column, flex-start, flex-end);
+    font: $desktopH2;
+    color: $codGray;
+
+    @include respond(mobile) {
+      grid-column-start: 18;
+    }
+  }
+}

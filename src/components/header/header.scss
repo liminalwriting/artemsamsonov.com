@@ -11,10 +11,9 @@
   font: $desktopSmall;
   background-color: $darkGray;
   margin: 0 5%;
-  border-bottom: 1px solid $codGray;
-  
-  a {
-    color: $white;
+
+  @include respond(mobile) {
+    border-bottom: 1px solid $codGray;
   }
   
   &__logo {
@@ -23,6 +22,10 @@
     
     @include respond(mobile) {
       @include col50(0, column, center);
+    }
+
+    a {
+      color: $white;
     }
     
     &-link {

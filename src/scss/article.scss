@@ -9,20 +9,16 @@
     font: $mobileMain;
   }
 
-  a {
-    color: $blue;
-  }
-
-  h1 {
+  section {
     margin: 0 0 24px 0;
-  }
-
-  h2 {
-    margin: 24px 0 16px 0;
 
     @include respond(mobile) {
-      margin: 8px 0 16px 0;
+      margin: 0 0 16px 0;
     }
+  }
+
+  a {
+    color: $blue;
   }
 
   ul {
@@ -45,21 +41,24 @@
     }
   }
 
-  &-annotation {
+  &__annotation {
     margin: 0 0 32px 0;
+
+    @include respond(mobile) {
+      margin: 0 0 24px 0;
+    }
   }
 
   &__list {
     @include colauto(16px 16px 24px 16px, column);
     width: 640px;
-    margin: 0 auto;
-    margin-bottom: 16px;
+    margin: 0 0 24px 0;
     font: $desktopSmall;
     background-color: darken($soapStone, 3%);
 
     @include respond(mobile) {
-      @include col100(16px 16px 24px 16px, column);
-      margin-top: 8px;
+      @include col100(16px 16px 20px 16px, column);
+      margin: 0 0 8px 0;
     }
 
     & h4 {
@@ -76,8 +75,8 @@
     margin: 8px 0 24px 0;
 
     @include respond(mobile) {
-      margin: 0 0 24px 0;
       width: 100%;
+      margin: 8px 0 16px 0;
     }
 
     &-auto {
@@ -85,6 +84,7 @@
     }
 
     img {
+      display: block;
       width: 100%;
       border: 1px solid darken($soapStone, 10%);
 

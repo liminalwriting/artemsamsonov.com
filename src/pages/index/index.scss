@@ -73,6 +73,8 @@
   margin: 0 0 64px 0;
 
   @include respond(mobile) {
+    grid-row-start: 3;
+    grid-column-end: 21;
     margin: 0 0 32px 0;
   }
 }
@@ -93,6 +95,18 @@
   grid-row-start: 3;
 
   @include col100(0, column);
-
   margin: 0 0 72px 0;
+
+  @include respond(mobile) {
+    grid-row-start: 2;
+    margin: 0 0 32px 0;
+  }
+}
+
+.cases__content {
+  @include col100(0, row, space-between);
+
+  @include respond(mobile) {
+    @include col100(0, column);
+  }
 }

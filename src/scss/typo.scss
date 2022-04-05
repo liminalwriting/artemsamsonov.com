@@ -6,7 +6,7 @@ $desktopH2: 32px/44px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
 $desktopH3: 20px/32px "Gotham Bold", 'Dela Gothic One', Arial, sans-serif;
 $desktopH4: 18px/30px "Gotham Bold", 'Dela Gothic One', Arial, sans-serif;
 $desktopMain: 19px/30px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
-$desktopSmall: 15px/22px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+$desktopSmall: 16px/22px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
 
 // Mobile Fonts
 $mobileH1: 24px/36px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
@@ -15,18 +15,13 @@ $mobileH3: 16px/24px "Gotham Medium", 'Dela Gothic One', Arial, sans-serif;
 $mobileMain: 16px/24px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
 $mobileSmall: 14px/20px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
 
-a {
-  text-decoration: none;
-  color: $coldBlue;
-}
-
 h1, h2, h3 {
   font-weight: bold;
 }
 
 h1 {
   font: $desktopH1;
-  margin: 0;
+  margin: 0 0 24px 0;
 
   @include respond(mobile) {
     font: $mobileH1;
@@ -36,10 +31,11 @@ h1 {
 
 h2 {
   font: $desktopH2;
-  margin: 0;
+  margin: 0 0 16px 0;
 
   @include respond(mobile) {
     font: $mobileH2;
+    margin: 0 0 16px 0;
   }
 }
 
@@ -50,6 +46,7 @@ h3 {
 
   @include respond(mobile) {
     font: $mobileH3;
+    margin: 0 0 4px 0;
   }
 }
 
@@ -59,6 +56,19 @@ h4 {
 
   @include respond(mobile) {
     font: $mobileH3;
+  }
+}
+
+a {
+  color: $coldBlue;
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 24px 0;
+
+  @include respond(mobile) {
+    margin: 0 0 16px 0;
   }
 }
 
