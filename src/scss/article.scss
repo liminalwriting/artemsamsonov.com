@@ -107,7 +107,7 @@
     &-caption {
       font: $desktopSmall;
       color: $darkGray;
-      margin: 8px 0 0 p0;
+      margin: 8px 0 0 0;
 
       @include respond(mobile) {
         margin: 6px 0 0 2px;
