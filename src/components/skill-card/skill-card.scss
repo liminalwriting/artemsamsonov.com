@@ -44,7 +44,7 @@
     grid-column-start: 15;
     grid-column-end: 21;
     grid-row-start: 1;
-    @include col100(0 8px 0 0, column, flex-start, flex-end);
+    @include col100(0, column, flex-start, flex-end);
     font: $desktopH2;
     color: $codGray;
 
