@@ -1,0 +1,79 @@
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/article-headline/article-headline
+include ../../components/article-breadcrumb/article-breadcrumb
+
+doctype html
+html
+    +head(
+      'Зарплатный калькулятор getmatch • Артём Самсонов • Продуктовый дизайнер',
+      'Как я проектировал зарплатный калькулятор getmatch',
+      'http://artemsamsonov.com/img/default.jpg',
+      'article'
+    )
+body.body_light
+    +header()
+    div.content
+        div.article
+            section
+                h1 Зарплатный калькулятор getmatch
+                p.article__annotation На серии глубинных интервью Кандидаты отметили «анализ зарплат» как одну из  ключевых потребностей. Компании же регулярно просили у Sales-команды зарплатную аналитику, основанную на реальных данных. Опираясь на эти запросы, мы сформировали две JTBD. Для Кандидата: понимать, достаточно ли денег он получает в текущей компании. Для Компании: определять размер зарплаты специалисту с учётом его уровня и локации.
+                h2 Решение
+                p  Спроектировали новый раздел «Зарплаты», в котором по умолчанию показываем Кандидатам график зарплат по выбранной специальности. Если Кандидат хочет посмотреть статистику по уровням, городам или форматам, а также увидеть рейтинг компаний, которые платят больше всего — придётся анонимно оставить зарплату. Сразу показываем товар лицом, закрыв значения заглушками:
+                p.article__image
+                    a(href="../img/getmatch-calc-01.jpg" target="_blank")
+                        img(src="../../img/getmatch-calc-01.jpg")
+                p В форме добавления зарплаты объясняем, зачем нам понадобились те или иные данные:
+                p.article__image
+                    a(href="../img/getmatch-calc-02.jpg" target="_blank")
+                        img(src="../../img/getmatch-calc-02.jpg")
+                    span.article__image-caption Например, при выборе компании
+                p.article__image
+                    a(href="../img/getmatch-calc-02b.jpg" target="_blank")
+                        img(src="../../img/getmatch-calc-02b.jpg")
+                    span.article__image-caption Или при указании опыта
+                p Валидируем все необходимые ошибки ввода:
+                p.article__image
+                    a(href="../img/getmatch-calc-03.jpg" target="_blank")
+                        img(src="../../img/getmatch-calc-03.jpg")
+                p А также подсказываем пользователю по наведению на кнопку, какие поля нужно обязательно заполнить:
+                p.article__image
+                    a(href="../img/getmatch-calc-04.jpg" target="_blank")
+                        img(src="../../img/getmatch-calc-04.jpg")
+                    span.article__image-caption Придётся всё же указать зарплату и город проживания…
+                p Добавление зарплаты не только разблокирует фильтры, но и позволяет посмотреть своё положение на рынке:
+                p.article__image
+                    a(href="../img/getmatch-calc-05.jpg" target="_blank")
+                        img(src="../../img/getmatch-calc-05.jpg")
+                p У зарплат выше, по рынку или ниже есть цветовые индикаторы:
+                p.article__image
+                    a(href="../img/getmatch-calc-06.jpg" target="_blank")
+                        img(src="../../img/getmatch-calc-06.jpg")
+                p Зарплату можно скрыть от чужих глаз, чтобы показать данные друзьям или не переживать о взгляде из-за плеча в офисе:
+                p.article__image
+                    a(href="../img/getmatch-calc-07.jpg" target="_blank")
+                        img(src="../../img/getmatch-calc-07.jpg")
+                p Если зарплат не хватает, покажем заглушку и позже пришлём оповещение в телеграм-бот:
+                p.article__image
+                    a(href="../img/getmatch-calc-08.jpg" target="_blank")
+                        img(src="../../img/getmatch-calc-08.jpg")
+                p У всех страниц, компонентов и состояний есть адаптивные версии:
+                p.article__image
+                    a(href="../img/getmatch-calc-10.jpg" target="_blank")
+                        img(src="../../img/getmatch-calc-10.jpg")
+                p В рамках задачи провели с UX-писателем серьёзную работу над формулировками. Я руководил процессом и ревьюил варианты:
+                    p.article__image
+                        a(href="../img/getmatch-calc-11b.jpg" target="_blank")
+                            img(src="../../img/getmatch-calc-11b.jpg")
+                        span.article__image-caption Несколько вариаций обсуждаемых формулировок
+                    p.article__image
+                        a(href="../img/getmatch-calc-11.jpg" target="_blank")
+                            img(src="../../img/getmatch-calc-11.jpg")
+                        span.article__image-caption Пример обсуждения
+                    p Разработчикам передали не только подробные макеты, но и текстовые спецификации с прототипами.
+                    p
+                        a(href="https://www.figma.com/proto/gRAEj3xOESxAVwgkzbZjJo/%E2%9C%85-Calc-%E2%86%92-Iteration-1?page-id=701%3A45383&node-id=794-55069&p=f&viewport=455%2C342%2C0.16&t=JKYRqaQhiauFifht-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=794%3A55069" target="_blanc") Пример кликабельного прототипа
+                h2 Результаты
+                p С кандидатской стороны ориентировались прежде всего на две метрики: среднее количество оставленных зарплат в месяц и повышение MAU всего сервиса в целом. Обе метрики достигли ожидаемых значений.
+                p CTA «Открыть профиль» в случае «Ваша зарплата ниже рынка» подняла метрику открытия профилей для компаний. Однако, к увеличению наймов это не привело — чаще всего профили открывали маловостребованные специалисты уровня junior.
+                p В первом же квартале после релиза компании-клиенты купили анонимизированные аналитические отчёты на NDA миллионов рублей.

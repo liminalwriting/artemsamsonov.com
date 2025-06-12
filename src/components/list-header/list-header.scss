@@ -10,4 +10,8 @@
   @include respond(mobile) {
     @include col100(0, row);
   }
+
+  &-second {
+    margin: 48px 0 0 0;
+  }
 }
