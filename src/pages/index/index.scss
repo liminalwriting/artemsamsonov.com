@@ -110,3 +110,36 @@
     @include col100(0, column);
   }
 }
+
+#tags {
+  grid-column-start: 1;
+  grid-column-end: 21;
+  grid-row-start: 4;
+
+  margin: 0 0 64px 0;
+
+  @include respond(mobile) {
+    grid-row-start: 4;
+    grid-column-end: 21;
+    margin: 0 0 32px 0;
+  }
+}
+
+.tags {
+
+  &__column {
+    color: $white;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+
+  &__wrap {
+    @include colauto(4px 0 0 0);
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}

@@ -4,6 +4,7 @@ include ../../components/list-header/list-header
 include ../../components/skill-card/skill-card
 include ../../components/case-card/case-card
 include ../../components/book-link/book-link
+include ../../components/tag/tag
 doctype html(prefix="og: http://ogp.me/ns#")
 html
 	+head(
@@ -16,15 +17,16 @@ body.body_dark
 	+header('dark')
 	div#index
 		div#main-info
-			div#main-info-text.main-info Продуктовый дизайнер из Москвы и Петербурга. Двенадцать лет я проектирую цифровые enterprise-продукты и помогаю выводить их на новый уровень
+			div#main-info-text.main-info Ведущий продуктовый дизайнер с&nbsp;12&#8209;летним опытом в&nbsp;B2B, B2C и&nbsp;HRTech. Проектирую цифровые продукты, масштабирую UX&#8209;процессы и&nbsp;улучшаю метрики роста
 			div#main-info-pic
 				img(src="../../img/profile-pic.jpg")
 		div#skills
 			+list-header('Компетенции', 'dark')
-			+skillCard('Проектирование макетов', 'Работаю в Figma, использую вложенные символы, переменные, собираю интерактивные прототипы. Пример', '01')
-			+skillCard('UX-исследования', 'Самостоятельно провёл более пятидесяти глубинных интервью, нанял и координировал работу UX-исследователя; проводил юзабилити и A/B-тесты', '02')
-			+skillCard('UX-редактура', 'Пишу тексты для телеграм-бота и рассылок getmatch, координировал работу и развивал UX-писателя, составлял UX writing-гайды', '03')
-			+skillCard('Работа с дизайн-системами', 'Полтора года отвечал за дизайн-систему из 150+ компонентов в компании Wrike: развивал компоненты, ревьюил задачи других дизайнеров, писал документацию', '04')
+			+skillCard('Мыслю продуктово', 'Опираюсь на JTBD Advanced, дерево метрик и аналитику. Формулирую продуктовые гипотезы и OKR, участвую в планировании и декомпозиции, влияю на roadmap', '01')
+			+skillCard('Провожу и координирую UX‑исследования', 'Глубинные интервью, user journey, юзабилити и A/B‑тесты. Сам провёл 50+ интервью, работал с ресёрчерами, внедрял результаты в продукт', '02')
+			+skillCard('Развиваю дизайн‑системы', 'Полтора года отвечал за дизайн‑систему Wrike. Развивал 150+ компонентов, ревьюил дизайнеров в командах, писал документацию. Помогал с токенизацией и accessibility', '03')
+			+skillCard('Проектирую интерфейсы в Figma', 'От вайрфреймов до интерактивных прототипов. Использую компоненты, вложенные структуры, переменные и плагины. Проектирую флоу с учётом бизнес‑целей и технических ограничений', '04')
+			+skillCard('Пишу и редактирую продуктовые тексты', 'Для телеграм‑бота и рассылок getmatch. Координировал UX‑писателя, составлял writing‑гайды и проводил ревью, развивал tone of voice, повышал ясность', '05')
 		div#cases
 			+list-header('Кейсы getmatch', 'dark')
 			div.cases__content
@@ -36,3 +38,48 @@ body.body_dark
 				+caseCard('case-01', 'Как перестать блуждать ёжиком в тумане и улучшать продукт разумно', 'Рассказываю на примере интеграции Wrike for MS Teams, как перестать делать лишнюю работу и реально помогать пользователям', 'msteams-rebuild.html')
 				+caseCard('case-02', 'Как мы проектировали уведомления из Wrike в MS Teams', 'Рассказываю о проблемах, с которыми мы столкнулись в процессе проектирования и как мы решали их с помощью пользователей', 'msteams-notifications.html')
 				+caseCard('case-03', 'Почему дизайнерам компонентов нужно доплачивать за вредность', 'Рассказываю на примере компонента «Календарь», как типичная на первый взгляд задача способна довести продуктового дизайнера до слёз', 'calendar-from-hell.html')
+		div#tags
+			+list-header('Инструменты и подходы', 'dark')
+			div.tags__content
+				div.tags__column
+					h3 Подходы
+					div.tags__wrap
+						+tag('JTBD')
+						+tag('Product Thinking')
+						+tag('Data Driven Design')
+						+tag('User Driven Design')
+						+tag('Lean UX')
+						+tag('Continuous Discovery')
+				div.tags__column
+					h3 Core-навыки
+					div.tags__wrap
+						+tag('UX Architecture')
+						+tag('Interaction Design')
+						+tag('Design Systems')
+						+tag('UX Research')
+						+tag('UX Writing')
+						+tag('Design Review')
+						+tag('Prototyping')
+				div.tags__column
+					h3 Метрики
+					div.tags__wrap
+						+tag('Retention')
+						+tag('DAU/MAU')
+						+tag('Time to Value')
+						+tag('Task Success Rate')
+						+tag('Completion Rate')
+						+tag('Adoption')
+						+tag('NPS')
+				div.tags__column
+					h3 Инструменты
+					div.tags__wrap
+						+tag('Figma')
+						+tag('Design Tokens')
+						+tag('Accessibility WCAG 2.2')
+						+tag('HTML 5')
+						+tag('CSS 4')
+						+tag('Protopie')
+						+tag('Amplitude')
+
+
+
