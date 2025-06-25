@@ -49,6 +49,12 @@
     }
   }
 
+  &__tags {
+    @include col100(0 0 16px 0);
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
   &__list {
     @include colauto(16px 16px 24px 16px, column);
     width: 640px;
