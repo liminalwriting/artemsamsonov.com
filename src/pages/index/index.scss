@@ -24,7 +24,7 @@
 
   @include respond(mobile) {
     grid-template-rows: repeat(2, auto);
-    margin: 16px 0 32px 0;
+    margin: 16px 0 0 0;
   }
 
   &-text {
@@ -42,6 +42,14 @@
       grid-row-start: 2;
 
       font: $mobileH2;
+    }
+
+    & h1 {
+      font: $desktopH2;
+
+      @include respond(mobile) {
+        font: $mobileH2;
+      }
     }
   }
 
@@ -73,9 +81,9 @@
   margin: 0 0 64px 0;
 
   @include respond(mobile) {
-    grid-row-start: 3;
+    grid-row-start: 2;
     grid-column-end: 21;
-    margin: 0 0 32px 0;
+    margin: 0 0 16px 0;
   }
 }
 
@@ -98,7 +106,7 @@
   margin: 0 0 72px 0;
 
   @include respond(mobile) {
-    grid-row-start: 2;
+    grid-row-start: 3;
     margin: 0 0 32px 0;
   }
 }
@@ -141,5 +149,44 @@
     @include colauto(4px 0 0 0);
     flex-wrap: wrap;
     gap: 4px;
+  }
+}
+
+#contacts-down {
+  grid-column-start: 1;
+  grid-column-end: 21;
+  grid-row-start: 5;
+
+  margin: 0 0 64px 0;
+
+  @include respond(mobile) {
+    grid-row-start: 5;
+    grid-column-end: 21;
+    margin: 0 0 32px 0;
+  }
+}
+
+.contacts-down-content {
+  @include col100(0, column);
+  color: $white;
+  font: $desktopMain;
+
+  @include respond(mobile) {
+     @include col100(24px 0 0 0, column);
+    font: $desktopSmall;
+
+    h3 {
+      margin-bottom: 16px;
+    }
+
+    a {
+      margin: 0 0 16px 0;
+    }
+  }
+
+  a {
+    span {
+      color: $white;
+    }
   }
 }

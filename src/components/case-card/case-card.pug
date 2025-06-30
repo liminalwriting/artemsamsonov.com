@@ -1,7 +1,7 @@
-mixin caseCard(cover, headline, description, link)
+mixin caseCard(cover, headline, description, link, altText)
     a.case-card(href=`${link}`)
         div.case-card__cover
-            img(src=`../../img/${cover}.jpg`)
+            img(src=`../../img/${cover}.jpg` alt=altText)
         div.case-card__headline
             h3=headline
         div.case-card__description=description

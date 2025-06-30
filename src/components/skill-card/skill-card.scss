@@ -35,7 +35,7 @@
       grid-column-end: 17;
       grid-row-start: 2;
 
-      padding: 0 0 16px 0;
+      padding: 0 0 32px 0;
       color: darken($gray, 10%);
     }
   }
@@ -50,6 +50,7 @@
 
     @include respond(mobile) {
       grid-column-start: 18;
+      font: $mobileH2;
     }
   }
 }
