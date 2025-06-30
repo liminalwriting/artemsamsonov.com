@@ -31,8 +31,11 @@
     "dependencies": {
         "file-loader": "^3.0.1",
         "global": "^4.4.0",
+        "gulp": "^5.0.1",
+        "gulp-sitemap": "^8.0.0",
         "jstransformer-markdown-it": "^2.1.0",
         "markdown-it-attrs": "^2.3.2",
-        "soshnikov-writing": "^1.0.21"
+        "soshnikov-writing": "^1.0.21",
+        "vinyl-named": "^1.1.0"
     }
 }
