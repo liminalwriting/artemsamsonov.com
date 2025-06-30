@@ -8,12 +8,13 @@ const SITE_URL = 'https://artemsamsonov.com';
 
 // sitemap.xml
 gulp.task('sitemap', function () {
-    return gulp.src('docs/**/*.html', { read: false })
+    return gulp.src('docs/*.html')
         .pipe(sitemap({
             siteUrl: SITE_URL,
             changefreq: 'monthly',
             priority: 0.9,
             getLoc(siteUrl, file) {
+                if (!file || !file.relative) return siteUrl;
                 const relativePath = file.relative.replace(/\\/g, '/');
                 const url = relativePath === 'index.html' ? '' : relativePath.replace(/\.html$/, '');
                 return `${siteUrl}/${url}`;

@@ -11,4 +11,21 @@ mixin head(title, description, image, type, font)
         link(href=font rel="stylesheet")
         +metrika()
         title=title
+        script(type="application/ld+json").
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Артём Самсонов",
+              "url": "https://artemsamsonov.com",
+              "image": "https://artemsamsonov.com/og-preview.jpg",
+              "sameAs": [
+                "https://t.me/forrrealism",
+                "https://www.linkedin.com/in/a-samsonov/"
+              ],
+              "jobTitle": "Ведущий продуктовый дизайнер",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "getmatch"
+              }
+            }
 
