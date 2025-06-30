@@ -6,11 +6,38 @@ include ../../components/article-breadcrumb/article-breadcrumb
 doctype html
 html
     +head(
-      'Как мы проектировали уведомления для MS Teams • Артём Самсонов • Продуктовый дизайнер',
-      'Рассказываю о проблемах, с которыми мы столкнулись в процессе проектирования и как мы решали их с помощью пользователей',
-      'http://artemsamsonov.com/img/default.jpg',
-      'article'
+        'Как мы проектировали уведомления для MS Teams • Артём Самсонов • Продуктовый дизайнер',
+        'Рассказываю о проблемах, с которыми мы столкнулись в процессе проектирования и как мы решали их с помощью пользователей',
+        'http://artemsamsonov.com/img/case-02.jpg',
+        'article'
     )
+    script(type="application/ld+json").
+        script(type="application/ld+json").
+          {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": "Уведомления из Wrike в Microsoft Teams",
+            "description": "Кейс про проектирование пользовательских уведомлений Wrike в Teams. Упростил сценарии, снизил шум, уточнил формат push-сообщений для разных ролей",
+            "author": {
+              "@type": "Person",
+              "name": "Артём Самсонов",
+              "url": "https://artemsamsonov.com"
+            },
+            "datePublished": "2024-09-20",
+            "url": "https://artemsamsonov.com/msteams-notifications",
+            "inLanguage": "ru",
+            "keywords": [
+              "Microsoft Teams",
+              "UX кейс",
+              "Push-уведомления",
+              "Продуктовый дизайн",
+              "Коммуникация с пользователями",
+              "Productivity",
+              "Wrike"
+              "Артём Самсонов"
+            ],
+            "image": "http://artemsamsonov.com/img/case-02.jpg"
+          }
 body.body_light
     +header()
     div.content
@@ -21,7 +48,7 @@ body.body_light
                     =" "
                     a(href="msteams-rebuild.html") вводной статье
                     =" "
-                    |я рассказывал, как мы перестали блуждать в тумане и перешли к планомерной работе над приложением Wrike для MS Teams.
+                    | я рассказывал, как мы перестали блуждать в тумане и перешли к планомерной работе над приложением Wrike для MS Teams.
                 p.article__annotation Опираясь на новую стратегию, первым делом мы решили добавить уведомления в чаты MS Teams. Сегодня я расскажу о проблемах, с которыми мы столкнулись в процессе проектирования и как мы решали их с помощью наших активных пользователей.
                 div.article__list
                     h4 Содержание статьи

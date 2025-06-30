@@ -13,6 +13,13 @@ html
         'http://artemsamsonov.com/img/default.jpg',
 		''
 	)
+	script(type="application/ld+json").
+		{
+		  "@context": "https://schema.org",
+		  "@type": "WebSite",
+		  "name": "Портфолио Артёма Самсонова, ведущего продуктового дизайнера из Москвы и Санкт-Петербурга",
+		  "url": "https://artemsamsonov.com"
+		}
 body.body_dark
 	+header('dark')
 	div#index

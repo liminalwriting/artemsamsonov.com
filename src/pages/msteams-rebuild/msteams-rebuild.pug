@@ -6,11 +6,38 @@ include ../../components/article-breadcrumb/article-breadcrumb
 doctype html
 html
     +head(
-      'Как перестать блуждать ёжиком в тумане и улучшать продукт разумно • Артём Самсонов • Продуктовый дизайнер',
-      'Рассказываю на примере интеграции между двумя системами, как перестать делать лишнюю работу и реально помогать пользователям',
-      'http://artemsamsonov.com/img/default.jpg',
-      'article'
+        'Как перестать блуждать ёжиком в тумане и улучшать продукт разумно • Артём Самсонов • Продуктовый дизайнер',
+        'Рассказываю на примере интеграции между двумя системами, как перестать делать лишнюю работу и реально помогать пользователям',
+        'http://artemsamsonov.com/img/case-01.jpg',
+        'article'
     )
+    script(type="application/ld+json").
+        script(type="application/ld+json").
+          {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": "Редизайн интеграции Wrike в Microsoft Teams",
+            "description": "Рассказываю на примере интеграции между двумя системами, как перестать делать лишнюю работу и реально помогать пользователям",
+            "author": {
+              "@type": "Person",
+              "name": "Артём Самсонов",
+              "url": "https://artemsamsonov.com"
+            },
+            "datePublished": "2024-08-05",
+            "url": "https://artemsamsonov.com/msteams-rebuild",
+            "inLanguage": "ru",
+            "keywords": [
+              "Microsoft Teams",
+              "UX редизайн",
+              "Чат-боты",
+              "Продуктовый дизайн",
+              "UX архитектура",
+              "Интерфейсы для команд",
+              "Wrike"
+              "Артём Самсонов"
+            ],
+            "image": "http://artemsamsonov.com/img/case-01.jpg"
+          }
 body.body_light
     +header()
     div.content

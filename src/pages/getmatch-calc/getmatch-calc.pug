@@ -13,6 +13,31 @@ html
       'http://artemsamsonov.com/img/case-04.jpg',
       'article'
     )
+    script(type="application/ld+json").
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Зарплатный калькулятор getmatch",
+          "alternateName": "Salary Calculator getmatch",
+          "headline": "Инструмент для оценки рыночной зарплаты кандидата",
+          "description": "Кейс о том, как я спроектировал зарплатный калькулятор в getmatch. Простой инструмент помогал кандидатам оценить свою рыночную зарплату, а клиентам — понимать, сколько платить IT-специалистам.",
+          "url": "https://artemsamsonov.com/getmatch-calc",
+          "author": {
+            "@type": "Person",
+            "name": "Артём Самсонов",
+            "url": "https://artemsamsonov.com"
+          },
+          "datePublished": "2025-06-26",
+          "dateModified": "2025-06-26",
+          "inLanguage": "ru",
+          "mainEntityOfPage": "https://artemsamsonov.com/getmatch-calc",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://artemsamsonov.com/img/case-04.jpg",
+            "width": 1152,
+            "height": 768
+          }
+        }
 body.body_light
     +header()
     div.content
