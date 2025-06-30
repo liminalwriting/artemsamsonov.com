@@ -13,7 +13,7 @@
     margin: 0 0 24px 0;
 
     @include respond(mobile) {
-      margin: 0 0 16px 0;
+      margin: 0;
     }
   }
 
@@ -23,14 +23,19 @@
 
   ul {
     padding: 0;
-    margin: 0 0 16px 16px;
+    margin: 0 0 48px 0;
+    list-style: none;
 
+    @include respond(mobile) {
+      margin: 0 0 32px 16px;
+    }
+    
     li {
-      margin: 0 0 10px 16px;
-      color: $blue;
+      margin: 0 0 16px 0;
+      color: $black;
 
-      span {
-        color: $black;
+      &::marker {
+        color: $blue;
       }
     }
 
@@ -50,9 +55,13 @@
   }
 
   &__tags {
-    @include col100(0 0 16px 0);
+    @include col100(4px 0 40px 0);
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 8px;
+
+    @include respond(mobile) {
+      @include col100(4px 0 0 0);
+    }
   }
 
   &__list {
@@ -73,6 +82,33 @@
 
     & a {
       margin: 0 0 6px 0;
+    }
+  }
+
+  &__2-cols {
+    @include col100(4px 0 32px 0, row);
+    margin-left: -24px;
+
+    @include respond(mobile) {
+      margin-left: 0;
+      @include col100(4px 0 0 0, column);
+    }
+  }
+
+  &__col {
+    @include col50(24px 24px 32px 24px, column);
+    align-self: stretch;
+    margin-right: 2%;
+    background-color: $blanc;
+    border-radius: 8px;
+
+    @include respond(mobile) {
+      @include col100(24px 24px 32px 24px, column);
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 0;
     }
   }
 
