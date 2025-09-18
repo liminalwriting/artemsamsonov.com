@@ -2,6 +2,10 @@
 @import "colors";
 @import "typo";
 
+:root {
+  --vh: 1vh;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -13,6 +17,7 @@ body {
   
   @include respond(mobile) {
     height: 100vh;
+    height: calc(var(--vh) * 100);
   }
 }
 
