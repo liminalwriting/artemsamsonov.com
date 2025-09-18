@@ -48,7 +48,7 @@
       text-align: center;
       @include col100(120px 0 0 0, column, space-between, center);
       h1 {
-        font: $desktopH2;
+        font: $fontH2;
       }
     }
   }
@@ -147,7 +147,7 @@
 
 .skills-row {
   @include col100(0, row);
-  font: $desktopSmall;
+  font: $fontSmall;
 
   @include respond(mobile) {
     @include col100(0, column);
@@ -198,7 +198,7 @@
 
     @include respond(mobile) {
       h3 {
-        font: $desktopMain;
+        font: $fontMain;
       }
     }
   }
@@ -237,7 +237,7 @@
 .contacts-down-content {
   @include col100(0, column);
   color: $white;
-  font: $desktopMain;
+  font: $fontMain;
 
     @include respond(mobile) {
      @include col100(24px 0 0 0, column);

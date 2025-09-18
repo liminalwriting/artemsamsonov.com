@@ -6,13 +6,31 @@
   background: rgba(248, 200, 179, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: none;
   border-radius: 0.4rem;
   color: $white;
   text-decoration: none;
-  font: $desktopSmall;
+  font: $fontSmall;
   transition: all 0.3s ease;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.4rem;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.005) 0%, rgba(255, 255, 255, 0.05) 100%);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+  }
 
   &:hover {
     background: rgba(248, 200, 179, 0.1);

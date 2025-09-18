@@ -2,10 +2,10 @@
   @include colauto(8px 16px 8px 16px);
   height: auto;
   border-radius: 6px;
-  font: $desktopExtraSmall;
+  font: $fontExtraSmall;
 
   @include respond(mobile) {
-    font: $desktopSmall;
+    font: $fontSmall;
   }
   
   // Глассморфизм эффект (в два раза прозрачнее)

@@ -1,17 +1,17 @@
 @import "colors";
 
 // Desktop Fonts
-$desktopH1: 3.2rem/3.5rem "Roslindale", 'PT Serif', Georgia, serif;
-$desktopH2: 2.5rem/3rem "Roslindale", 'PT Serif', Georgia, serif;
-$desktopH3: 1.25rem/2rem "Roslindale", 'PT Serif', Arial, sans-serif;
-$desktopH4: 1.125rem/1.875rem "Roslindale", 'PT Serif', Arial, sans-serif;
-$desktopMain: 1.1875rem/1.6rem "PT Root UI", 'PT Sans', Arial, sans-serif;
-$desktopSmall: 1rem/1.35rem "PT Root UI", 'PT Sans', Arial, sans-serif;
-$desktopExtraSmall: 0.8rem/1rem "PT Root UI", 'PT Sans', Arial, sans-serif;
+$fontH1: 3.2rem/3.5rem 'Roslindale', 'PT Serif', Georgia, serif;
+$fontH2: 2.5rem/3rem 'Roslindale', 'PT Serif', Georgia, serif;
+$fontH3: 1.25rem/2rem 'Roslindale', 'PT Serif', Arial, sans-serif;
+$fontH4: 1.125rem/1.875rem 'Roslindale', 'PT Serif', Arial, sans-serif;
+$fontMain: 1.1875rem/1.6rem 'PT Root UI', 'PT Sans', Arial, sans-serif;
+$fontSmall: 1rem/1.35rem 'PT Root UI', 'PT Sans', Arial, sans-serif;
+$fontExtraSmall: 0.8rem/1rem 'PT Root UI', 'PT Sans', Arial, sans-serif;
 
 
 h1 {
-  font: $desktopH1;
+  font: $fontH1;
   margin: 0 0 1.5rem 0;
 
   @include respond(mobile) {
@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-  font: $desktopH2;
+  font: $fontH2;
   margin: 0 0 1rem 0;
 
   @include respond(mobile) {
@@ -29,7 +29,7 @@ h2 {
 }
 
 h3 {
-  font: $desktopMain;
+  font: $fontMain;
   line-height: 1.4;
   margin: 0 0 0.5rem 0;
 
@@ -39,7 +39,7 @@ h3 {
 }
 
 h4 {
-  font: $desktopH4;
+  font: $fontH4;
   margin: 0 0 0.5rem 0;
 
 }

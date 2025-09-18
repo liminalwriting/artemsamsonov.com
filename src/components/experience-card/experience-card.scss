@@ -34,7 +34,7 @@
   }
   
   &__years {
-    font: $desktopSmall;
+    font: $fontSmall;
     letter-spacing: 0.05em;
     color: $gray;
     grid-row: 1;
@@ -44,12 +44,12 @@
       grid-row: 1;
       grid-column: 2;
       justify-self: end;
-      font: $desktopMain;
+      font: $fontMain;
     }
   }
   
   &__company {
-    font: $desktopH2;
+    font: $fontH2;
     color: inherit;
     grid-row: 2;
     grid-column: 1;
@@ -123,20 +123,20 @@
   
   &__position {
     @include col100(0, column, flex-start, flex-start);
-    font: $desktopMain;
+    font: $fontMain;
     margin-bottom: 1rem;
     color: inherit;
   }
   
   &__description {
     @include col100(0, column, flex-start, flex-start);
-    font: $desktopSmall;
+    font: $fontSmall;
     color: inherit;
   }
   
   &__item {
     @include col100(0, column, flex-start, flex-start);
-    font: $desktopSmall;
+    font: $fontSmall;
     color: $gray;
     padding: 4px 0 16px 0;
     border-top: 1px solid;
