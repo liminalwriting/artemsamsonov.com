@@ -7,13 +7,11 @@ html {
 }
 
 body {
-  padding: 0 5%;
+  padding: 0;
   margin: 0;
-  //text-transform: lowercase;
   scroll-behavior: smooth;
   
   @include respond(mobile) {
-    padding: 72px 5% 24px 5%;
     height: 100vh;
   }
 }

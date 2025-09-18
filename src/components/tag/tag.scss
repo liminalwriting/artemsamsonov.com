@@ -2,15 +2,34 @@
   @include colauto(8px 16px 8px 16px);
   height: auto;
   border-radius: 6px;
-  font: $desktopSmall;
+  font: $desktopExtraSmall;
+
+  @include respond(mobile) {
+    font: $desktopSmall;
+  }
+  
+  // Глассморфизм эффект (в два раза прозрачнее)
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.025);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 
   &_light {
-    background-color: $blanc;
+    background: rgba(255, 255, 255, 0.1);
     color: $black;
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   &_dark {
-    background-color: lighten($black, 20%);
-    color: $white;
+    background: rgba(255, 255, 255, 0.05);
+    color: $gray;
+    border: 1px solid rgba(255, 255, 255, 0.025);
+  }
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.08);
   }
 }

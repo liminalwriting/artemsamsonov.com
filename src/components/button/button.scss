@@ -1,0 +1,31 @@
+@import "../../scss/colors";
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+  background: rgba(248, 200, 179, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.4rem;
+  color: $white;
+  text-decoration: none;
+  font: $desktopSmall;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background: rgba(248, 200, 179, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  @include respond(mobile) {
+    background: rgba($black, 0.1);
+  }
+}

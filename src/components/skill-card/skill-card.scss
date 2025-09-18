@@ -21,7 +21,8 @@
     @include respond(mobile) {
       grid-column-end: 17;
       padding: 0 0 8px 0;
-      font: $mobileH3;
+      color: $white;
+      font: $desktopMain;
     }
   }
   
@@ -37,6 +38,7 @@
 
       padding: 0 0 32px 0;
       color: darken($gray, 10%);
+      font: $desktopSmall;
     }
   }
 
@@ -50,7 +52,7 @@
 
     @include respond(mobile) {
       grid-column-start: 18;
-      font: $mobileH2;
+      font: $desktopMain;
     }
   }
 }
