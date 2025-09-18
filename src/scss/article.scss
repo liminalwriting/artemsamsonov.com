@@ -2,7 +2,7 @@
   @include colauto(120px 0 48px 0, column);
   width: 1024px;
   margin: 0 auto;
-  font: $desktopMain;
+  font: $fontMain;
 
   @include respond(mobile) {
     @include col100(24px 0 48px 0, column);
@@ -40,7 +40,7 @@
 
     &-secondary {
       @include col100(0 0 8px 24px);
-      font: $desktopSmall;
+      font: $fontSmall;
       border-left: 4px solid $coldBlue;
     }
   }
@@ -67,7 +67,7 @@
     @include colauto(16px 16px 24px 16px, column);
     width: 640px;
     margin: 0 0 24px 0;
-    font: $desktopSmall;
+    font: $fontSmall;
     background-color: darken($soapStone, 3%);
 
     @include respond(mobile) {
@@ -146,7 +146,7 @@
     }
 
     &-caption {
-      font: $desktopSmall;
+      font: $fontSmall;
       color: $darkGray;
       margin: 8px 0 0 0;
 

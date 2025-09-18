@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(20, 5%);
   grid-template-rows: repeat(1, auto);
-  font: $desktopSmall;
+  font: $fontSmall;
   border-top: 1px solid $codGray;
   padding: 4px 0 8px 0;
   width: 100%;
@@ -22,7 +22,7 @@
       grid-column-end: 17;
       padding: 0 0 8px 0;
       color: $white;
-      font: $desktopMain;
+      font: $fontMain;
     }
   }
   
@@ -38,7 +38,7 @@
 
       padding: 0 0 32px 0;
       color: darken($gray, 10%);
-      font: $desktopSmall;
+      font: $fontSmall;
     }
   }
 
@@ -47,12 +47,12 @@
     grid-column-end: 21;
     grid-row-start: 1;
     @include col100(0, column, flex-start, flex-end);
-    font: $desktopH2;
+    font: $fontH2;
     color: $codGray;
 
     @include respond(mobile) {
       grid-column-start: 18;
-      font: $desktopMain;
+      font: $fontMain;
     }
   }
 }
