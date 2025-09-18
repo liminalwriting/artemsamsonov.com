@@ -10,6 +10,19 @@
   a.appendChild(r);
 })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 
+// Set viewport height for mobile browsers
+function setViewportHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Set initial viewport height
+setViewportHeight();
+
+// Update viewport height on resize and orientation change
+window.addEventListener('resize', setViewportHeight);
+window.addEventListener('orientationchange', setViewportHeight);
+
 // Glassmorphism effect on header scroll
 document.addEventListener('DOMContentLoaded', function() {
   const header = document.querySelector('.header');
