@@ -13,6 +13,18 @@ module.exports = function (paths) {
               }
             }
           ]
+        },
+        {
+          test: /\.(mp4|webm|ogg)$/,
+          use:  [
+            {
+              loader:  'file-loader',
+              options: {
+                name:       '[name].[ext]',
+                outputPath: './video'
+              }
+            }
+          ]
         }
       ]
     }

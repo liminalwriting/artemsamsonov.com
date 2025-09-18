@@ -8,7 +8,7 @@
   color: $white;
 
   @include respond(mobile) {
-    @include col100(0, row);
+    @include col100(0 0 16px 0, row);
   }
 
   h2 {

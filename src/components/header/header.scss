@@ -2,26 +2,38 @@
 @import "../../scss/typo";
 
 .header {
-  @include col90(0, row, flex-start, center);
   position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
+  width: 100%;
   height: 64px;
   font: $desktopSmall;
-  background-color: $darkGray;
-  margin: 0 5%;
+  background: rgba($black, calc(var(--bg-opacity, 0) * 0.1));
+  backdrop-filter: blur(calc(var(--bg-opacity, 0) * 10px));
+  -webkit-backdrop-filter: blur(calc(var(--bg-opacity, 0) * 10px));
+  border-bottom: 1px solid rgba(255, 255, 255, calc(var(--bg-opacity, 0) * 0.08));
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, calc(var(--bg-opacity, 0) * 0.37));
+  transition: all 0.3s ease;
+  
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: 1fr;
+  align-items: center;
 
   @include respond(mobile) {
     border-bottom: 1px solid $codGray;
   }
   
   &__logo {
-    @include col20(0, column, center);
+    grid-column-start: 3;
+    grid-column-end: 6;
+    @include col100(0, row, flex-start, center);
     height: 100%;
     
     @include respond(mobile) {
-      @include col50(0, column, center);
+      grid-column-start: 2;
+      grid-column-end: 12;
     }
 
     a {
@@ -35,23 +47,29 @@
   }
   
   &__menu {
-    @include col80(0, row, flex-end, center);
+    grid-column-start: 7;
+    grid-column-end: 19;
+    @include col100(0, row, flex-end);
+    gap: 24px;
+
+    a {
+      color: $white;
+    }
     
     @include respond(tablet) {
-      @include col50(0, row, flex-end);
+      grid-column-start: 7;
+      grid-column-end: 19;
     }
     
     @include respond(mobile) {
-      display: none;
+      grid-column-start: 12;
+      grid-column-end: 20;
+      gap: 16px;
     }
     
     &-elem {
-      @include colauto(0 0 0 24px, column, center);
+      @include colauto(0, row, flex-start, center);
       height: 100%;
-      
-      @include respond(mobile) {
-        @include colauto(0 0 0 24px);
-      }
     }
   }
   
@@ -63,4 +81,5 @@
       color: $black;
     }
   }
+
 }

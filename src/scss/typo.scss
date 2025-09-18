@@ -1,62 +1,47 @@
 @import "colors";
 
 // Desktop Fonts
-$desktopH1: 40px/56px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
-$desktopH2: 32px/44px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
-$desktopH3: 20px/32px "Gotham Bold", 'Dela Gothic One', Arial, sans-serif;
-$desktopH4: 18px/30px "Gotham Bold", 'Dela Gothic One', Arial, sans-serif;
-$desktopMain: 19px/30px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
-$desktopSmall: 16px/22px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
+$desktopH1: 3.2rem/3.5rem "Roslindale", 'PT Serif', Georgia, serif;
+$desktopH2: 2.5rem/3rem "Roslindale", 'PT Serif', Georgia, serif;
+$desktopH3: 1.25rem/2rem "Roslindale", 'PT Serif', Arial, sans-serif;
+$desktopH4: 1.125rem/1.875rem "Roslindale", 'PT Serif', Arial, sans-serif;
+$desktopMain: 1.1875rem/1.6rem "PT Root UI", 'PT Sans', Arial, sans-serif;
+$desktopSmall: 1rem/1.35rem "PT Root UI", 'PT Sans', Arial, sans-serif;
+$desktopExtraSmall: 0.8rem/1rem "PT Root UI", 'PT Sans', Arial, sans-serif;
 
-// Mobile Fonts
-$mobileH1: 24px/36px "Gotham Black", 'Dela Gothic One', Arial, sans-serif;
-$mobileH2: 20px/30px "Gotham Bold", 'Dela Gothic One', Arial, sans-serif;
-$mobileH3: 16px/24px "Gotham Medium", 'Dela Gothic One', Arial, sans-serif;
-$mobileMain: 16px/24px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
-$mobileSmall: 14px/20px "PT Root UI Regular", 'PT Sans', Arial, sans-serif;
-
-h1, h2, h3 {
-  font-weight: bold;
-}
 
 h1 {
   font: $desktopH1;
-  margin: 0 0 24px 0;
+  margin: 0 0 1.5rem 0;
 
   @include respond(mobile) {
-    font: $mobileH1;
-    margin: 0 0 16px 0;
+    margin: 0 0 1rem 0;
   }
 }
 
 h2 {
   font: $desktopH2;
-  margin: 0 0 16px 0;
+  margin: 0 0 1rem 0;
 
   @include respond(mobile) {
-    font: $mobileH2;
-    margin: 32px 0 16px 0;
+    margin: 2rem 0 1rem 0;
   }
 }
 
 h3 {
-  font: $desktopH3;
+  font: $desktopMain;
   line-height: 1.4;
-  margin: 0 0 8px 0;
+  margin: 0 0 0.5rem 0;
 
   @include respond(mobile) {
-    font: $mobileH3;
-    margin: 0 0 4px 0;
+    margin: 0 0 0.25rem 0;
   }
 }
 
 h4 {
   font: $desktopH4;
-  margin: 0 0 8px 0;
+  margin: 0 0 0.5rem 0;
 
-  @include respond(mobile) {
-    font: $mobileH3;
-  }
 }
 
 a {
@@ -65,10 +50,10 @@ a {
 }
 
 p {
-  margin: 0 0 24px 0;
+  margin: 0 0 1.5rem 0;
 
   @include respond(mobile) {
-    margin: 0 0 16px 0;
+    margin: 0 0 1rem 0;
   }
 }
 
@@ -77,7 +62,7 @@ ul {
   padding: 0;
 
   li {
-    margin: 0 0 8px 0;
+    margin: 0 0 0.5rem 0;
     list-style-type: square;
   }
 }
@@ -104,11 +89,17 @@ ul {
 }
 
 @font-face {
-  font-family: 'PT Root UI Regular';
-  src: url('../fonts/pt-root-ui-regular.eot');
-  src: url('../fonts/pt-root-ui-regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/pt-root-ui-regular.woff2') format('woff2'),
-  url('../fonts/pt-root-ui-regular.ttf') format('truetype');
+  font-family: 'Roslindale';
+  src: url('../fonts/roslindale.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('../fonts/pt-root.woff2') format('woff2'),
+       url('../fonts/pt-root.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

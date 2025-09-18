@@ -18,6 +18,8 @@ const PATHS = {
   dist:      path.join(__dirname, './docs'),
   img:       path.join(__dirname, './src/img'),
   distImg:   path.join(__dirname, './docs/img'),
+  video:     path.join(__dirname, './src/video'),
+  distVideo: path.join(__dirname, './docs/video'),
   styles:    path.join(__dirname, './src/scss'),
   fonts:     path.join(__dirname, './src/fonts'),
   distFonts: path.join(__dirname, './docs/fonts')
@@ -33,6 +35,10 @@ let plugins = [
     {
       from: PATHS.img,
       to:   PATHS.distImg
+    },
+    {
+      from: PATHS.video,
+      to:   PATHS.distVideo
     },
     {
       from: PATHS.fonts,

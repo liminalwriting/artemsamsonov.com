@@ -9,3 +9,18 @@
   r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
   a.appendChild(r);
 })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+
+// Glassmorphism effect on header scroll
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.header');
+  
+  if (header) {
+    window.addEventListener('scroll', function() {
+      const scrollY = window.scrollY;
+      const maxScroll = 400; // Maximum scroll distance for full opacity
+      const opacity = Math.min(scrollY / maxScroll, 1); // Calculate opacity from 0 to 1
+      
+      header.style.setProperty('--bg-opacity', opacity);
+    });
+  }
+});
