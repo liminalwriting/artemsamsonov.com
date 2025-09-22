@@ -55,4 +55,9 @@
       font: $fontMain;
     }
   }
+
+  &__metric-value {
+    color: $successGreen;
+    font-weight: 600;
+  }
 }

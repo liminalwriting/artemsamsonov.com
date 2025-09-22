@@ -3,6 +3,7 @@
   width: 1024px;
   margin: 0 auto;
   font: $fontMain;
+  color: $gray;
 
   @include respond(mobile) {
     @include col100(24px 0 48px 0, column);
@@ -14,6 +15,10 @@
     @include respond(mobile) {
       margin: 0;
     }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $blanc;
   }
 
   a {
@@ -31,7 +36,7 @@
     
     li {
       margin: 0 0 16px 0;
-      color: $black;
+      color: $gray;
 
       &::marker {
         color: $blue;
@@ -75,7 +80,7 @@
       margin: 0 0 8px 0;
     }
 
-    & h4 {
+    & h1, & h2, & h3, & h4, & h5, & h6 {
       margin: 0 0 8px 0;
     }
 
@@ -95,15 +100,25 @@
   }
 
   &__col {
-    @include col50(24px 24px 32px 24px, column);
+    @include col50(4px 0 32px 0, column, flex-start, flex-start);
     align-self: stretch;
     margin-right: 2%;
-    background-color: $blanc;
-    border-radius: 8px;
+    font: $fontSmall;
+    color: $gray;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 70%, transparent 100%) 1;
+
+    &:last-child {
+      @include col50(4px 0 0 0, column, flex-start, flex-start);
+    }
 
     @include respond(mobile) {
-      @include col100(24px 24px 32px 24px, column);
-      margin-bottom: 8px;
+      @include col100(4px 0 32px 0, column, flex-start, flex-start);
+      margin-bottom: 0;
+      
+      &:last-child {
+        @include col100(4px 0 0 0, column, flex-start, flex-start);
+      }
     }
 
     p {
@@ -111,23 +126,39 @@
     }
   }
 
+  &__skill-cards {
+    margin-bottom: 48px;
+  }
+
   &__image {
-    @include col100(0, column);
-    margin: 8px 0 24px 0;
+    @include col100(0 0 24px 0, column);
 
     @include respond(mobile) {
       width: 100%;
-      margin: 8px 0 16px 0;
     }
 
     &-auto {
       width: 320px !important;
     }
 
+    &--half {
+      @include col100(0, column, center);
+      
+      a {
+        width: 80%;
+        max-width: 600px;
+      }
+
+      @include respond(mobile) {
+        a {
+          width: 100%;
+        }
+      }
+    }
+
     img {
-      display: block;
       width: 100%;
-      border: 1px solid darken($soapStone, 10%);
+      box-shadow: $cardShadow;
 
       @include respond(mobile) {
         margin: 0;

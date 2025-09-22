@@ -3,8 +3,8 @@
 // Desktop Fonts
 $fontH1: 3.2rem/3.5rem 'Roslindale', 'PT Serif', Georgia, serif;
 $fontH2: 2.5rem/3rem 'Roslindale', 'PT Serif', Georgia, serif;
-$fontH3: 1.25rem/2rem 'Roslindale', 'PT Serif', Arial, sans-serif;
-$fontH3Bold: 1.25rem/2rem 'Roslindale', 'PT Serif', Arial, sans-serif;
+$fontH3: 1.25rem/2rem 'PT Root UI', 'PT Serif', Arial, sans-serif;
+$fontH3Bold: 1.25rem/2rem 'PT Root UI', 'PT Serif', Arial, sans-serif;
 $fontH3BoldWeight: bold;
 $fontH4: 1rem/1.4rem 'RoslindPT Root UIale', 'PT Sans', Arial, sans-serif;
 $fontMain: 1.1875rem/1.6rem 'PT Root UI', 'PT Sans', Arial, sans-serif;
@@ -31,7 +31,7 @@ h2 {
 }
 
 h3 {
-  font: $fontMain;
+  font: $fontH3;
   line-height: 1.4;
   margin: 0 0 0.5rem 0;
 

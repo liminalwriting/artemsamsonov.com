@@ -3,6 +3,7 @@ include ../../components/header/header
 include ../../components/article-headline/article-headline
 include ../../components/article-breadcrumb/article-breadcrumb
 include ../../components/tag/tag
+include ../../components/skill-card/skill-card
 include ../../components/sign/sign
 
 doctype html
@@ -17,11 +18,11 @@ html
         {
           "@context": "https://schema.org",
           "@type": "CreativeWork",
-          "name": "Зарплатный калькулятор getmatch",
-          "alternateName": "Salary Calculator getmatch",
-          "headline": "Инструмент для оценки рыночной зарплаты кандидата",
-          "description": "Кейс о том, как я спроектировал зарплатный калькулятор в getmatch. Простой инструмент помогал кандидатам оценить свою рыночную зарплату, а клиентам — понимать, сколько платить IT-специалистам.",
-          "url": "https://artemsamsonov.com/getmatch-calc",
+          "name": "Редизайн карточки кандидата getmatch",
+          "alternateName": "Candidate Card Redesign getmatch",
+          "headline": "Улучшение UX карточки кандидата для рекрутеров",
+          "description": "Кейс о том, как я провёл редизайн карточки кандидата в getmatch. Новая карточка помогла рекрутерам быстрее анализировать информацию и увеличила количество одобрений, что привело к росту наймов и выручки.",
+          "url": "https://artemsamsonov.com/getmatch-card",
           "author": {
             "@type": "Person",
             "name": "Артём Самсонов",
@@ -30,116 +31,77 @@ html
           "datePublished": "2025-06-26",
           "dateModified": "2025-06-26",
           "inLanguage": "ru",
-          "mainEntityOfPage": "https://artemsamsonov.com/getmatch-calc",
+          "mainEntityOfPage": "https://artemsamsonov.com/getmatch-card",
           "image": {
             "@type": "ImageObject",
-            "url": "https://artemsamsonov.com/img/case-04.jpg",
+            "url": "https://artemsamsonov.com/img/getmatch-card-01.png",
             "width": 1152,
             "height": 768
           }
         }
-body.body_light
-    +header()
+body.body_dark
+    +header('dark')
     div.content
         div.article
             section
-                h1 Зарплатный калькулятор getmatch
-                p.article__annotation Раздел сервиса на пересечении интересов кандидатов и клиентов.
-                h2 Мой вклад
+                h1 Редизайн карточки кандидата
+                p.article__annotation Новая карточка в ленте рекрутеров помогла и пользователям, и бизнесу: анализ информации стал в два раза быстрее, а количество одобрений привело к росту наймов и, как следствие — к выручке. И всё благодаря дизайну
+                h3 Мой вклад
                 div.article__tags
-                    +tag('Глубинные интервью', 'light')
-                    +tag('Формулировка JTBD', 'light')
-                    +tag('Архитектура сценариев', 'light')
-                    +tag('UX/UI-дизайн', 'light')
-                    +tag('UX-редактура', 'light')
-                    +tag('Спецификации', 'light')
-                    +tag('Сопровождение разработки', 'light')
-                h2 Проблема
-                .article__2-cols
-                    .article__col  
-                        h3 Для кандидатов
-                        p На серии глубинных интервью кандидаты отмечали, что не понимают, достаточно ли им платят
-                    .article__col
-                        h3 Для клиентов
-                        p Компании не понимали, сколько платить — им нужна была аналитика, основанная на #[em реальных] данных
-                h2 Job to be Done
-                .article__2-cols
-                    .article__col
-                        h3 Для кандидата
-                        p Понять, справедливо ли мне платят и какие условия я могу просить у компаний
-                    .article__col 
-                            h3 Для компаний
-                            p Определить зарплатную вилку, которую предлагать кандидатам и сотрудникам
-                h2 Задача
+                    +tag('Координация UX-исследования', 'M')
+                    +tag('Проектирование интерфейса', 'M')
+                    +tag('Сопровождение разработки', 'M')
+                h3 Контекст
+                p Проводя сезонную сессию глубинных интервью с рекрутерами, мы выявили, что на краткой карточке кандидата нет ряда важной информации. Из-за этого рекрутеры всегда открывают полный профиль в соседней вкладке.
+                h3 Задача
                 p Создать решение, которое:
                 ul
-                    li даст кандидатам понимание, насколько их зарплата соответствует рынку
-                    li мотивирует делиться зарплатой добровольно
-                    li позволит компаниям покупать агрегированную аналитику
+                    li Сократит путь от просмотра информации до открытия контактов
+                    li Увеличит количество одобрений
                 h2 Решение
-                p  Новый раздел «Зарплаты» показывает график зарплат по специальности. Чтобы посмотреть статистику по уровням, городам, форматам и топ-компаниям, нужно анонимно оставить зарплату.
-                
-                p Сразу показали товар лицом, закрыв платные значения заглушками:
-                p.article__image
-                    a(href="../img/getmatch-calc-01.jpg" target="_blank")
-                        img(src="../../img/getmatch-calc-01.jpg")
-                p В форме добавления объяснили, зачем нам понадобилось каждое из полей:
-                p.article__image
-                    a(href="../img/getmatch-calc-02.jpg" target="_blank")
-                        img(src="../../img/getmatch-calc-02.jpg")
-                    span.article__image-caption Например, при выборе компании
-                p.article__image
-                    a(href="../img/getmatch-calc-02b.jpg" target="_blank")
-                        img(src="../../img/getmatch-calc-02b.jpg")
-                    span.article__image-caption …или при указании опыта
-                p Провалидировали все необходимые ошибки ввода:
-                p.article__image
-                    a(href="../img/getmatch-calc-03.jpg" target="_blank")
-                        img(src="../../img/getmatch-calc-03.jpg")
-                p При попытке добавить зарплату без нужных данных подсветили пользователю, какие поля придётся заполнить:
-                p.article__image
-                    a(href="../img/getmatch-calc-04.jpg" target="_blank")
-                        img(src="../../img/getmatch-calc-04.jpg")
-                    span.article__image-caption Придётся всё же указать зарплату и город проживания
-                p Добавление зарплаты не только разблокирует фильтры, но и позволит оценить своё положение на рынке:
-                p.article__image
-                    a(href="../img/getmatch-calc-05.jpg" target="_blank")
-                        img(src="../../img/getmatch-calc-05.jpg")
-                p У зарплат выше, по рынку или ниже рынка есть цветовые индикаторы:
-                p.article__image
-                    a(href="../img/getmatch-calc-06.jpg" target="_blank")
-                        img(src="../../img/getmatch-calc-06.jpg")
-                p Зарплату можно скрыть от чужих глаз, чтобы заскриншотить данные друзьям или не прятаться в опенспейсе:
-                p.article__image
-                    a(href="../img/getmatch-calc-07.jpg" target="_blank")
-                        img(src="../../img/getmatch-calc-07.jpg")
-                p Если зарплат не хватает, покажем заглушку и позже пришлём оповещение в телеграм-бот:
-                p.article__image
-                    a(href="../img/getmatch-calc-08.jpg" target="_blank")
-                        img(src="../../img/getmatch-calc-08.jpg")
-                p У всех страниц, компонентов и состояний есть адаптивные версии:
-                p.article__image
-                    a(href="../img/getmatch-calc-10.jpg" target="_blank")
-                        img(src="../../img/getmatch-calc-10.jpg")
-                p В рамках задачи провели с UX-писателем серьёзную работу над формулировками. Я руководил процессом и ревьюил варианты:
-                    p.article__image
-                        a(href="../img/getmatch-calc-11b.jpg" target="_blank")
-                            img(src="../../img/getmatch-calc-11b.jpg")
-                        span.article__image-caption Несколько вариаций обсуждаемых формулировок
-                    p.article__image
-                        a(href="../img/getmatch-calc-11.jpg" target="_blank")
-                            img(src="../../img/getmatch-calc-11.jpg")
-                        span.article__image-caption Пример обсуждения
-                    p Разработчикам передали не только подробные макеты, но и текстовые спецификации с прототипами.
-                    p
-                        a(href="https://www.figma.com/proto/gRAEj3xOESxAVwgkzbZjJo/%E2%9C%85-Calc-%E2%86%92-Iteration-1?page-id=701%3A45383&node-id=794-55069&p=f&viewport=455%2C342%2C0.16&t=JKYRqaQhiauFifht-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=794%3A55069" target="_blanc") Пример кликабельного прототипа
+                p  Провели редизайн карточки кандидата для рекрутера:
+                .article__skill-cards
+                    +skillCard(
+                        'Подняли выше навыки',
+                        '96% респондентов анализировали скиллы до изучения опыта работы и отметили, что отсутствие необходмого скилла — бесповоротный редфлаг',
+                        ''
+                    )
+                    +skillCard(
+                        'Спроектировали пожелания по локациям',
+                        'Новая информация, которая помогает сразу оценить желания кандидата: «готов ли переехать в Москву», «стоит ли предлагать позицию в Тбилиси» — и так далее',
+                        ''
+                    )
+                    +skillCard(
+                        'Добавили детальное описание опыта',
+                        '100% респондентов ходили в полный профиль именно за ним. Добавили спойлером, чтобы не растягивать карточку (некоторые кандидаты пишут в них «Войну и мир»)',
+                        ''
+                    )
+                    +skillCard(
+                        'Отобразили контакты в сайдбаре',
+                        'Раньше открыть их можно было только в полном профиле',
+                        ''
+                    )
+                p.article__image.article__image
+                    a(href="../../img/getmatch-card-01.png" target="_blank")
+                        img(src="../../img/getmatch-card-01.png")
                 h2 Результаты
-                ul 
-                    li MAU сервиса вырос на #[attr NDA] п.п. (→ просмотры вакансий → отклики → одобрения → наймы → выручка)
-                    li Компании купили обощённую аналитику на #[attr NDA] миллионов рублей в первом же квартале (→ выручка)
-                p #[strong Фан-факт:] кнопка «Открыть профиль» в кейсе «Ваша зарплата ниже рынка» подняла открытие профилей. Однако, к росту наймов это не привело — чаще всего профили открывали маловостребованные специалисты уровня junior.
-                h2 Чему я научился
-                p Принцип #[a(href="https://www.nngroup.com/articles/progressive-disclosure/") Progressive Disclosure (nngroup.com)] работает — если пользователь видит даже заблюренную ценность, он готов поделиться чувствительными данными.
-                p Маленькие и на первый взгляд необязательные детали важны. Цветная маркировка позиции на рынке, скрытие зарплаты — недорогие в разработке вещи, но дарят пользователю ощущение заботы и аккуратности (#[a(href="https://www.nngroup.com/articles/peak-end-rule/") Peak–End Rule], Daniel Kahneman, 1999).
-                +sign()
+                .article__skill-cards
+                    +skillCard(
+                        'Time to Value: -56%',
+                        'Время принятия решения сократилось с 2 минут 40 сек. до 1 минуты 10 сек. — за счёт избавления от лишнего перехода в полный профиль и быстрого доступа к важной информации',
+                        '',
+                        'metric'
+                    )
+                    +skillCard(
+                        'Task Success Rate: +18%',
+                        'Рекрутеры стали открывать больше контактов',
+                        '',
+                        'metric'
+                    )
+                    +skillCard(
+                        'Выручка в месяц: +972 000 ₽',
+                        'Больше открытий контактов → больше собеседований → больше наймов. А за наймы нам платили деньги',
+                        '',
+                        'metric'
+                    )
                 
