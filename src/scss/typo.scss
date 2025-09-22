@@ -4,7 +4,9 @@
 $fontH1: 3.2rem/3.5rem 'Roslindale', 'PT Serif', Georgia, serif;
 $fontH2: 2.5rem/3rem 'Roslindale', 'PT Serif', Georgia, serif;
 $fontH3: 1.25rem/2rem 'Roslindale', 'PT Serif', Arial, sans-serif;
-$fontH4: 1.125rem/1.875rem 'Roslindale', 'PT Serif', Arial, sans-serif;
+$fontH3Bold: 1.25rem/2rem 'Roslindale', 'PT Serif', Arial, sans-serif;
+$fontH3BoldWeight: bold;
+$fontH4: 1rem/1.4rem 'RoslindPT Root UIale', 'PT Sans', Arial, sans-serif;
 $fontMain: 1.1875rem/1.6rem 'PT Root UI', 'PT Sans', Arial, sans-serif;
 $fontSmall: 1rem/1.35rem 'PT Root UI', 'PT Sans', Arial, sans-serif;
 $fontExtraSmall: 0.8rem/1rem 'PT Root UI', 'PT Sans', Arial, sans-serif;
@@ -68,30 +70,16 @@ ul {
 }
 
 @font-face {
-  font-family: 'Gotham Black';
-  src: url('../fonts/gotham-black.ttf');
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Gotham Bold';
-  src: url('../fonts/gotham-bold.ttf');
-  font-style: normal;
+  font-family: 'Roslindale';
+  src: url('../fonts/roslindale.otf') format('truetype');
   font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Gotham Medium';
-  src: url('../fonts/gotham-medium.ttf');
   font-style: normal;
-  font-weight: normal;
 }
 
 @font-face {
   font-family: 'Roslindale';
-  src: url('../fonts/roslindale.otf') format('truetype');
-  font-weight: normal;
+  src: url('../fonts/roslindate-bold.otf') format('truetype');
+  font-weight: bold;
   font-style: normal;
 }
 

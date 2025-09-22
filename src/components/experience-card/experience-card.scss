@@ -1,5 +1,6 @@
 @import "../../scss/colors";
 @import "../../scss/typo";
+@import "../../scss/main";
 
 .experience-card {
   @include col100(0, column);
@@ -44,7 +45,6 @@
       grid-row: 1;
       grid-column: 2;
       justify-self: end;
-      font: $fontMain;
     }
   }
   
@@ -72,22 +72,7 @@
     -webkit-backdrop-filter: blur(10px);
     border: none;
     
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 0.4rem;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.005) 0%, rgba(255, 255, 255, 0.05) 100%);
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask-composite: xor;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      pointer-events: none;
-    }
+    @include glassmorphism-border;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
     
     img {
@@ -122,9 +107,9 @@
   }
   
   &__position {
-    @include col100(0, column, flex-start, flex-start);
+    @include col100(0.5rem 0 0 0, column, flex-start, flex-start);
     font: $fontMain;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: inherit;
   }
   
@@ -135,12 +120,14 @@
   }
   
   &__item {
-    @include col100(0, column, flex-start, flex-start);
+    @include col100(4px 0 32px 0, column, flex-start, flex-start);
     font: $fontSmall;
     color: $gray;
-    padding: 4px 0 16px 0;
     border-top: 1px solid;
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 70%, transparent 100%) 1;
     
+    &:last-child {
+      @include col100(4px 0 0 0, column, flex-start, flex-start);
+    }
   }
 }

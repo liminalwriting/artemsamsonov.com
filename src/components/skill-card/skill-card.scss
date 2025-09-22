@@ -14,9 +14,9 @@
   }
   
   &__name {
+    grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 6;
-    grid-row-start: 1;
 
     @include respond(mobile) {
       grid-column-end: 17;
@@ -27,9 +27,9 @@
   }
   
   &__description {
+    grid-row-start: 1;
     grid-column-start: 8;
     grid-column-end: 14;
-    grid-row-start: 1;
 
     @include respond(mobile) {
       grid-column-start: 1;
@@ -43,9 +43,9 @@
   }
 
   &__digit {
+    grid-row-start: 1;
     grid-column-start: 15;
     grid-column-end: 21;
-    grid-row-start: 1;
     @include col100(0, column, flex-start, flex-end);
     font: $fontH2;
     color: $codGray;

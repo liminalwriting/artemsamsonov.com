@@ -1,35 +1,86 @@
-.case-card {
-  @include col30(0, column);
-  color: inherit;
+@import "../../scss/colors";
+@import "../../scss/typo";
+@import "../../scss/main";
 
-  @include respond(mobile) {
-    @include col100(0, column);
-    margin: 0 0 32px 0;
-  }
-
+.case {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: start;
+  color: $white;
+  margin-bottom: 2rem;
+  padding: 2rem 3rem;
+  background: lighten($black, 7%);
+  border-radius: 0.4rem;
+  font: $fontMain;
+  position: relative;
+  box-shadow: $cardShadow;
+  
+  @include glassmorphism-border;
+  
   &:last-child {
     margin-bottom: 0;
   }
-
-  &__cover {
-    margin: 0 0 16px 0;
-
+  
+  @include respond(mobile) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    
+    .case__content {
+      margin-left: 0;
+    }
+  }
+  
+  &--reverse {
+    grid-template-columns: 60% 40%;
+    
     @include respond(mobile) {
-      margin: 0 0 8px 0;
-    }
-
-    img {
-      width: 100%;
-      border: 1px solid $codGray;
+      grid-template-columns: 1fr;
     }
   }
 
-  &__headline {
-    color: $coldBlue;
-  }
-
-  &__description {
+  &__type {
     font: $fontSmall;
     color: $gray;
+    @include col100(1rem 0 2rem 0, column);
+  }
+  
+  &__content {
+    @include col100(0 2rem 0 0, column);
+    margin-left: 1.125rem; // 18px
+  }
+  
+  &--reverse &__content {
+    @include col100(0 0 0 1.75rem, column); // 28px
+  }
+  
+  &__metrics {
+    @include col100(1rem 0 3rem 0, column);
+    gap: 0.3rem;
+    font: $fontSmall;
+    color: $gray;
+  }
+  
+  &__metric {
+    display: block;
+    
+    &-value {
+      color: $successGreen;
+      font-weight: 600;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.4rem;
+      object-fit: cover;
+    }
   }
 }

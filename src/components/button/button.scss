@@ -1,46 +1,26 @@
 @import "../../scss/colors";
 
 .button {
+  @extend .glassmorphism;
   display: inline-block;
   padding: 0.75rem 2.5rem;
-  background: rgba(248, 200, 179, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: none;
+  background: $coralBisque;
   border-radius: 0.4rem;
   color: $white;
   text-decoration: none;
   font: $fontSmall;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
-  position: relative;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 0.4rem;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.005) 0%, rgba(255, 255, 255, 0.05) 100%);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: xor;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    pointer-events: none;
-  }
+  box-shadow: $cardShadow;
 
   &:hover {
     background: rgba(248, 200, 179, 0.1);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.125rem); // -2px
+    box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.2);
   }
 
   &:active {
     transform: translateY(0);
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.1);
   }
   
   @include respond(mobile) {
