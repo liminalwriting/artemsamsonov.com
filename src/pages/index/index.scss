@@ -180,7 +180,7 @@
   grid-column-start: 1;
   grid-column-end: 21;
 
-  margin: $sectionSpacing 15% 0 15%;
+  margin: $sectionSpacing 15% $sectionSpacing 15%;
 
   @include respond(mobile) {
     grid-row-start: 5;
@@ -214,43 +214,6 @@
 
     @include respond(mobile) {
      @include colauto(8px 0 0 0);
-    }
-  }
-}
-
-#contacts-down {
-  grid-row-start: 6;
-  grid-column-start: 1;
-  grid-column-end: 21;
-
-  margin: $sectionSpacing 0 0 0;
-
-  @include respond(mobile) {
-    grid-row-start: 6;
-    grid-column-end: 21;
-  }
-}
-
-.contacts-down-content {
-  @include col100(0, column);
-  color: $white;
-  font: $fontMain;
-
-    @include respond(mobile) {
-     @include col100(24px 0 0 0, column);
-
-    h3 {
-      margin-bottom: 16px;
-    }
-
-    a {
-      margin: 0 0 16px 0;
-    }
-  }
-
-  a {
-    span {
-      color: $white;
     }
   }
 }

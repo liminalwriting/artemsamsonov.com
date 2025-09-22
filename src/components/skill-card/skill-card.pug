@@ -1,5 +1,10 @@
-mixin skillCard(name, description, digit)
+mixin skillCard(name, description, digit, mode = 'default')
     div.skill-card
-        div.skill-card__name=name
+        if mode === 'metric'
+            div.skill-card__name
+                = name.split(': ')[0] + ': '
+                span.skill-card__metric-value= name.split(': ')[1]
+        else
+            div.skill-card__name=name
         div.skill-card__description=description
         div.skill-card__digit=digit
