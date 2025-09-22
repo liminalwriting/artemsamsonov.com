@@ -1,8 +1,24 @@
-mixin caseCard(cover, headline, description, link, altText)
-    a.case-card(href=`${link}`)
-        div.case-card__cover
-            img(src=`../../img/${cover}.jpg` alt=altText)
-        div.case-card__headline
-            h3=headline
-        div.case-card__description=description
-        div.case-card__button
+mixin caseCard(type, title, metrics, imageSrc, imageAlt, buttonText, buttonLink, reverse = false)
+  .case(class=reverse ? 'case--reverse' : '')
+    if reverse
+      .case__image
+        img(src=imageSrc, alt=imageAlt)
+      .case__content
+        span.case__type= type
+        h2= title
+        .case__metrics
+          each metric in metrics
+            span.case__metric= metric.label + ': '
+              span.case__metric-value= metric.value
+        +button(buttonText, buttonLink)
+    else
+      .case__content
+        span.case__type= type
+        h2= title
+        .case__metrics
+          each metric in metrics
+            span.case__metric= metric.label + ': '
+              span.case__metric-value= metric.value
+        +button(buttonText, buttonLink)
+      .case__image
+        img(src=imageSrc, alt=imageAlt)

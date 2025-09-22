@@ -27,10 +27,10 @@ body.body_dark
 	div#index
 		div#main-info
 			div#main-info-text.main-info 
-				h1 Lead Product Designer из&nbsp;Москвы. Создаю и&nbsp;развиваю команды, масштабирую UX&#8209;процессы,<br>улучшаю метрики роста
+				h1 Lead Product Designer из&nbsp;Москвы. Создаю и&nbsp;развиваю команды, масштабирую UX&#8209;процессы, улучшаю метрики роста
 				#main-info-buttons 
-					+button('Опыт', '#experience')
-					//+button('Кейсы', '#cases')
+					+button('Опыт работы', '#experience')
+					+button('Кейсы', '#cases')
 		div#experience
 			div.experience-cards
 				+experienceCard(
@@ -39,13 +39,13 @@ body.body_dark
 					'../../img/getmatch.jpg',
 					'Lead Product Designer',
 					'https://getmatch.ru',
-					'Нанял мультидисциплинарную команду дизайнеров: UX&nbsp;Researcher, UX&nbsp;Writer, Middle Product Designer',
+					'Нанял мультидисциплинарную команду дизайнеров: UX&nbsp;Researcher, UX&nbsp;Writer, Middle&nbsp;Product Designer',
 					'Создал с нуля дизайн&#8209;процесс: discovery, планирование, совместная работа, кросс&#8209;ревью, PBR, контроль разработки',
 					'Ревьюил и&nbsp;помогал расти<br>(1:1, матрицы компетенций, ИПР, квартальные ревью)'
 				)
 				+experienceCard(
 					'2019–2022',
-					'wrike',
+					'Wrike',
 					'../../img/wrike.jpg',
 					'Design System Owner',
 					'https://wrike.com',
@@ -59,13 +59,40 @@ body.body_dark
 					'../../img/propeller.jpg',
 					'Senior Product Designer',
 					'https://propellerads.com',
-					'Вырастил сеньора из&nbsp;мидла (сейчас Lead Product Designer в&nbsp;Лондоне)',
+					'Вырастил сеньора из&nbsp;мидла (сейчас Lead&nbsp;Product Designer в&nbsp;Лондоне)',
 					'Создал процессы кросс-ревью в&nbsp;команде',
 					'Внедрил дизайн в коде<br>(HTML5, CSS3, JS, React)'
 				)
-			
+		#cases 
+			+caseCard(
+				'кейс getmatch',
+				'Редизайн карточки кандидата',
+				[
+					{label: 'Time to Value', value: '-56%'},
+					{label: 'Task Success Rate', value: '+18%'},
+					{label: 'Выручка в месяц', value: '+972 000 ₽'}
+				],
+				'../../img/getmatch-card-preview.png',
+				'Редизайн карточки кандидата getmatch',
+				'Смотреть кейс',
+				'getmatch-card.html',
+				false
+			)
+			//+caseCard(
+				'кейс getmatch',
+				'One Day Offer для кандидатов',
+				[
+					{label: 'Эффективность откликов', value: '+212%'},
+					{label: 'Продажи за месяц', value: '+1 500 000 ₽'}
+				],
+				'../../img/wrike.jpg',
+				'Улучшение UX уведомлений wrike',
+				'Смотреть кейс',
+				'getmatch-card',
+				true
+			//)
 		div#skills
-			+list-header('Играющий тренер', 'dark')
+			+list-header('Как играющий тренер', 'dark')
 			+skillCard(
 				'Мыслю продуктово',
 				'Опираюсь на JTBD, дерево метрик и\u00A0аналитику. Формулирую продуктовые гипотезы и\u00A0OKR, участвую в\u00A0планировании и\u00A0декомпозиции, влияю на\u00A0roadmap',
@@ -91,22 +118,11 @@ body.body_dark
 				'Для телеграм‑бота и\u00A0рассылок getmatch. Координировал UX‑писателя, составлял writing‑гайды и\u00A0проводил ревью, развивал tone of\u00A0voice, повышал ясность',
 				'05'
 			)
-		//div#cases
-			+list-header('Кейсы getmatch', 'dark')
-			div.cases__content
-				+caseCard('case-04', 'Зарплатный калькулятор', 'Как я проектировал инструмент для аналитики зарплат в русском IT', 'getmatch-calc.html', 'Глубинные интервью, Формулировка JTBD, Архитектура сценариев, UX/UI-дизайн, UX-редактура, Спецификации, Сопровождение разработки')
-				+caseCard('case-05', 'Поднятие профиля', 'Механизм, помогающий кандидатам стать заметнее для компаний, а рекрутерам — находить кандидатов из глубины ленты', 'getmatch-up.html', 'Формулировка JTBD, Usability Test, UX-дизайн в Telegram, UXW-лидерство, Анализ количественных метрик')
-				+caseCard('case-06', 'Исследование персон кандидатов', 'Как мы сформировали персоны кандидатов в продукте и пользуемся ими до  сих пор', 'getmatch-personas.html', 'Дизайн-менеджмент, Архитектура исследования, Глубинные интервью, Презентация результатов, Формирование Roadmap')
-			+list-header('Wrike • 2019–2022', 'dark').list-header-second
-			div.cases__content
-				+caseCard('case-01', 'Как перестать блуждать ёжиком в тумане и улучшать продукт разумно', 'Рассказываю на примере интеграции Wrike for MS Teams, как перестать делать лишнюю работу и реально помогать пользователям', 'msteams-rebuild.html', 'Как улучшать продукт разумно: UX/UI, исследования пользователей, UX research,персоны')
-				+caseCard('case-02', 'Как мы проектировали уведомления из Wrike в MS Teams', 'Рассказываю о проблемах, с которыми мы столкнулись в процессе проектирования и как мы решали их с помощью пользователей', 'msteams-notifications.html', 'UX/UI, исследования пользователей, UX research')
-				+caseCard('case-03', 'Почему дизайнерам компонентов нужно доплачивать за вредность', 'Рассказываю на примере компонента «Календарь», как типичная на первый взгляд задача способна довести продуктового дизайнера до слёз', 'calendar-from-hell.html', 'Дизайн-системы, дизайн компонентов, UX/UI, продуктовый дизайн')
 		div#tags
 			+list-header('Инструменты и подходы', 'dark')
 			div.tags__content
 				div.tags__column
-					h3 Подходы
+					h4 Подходы
 					div.tags__wrap
 						+tag('JTBD')
 						+tag('Product Thinking')
@@ -115,7 +131,7 @@ body.body_dark
 						+tag('Lean UX')
 						+tag('Continuous Discovery')
 				div.tags__column
-					h3 Core-навыки
+					h4 Core-навыки
 					div.tags__wrap
 						+tag('UX Architecture')
 						+tag('Interaction Design')
@@ -125,7 +141,7 @@ body.body_dark
 						+tag('Design Review')
 						+tag('Prototyping')
 				div.tags__column
-					h3 Метрики
+					h4 Метрики
 					div.tags__wrap
 						+tag('Retention')
 						+tag('DAU/MAU')
@@ -135,7 +151,7 @@ body.body_dark
 						+tag('Adoption')
 						+tag('NPS')
 				div.tags__column
-					h3 Инструменты
+					h4 Инструменты
 					div.tags__wrap
 						+tag('Figma')
 						+tag('Design Tokens')

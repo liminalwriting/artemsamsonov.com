@@ -1,3 +1,7 @@
+@import "../../scss/colors";
+@import "../../scss/typo";
+@import "../../scss/main";
+
 #index {
   //parent
   display: grid;
@@ -48,8 +52,10 @@
       grid-column-end: 20;
       text-align: center;
       @include col100(120px 0 0 0, column, space-between, center);
+      
       h1 {
-        font: $fontH2;
+        font: $fontH3;
+        //font-weight: $fontH3BoldWeight;
       }
     }
   }
@@ -71,13 +77,12 @@
   grid-column-start: 1;
   grid-column-end: 21;
 
-  @include col100(64px 0, column);
+  @include col100($sectionSpacing 0 0 0, column);
 
   @include respond(mobile) {
     grid-row-start: 2;
     grid-column-start: 2;
     grid-column-end: 20;
-    margin: 0 0 16px 0;
     @include col100(0, column);
   }
 
@@ -129,44 +134,36 @@
   }
 }
 
-#skills {
-  grid-column-start: 1;
-  grid-column-end: 21;
+/*** Cases ***/
+#cases {
   grid-row-start: 3;
+  grid-column-start: 3;
+  grid-column-end: 19;
 
-  @include col100(0 15% 0 15%, column);
-  margin: 0 0 64px 0;
+  @include col100($sectionSpacing+2rem 0 2rem 0, column);
+
 
   @include respond(mobile) {
     grid-row-start: 3;
     grid-column-start: 2;
     grid-column-end: 20;
-    margin: 0 0 16px 0;
-    @include col100(0, column);
+    @include col100(1.5rem, column);
   }
+
 }
 
-.skills-row {
-  @include col100(0, row);
-  font: $fontSmall;
-
-  @include respond(mobile) {
-    @include col100(0, column);
-  }
-}
-
-/*** Cases ***/
-#cases {
-  grid-column-start: 1;
-  grid-column-end: 21;
+#skills {
   grid-row-start: 4;
+  grid-column-start: 4;
+  grid-column-end: 18;
 
-  @include col100(0, column);
-  margin: 0 0 72px 0;
+  @include col100($sectionSpacing 0 0 0, column);
 
   @include respond(mobile) {
     grid-row-start: 4;
-    margin: 0 0 32px 0;
+    grid-column-start: 2;
+    grid-column-end: 20;
+    @include col100(0, column);
   }
 }
 
@@ -179,23 +176,23 @@
 }
 
 #tags {
+  grid-row-start: 5;
   grid-column-start: 1;
   grid-column-end: 21;
-  grid-row-start: 5;
 
-  margin: 0 15% 64px 15%;
+  margin: $sectionSpacing 15% 0 15%;
 
   @include respond(mobile) {
     grid-row-start: 5;
     grid-column-start: 2;
     grid-column-end: 20;
-    margin: 0 0 32px 0;
   }
 }
 
 .tags {
   &__column {
     color: $white;
+    @include col100(0.8rem 0 0 0, column);
 
     @include respond(mobile) {
       h3 {
@@ -222,16 +219,15 @@
 }
 
 #contacts-down {
+  grid-row-start: 6;
   grid-column-start: 1;
   grid-column-end: 21;
-  grid-row-start: 6;
 
-  margin: 0 0 64px 0;
+  margin: $sectionSpacing 0 0 0;
 
   @include respond(mobile) {
     grid-row-start: 6;
     grid-column-end: 21;
-    margin: 0 0 32px 0;
   }
 }
 
