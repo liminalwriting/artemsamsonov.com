@@ -33,11 +33,11 @@
     {
       "@context": "https://schema.org",
       "@type": "CreativeWork",
-      "name": "Редизайн карточки кандидата getmatch",
-      "alternateName": "Candidate Card Redesign getmatch",
-      "headline": "Улучшение UX карточки кандидата для рекрутеров",
-      "description": "Кейс о том, как я провёл редизайн карточки кандидата в getmatch. Новая карточка помогла рекрутерам быстрее анализировать информацию и увеличила количество одобрений, что привело к росту наймов и выручки.",
-      "url": "https://artemsamsonov.com/getmatch-card",
+      "name": "One Day Offer для кандидатов getmatch",
+      "alternateName": "One Day Offer for Candidates getmatch",
+      "headline": "Улучшение UX уведомлений для кандидатов",
+      "description": "Кейс о том, как я улучшил UX уведомлений в getmatch. Новый подход к коммуникации с кандидатами увеличил эффективность откликов и привел к росту продаж.",
+      "url": "https://artemsamsonov.com/getmatch-odo",
       "author": {
         "@type": "Person",
         "name": "Артём Самсонов",
@@ -46,7 +46,7 @@
       "datePublished": "2025-06-26",
       "dateModified": "2025-06-26",
       "inLanguage": "ru",
-      "mainEntityOfPage": "https://artemsamsonov.com/getmatch-card",
+      "mainEntityOfPage": "https://artemsamsonov.com/getmatch-odo",
       "image": {
         "@type": "ImageObject",
         "url": "https://artemsamsonov.com/img/getmatch-card-01.png",
@@ -64,33 +64,49 @@
   <div class="content">
     <div class="article">
       <section>
-        <h1>Редизайн карточки кандидата</h1>
-        <p class="article__annotation">Новая карточка в ленте рекрутеров помогла и пользователям, и бизнесу: анализ информации стал в два раза быстрее, а количество одобрений привело к росту наймов и, как следствие—выручки. И всё благодаря дизайну.</p>
+        <h1>One Day Offer для кандидатов</h1>
+        <p class="article__annotation">Редизайн механики увеличил среднее количество откликов на 212% и принёс 1 500 000 ₽ продаж за первый месяц после релиза.</p>
         <h3>Мой вклад</h3>
         <div class="article__tags">
-          <div class="tag--M tag">Координация UX-исследования</div>
-          <div class="tag--M tag">Проектирование интерфейса</div>
-          <div class="tag--M tag">Сопровождение разработки</div>
+          <div class="tag--M tag">Сбор бизнес-требований</div>
+          <div class="tag--M tag">UX-исследование кандидатов</div>
+          <div class="tag--M tag">Определение и анализ метрик</div>
+          <div class="tag--M tag">Ревью контента и макетов</div>
         </div>
         <h3>Контекст</h3>
-        <p>Проводя сезонную сессию глубинных интервью с рекрутерами, мы выявили, что на краткой карточке кандидата нет ряда важной информации. Из-за этого рекрутеры всегда открывают полный профиль в соседней вкладке.</p>
+        <p>One Day Offer (ODO) — мероприятие, на котором кандидаты проходят все этапы собеседования за день. getmatch продавал компаниям ODO под ключ.</p>
+        <p>Однако, презентация услуги хромала — кандидаты не понимали, чем One Day Offer лучше обычного отклика на вакансию. Компании получали мало откликов и не понимали, почему One Day Offer дороже обычной вакансии.</p>
         <h3>Задача</h3>
         <p>Создать решение, которое:</p>
         <ul>
-          <li>Сократит путь от просмотра информации до открытия контактов</li>
-          <li>Увеличит количество одобрений</li>
+          <li>донесёт до кандидатов ценность One Day Offer</li>
+          <li>докажет компаниям, что за One Day Offer стоит заплатить в 5 раз больше</li>
         </ul>
         <h2>Решение</h2>
-        <p> Провели редизайн карточки кандидата для рекрутера:</p>
+        <h3>Этап 1 → Исследование ценности ODO</h3>
+        <p> Провели опрос кандидатов в телеграм-боте, которые уже откликались на One Day Offer. Спрашивали о причинах отклика. Получили следующие результаты:
+          <ul>
+            <li>Возможность пройти собеседование за день (выбрали 80% респондентов)</li>
+            <li>Онлайн-формат всех этапов (45%)</li>
+            <li>Желание попасть именно в эту компанию (28%)</li>
+            <li>Желание получить обратную связь (17%)</li>
+            <li>Другое (писали в свободной форме)</li>
+          </ul>
+          <p>Параллельно собрали данные о том, какую информацию считают важными рекрутеры: даты проведения мероприятия, этапы, перечень требуемых скиллов и команд.</p>
+        </p>
+        <h3> Этап 2 → Новый дизайн страницы ODO </h3>
+        <p>Опираясь на данные с двух сторон, спроектировали новую страницу ↓</p>
+        <p class="article__image article__image"><a href="../../img/getmatch-odo-01.jpg" target="_blank"><img src="img/getmatch-odo-01.jpg"></a><span class="article__image-caption">Новый дизайн страницы ODO</span></p>
+        <h2>Подробности</h2>
         <div class="article__skill-cards">
           <div class="skill-card skill-card--case">
-            <div class="skill-card__name">Подняли выше навыки</div>
-            <div class="skill-card__description">96% респондентов анализировали скиллы до изучения опыта работы и отметили, что отсутствие необходмого скилла — бесповоротный редфлаг</div>
+            <div class="skill-card__name">Сделали шапку кастомной и презентабельной</div>
+            <div class="skill-card__description">Компании смогли загружать свои графические материалы, ODO визуально стали отличаться от обычных вакансий</div>
             <div class="skill-card__digit"></div>
           </div>
           <div class="skill-card skill-card--case">
-            <div class="skill-card__name">Спроектировали пожелания по локациям</div>
-            <div class="skill-card__description">Новая информация, которая помогает сразу оценить желания кандидата: «готов ли переехать в Москву», «стоит ли предлагать позицию в Тбилиси» — и так далее</div>
+            <div class="skill-card__name">Показали таймлайн мероприятия</div>
+            <div class="skill-card__description">Раньше этапы описывали текстом, теперь стало понятно, как мероприятия следуют друг за другом</div>
             <div class="skill-card__digit"></div>
           </div>
           <div class="skill-card skill-card--case">
@@ -104,7 +120,6 @@
             <div class="skill-card__digit"></div>
           </div>
         </div>
-        <p class="article__image article__image"><a href="../../img/getmatch-card-01.png" target="_blank"><img src="img/getmatch-card-02.png"></a></p>
         <h2>Результаты</h2>
         <div class="article__skill-cards">
           <div class="skill-card skill-card--case">
@@ -120,7 +135,7 @@
             <div class="skill-card__digit"></div>
           </div>
           <div class="skill-card skill-card--case">
-            <div class="skill-card__name">Выручка в месяц: <span class="skill-card__metric-value">+972 000 ₽</span>
+            <div class="skill-card__name">Выручка в месяц: <span class="skill-card__metric-value">+972 000 ₽</span>
             </div>
             <div class="skill-card__description">Больше открытий контактов → больше собеседований → больше наймов. А за наймы нам платили деньги</div>
             <div class="skill-card__digit"></div>

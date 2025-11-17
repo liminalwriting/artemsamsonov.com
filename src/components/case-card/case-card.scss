@@ -7,8 +7,8 @@
   grid-template-columns: 40% 60%;
   align-items: start;
   color: $white;
-  margin-bottom: 2rem;
-  padding: 2rem 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem 3rem 3rem 3rem;
   background: lighten($black, 7%);
   border-radius: 0.4rem;
   font: $fontMain;
@@ -43,7 +43,7 @@
   &__type {
     font: $fontSmall;
     color: $gray;
-    @include col100(1rem 0 2rem 0, column);
+    @include col100(0 0 2rem 0, column);
   }
   
   &__content {
@@ -68,19 +68,22 @@
     &-value {
       color: $successGreen;
       font-weight: 600;
+      opacity: 0.5;
     }
   }
 
   &__image {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-end;
     
     img {
-      width: 100%;
+      width: 80%;
       height: auto;
       border-radius: 0.4rem;
       object-fit: cover;
+      opacity: 0.5;
     }
   }
 }

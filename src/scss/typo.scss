@@ -16,6 +16,10 @@ h1 {
   font: $fontH1;
   margin: 0 0 1.5rem 0;
 
+  @include respond(largeDesktop) {
+    font: 4rem/4.55rem 'Roslindale', 'PT Serif', Georgia, serif;
+  }
+
   @include respond(mobile) {
     margin: 0 0 1rem 0;
   }
@@ -64,7 +68,8 @@ ul {
   padding: 0;
 
   li {
-    margin: 0 0 0.5rem 0;
+    font: $fontSmall;
+    margin: 0 0 0.25rem 0;
     list-style-type: square;
   }
 }

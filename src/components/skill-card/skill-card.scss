@@ -60,4 +60,14 @@
     color: $successGreen;
     font-weight: 600;
   }
+
+  &--case {
+    .skill-card__description {
+      grid-column-end: 18;
+    }
+
+    .skill-card__digit {
+      display: none;
+    }
+  }
 }
