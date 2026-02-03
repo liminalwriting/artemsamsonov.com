@@ -44,14 +44,14 @@
   &-text {
     grid-column-start: 3;
     grid-column-end: 12;
-    @include col100(300px 0 0 0, column, space-between, center);
+    @include col100(0, column, center, center);
     color: $white;
 
     @include respond(mobile) {
       grid-column-start: 2;
       grid-column-end: 20;
       text-align: center;
-      @include col100(120px 0 0 0, column, space-between, center);
+      @include col100(0, column, center, center);
       
       h1 {
         font: $fontH3;
@@ -61,7 +61,7 @@
   }
 
   &-buttons {
-    @include col100(24px 0 0 0);
+    @include col100(64px 0 0 0);
     gap: 16px;
     align-self: flex-end;
 
