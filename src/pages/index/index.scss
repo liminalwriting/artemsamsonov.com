@@ -157,7 +157,7 @@
   grid-column-start: 4;
   grid-column-end: 18;
 
-  @include col100($sectionSpacing/2 0 0 0, column);
+  @include col100($sectionSpacing 0 0 0, column);
 
   @include respond(mobile) {
     grid-row-start: 4;
