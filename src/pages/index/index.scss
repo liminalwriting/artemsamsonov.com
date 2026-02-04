@@ -16,6 +16,7 @@
 
 /*** Main Info ***/
 #main-info {
+  position: relative;
   grid-row-start: 1;
   grid-column-start: 1;
   grid-column-end: 21;
@@ -42,28 +43,47 @@
   }
 
   &-text {
+    position: relative;
     grid-column-start: 3;
     grid-column-end: 12;
-    @include col100(0, column, center, center);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 0;
     color: $white;
+
+    h1 {
+      position: absolute;
+      top: calc(50vh - 5vh);
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      transform: translateY(-50%);
+      text-align: left;
+      box-sizing: border-box;
+    }
 
     @include respond(mobile) {
       grid-column-start: 2;
       grid-column-end: 20;
       text-align: center;
-      @include col100(0, column, center, center);
-      
+      @include col100(0, column, flex-start, center);
+
       h1 {
         font: $fontH3;
-        //font-weight: $fontH3BoldWeight;
+        text-align: center;
       }
     }
   }
 
   &-buttons {
-    @include col100(56px 0 0 0);
+    @include col100(0, row);
     gap: 16px;
-    align-self: flex-end;
+    align-self: stretch;
+    margin-top: auto;
+    margin-bottom: 32px;
 
     @include respond(mobile) {
       @include col100(48px 0 0 0, row, center);

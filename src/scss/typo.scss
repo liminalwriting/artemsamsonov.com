@@ -1,7 +1,7 @@
 @import "colors";
 
 // Desktop Fonts
-$fontH1: 3.2rem/3.5rem 'Roslindale', 'PT Serif', Georgia, serif;
+$fontH1: 3.2rem/3.7rem 'Roslindale', 'PT Serif', Georgia, serif;
 $fontH2: 2.5rem/3rem 'Roslindale', 'PT Serif', Georgia, serif;
 $fontH3: 1.25rem/2rem 'PT Root UI', 'PT Serif', Arial, sans-serif;
 $fontH3Bold: 1.25rem/2rem 'PT Root UI', 'PT Serif', Arial, sans-serif;
@@ -17,7 +17,7 @@ h1 {
   margin: 0 0 1.5rem 0;
 
   @include respond(largeDesktop) {
-    font: 4rem/4.55rem 'Roslindale', 'PT Serif', Georgia, serif;
+    font: 3.5rem/4.4rem 'Roslindale', 'PT Serif', Georgia, serif;
   }
 
   @include respond(mobile) {
