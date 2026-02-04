@@ -178,7 +178,7 @@
 $mobile: 320px;
 $tablet: 767px;
 $desk: 1023px;
-$largeDesktop: 1440px;
+$largeDesktop: 1536px;
 
 @mixin respond($media) {
   @if $media == mobile {
