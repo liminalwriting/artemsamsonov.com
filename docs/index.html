@@ -47,7 +47,8 @@
     <div id="main-info">
       <div class="main-info" id="main-info-text">
         <h1>Head&nbsp;of&nbsp;Product&nbsp;Design из&nbsp;Москвы. Создаю и&nbsp;развиваю команды, масштабирую процессы, выстраиваю дизайн&#8209;стратегию, влияющую на&nbsp;метрики роста</h1>
-        <div id="main-info-buttons"> <a class="button" href="#experience">Опыт работы</a><a class="button" href="#cases">Кейсы</a>
+        <div id="main-info-buttons"> <a class="button" href="#experience">Опыт работы</a>
+          <!--+button('Кейсы', '#cases')-->
         </div>
       </div>
     </div>
@@ -97,24 +98,35 @@
           </div></a>
       </div>
     </div>
-    <div id="cases"> 
-      <div class="case">
-        <div class="case__content"><span class="case__type">кейс getmatch</span>
-          <h2>Редизайн карточки кандидата</h2>
-          <div class="case__metrics"><span class="case__metric">Time to Value: <span class="case__metric-value">-56%</span></span><span class="case__metric">Task Success Rate: <span class="case__metric-value">+18%</span></span><span class="case__metric">Выручка в месяц: <span class="case__metric-value">+972 000 ₽</span></span>
-          </div><a class="button" href="getmatch-card.html">Смотреть кейс</a>
-        </div>
-        <div class="case__image"><img src="img/getmatch-card-preview.png" alt="Редизайн карточки кандидата getmatch"></div>
-      </div>
-      <div class="case">
-        <div class="case__content"><span class="case__type">кейс getmatch</span>
-          <h2>One Day Offer для кандидатов</h2>
-          <div class="case__metrics"><span class="case__metric">Эффективность откликов: <span class="case__metric-value">+212%</span></span><span class="case__metric">Продажи за месяц: <span class="case__metric-value">+1 500 000 ₽</span></span>
-          </div><a class="button" href="getmatch-odo.html">Смотреть кейс</a>
-        </div>
-        <div class="case__image"><img src="img/getmatch-odo-preview.jpg" alt="One Day Offer для кандидатов getmatch"></div>
-      </div>
-    </div>
+    <!--#cases 
+    +caseCard(
+    	'кейс getmatch',
+    	'Редизайн карточки кандидата',
+    	[
+    		{label: 'Time to Value', value: '-56%'},
+    		{label: 'Task Success Rate', value: '+18%'},
+    		{label: 'Выручка в месяц', value: '+972 000 ₽'}
+    	],
+    	'../../img/getmatch-card-preview.png',
+    	'Редизайн карточки кандидата getmatch',
+    	'Смотреть кейс',
+    	'getmatch-card.html',
+    	false
+    )
+    +caseCard(
+    	'кейс getmatch',
+    	'One Day Offer для\u00A0кандидатов',
+    	[
+    		{label: 'Эффективность откликов', value: '+212%'},
+    		{label: 'Продажи за месяц', value: '+1 500 000 ₽'}
+    	],
+    	'../../img/getmatch-odo-preview.jpg',
+    	'One Day Offer для кандидатов getmatch',
+    	'Смотреть кейс',
+    	'getmatch-odo.html',
+    	false
+    )
+    -->
     <div id="skills">
       <div class="list-header">
         <h2>Как играющий тренер</h2>
