@@ -43,7 +43,8 @@ module.exports = function (paths) {
             {
               loader:  'sass-loader',
               options: {
-                sourceMap: true
+                implementation: require('sass'),
+                sourceMap:      true
               }
             }
           ]

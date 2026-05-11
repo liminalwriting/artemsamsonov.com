@@ -1,8 +1,8 @@
-mixin experienceCard(years, company, image, position, link, ...descriptions)
+mixin experienceCard(years, company, image, position, link, descr, ...descriptions)
     a.experience-card(href=link, target="_blank", rel="noopener noreferrer")
         .experience-card__content
             h3.experience-card__company= company
-            .experience-card__years= years
+            .experience-card__years!= years
         .experience-card__image
             if image.endsWith('.mp4') || image.endsWith('.webm') || image.endsWith('.ogg')
                 video(src=image, muted, loop, playsinline, autoplay, preload="auto")
@@ -11,5 +11,6 @@ mixin experienceCard(years, company, image, position, link, ...descriptions)
         .experience-card__details
             .experience-card__position= position
             .experience-card__description
+                p.experience-card__item!= descr
                 each description in descriptions
                     .experience-card__item!= description

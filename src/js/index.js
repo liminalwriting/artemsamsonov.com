@@ -25,6 +25,18 @@ window.addEventListener('orientationchange', setViewportHeight);
 
 // Glassmorphism effect on header scroll
 document.addEventListener('DOMContentLoaded', function() {
+  const tenureEl = document.getElementById('experience-tenure-mango');
+  if (tenureEl) {
+    const start = new Date(2025, 11, 1); // 1 December 2025 (month 0-based)
+    const now = new Date();
+    const endOfCurrentMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+    const months =
+      (endOfCurrentMonth.getFullYear() - start.getFullYear()) * 12 +
+      (endOfCurrentMonth.getMonth() - start.getMonth());
+    const n = Math.max(0, months);
+    tenureEl.textContent = `${n} мес`;
+  }
+
   const header = document.querySelector('.header');
   
   if (header) {
