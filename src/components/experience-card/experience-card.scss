@@ -26,12 +26,6 @@
     margin-bottom: 1rem;
     color: inherit;
     width: 100%;
-    
-    @include respond(mobile) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-      align-items: baseline;
-    }
   }
   
   &__years {
@@ -40,12 +34,6 @@
     color: $gray;
     grid-row: 1;
     grid-column: 1;
-    
-    @include respond(mobile) {
-      grid-row: 1;
-      grid-column: 2;
-      justify-self: end;
-    }
   }
   
   &__company {
@@ -53,11 +41,6 @@
     color: inherit;
     grid-row: 2;
     grid-column: 1;
-    
-    @include respond(mobile) {
-      grid-row: 1;
-      grid-column: 1;
-    }
   }
   
   &__image {
@@ -129,7 +112,7 @@
       border: none;
 
       @include respond(mobile) {
-        margin: 0 0 0.75rem 0;
+        margin: 0;
       }
     }
   }
