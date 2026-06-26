@@ -5,10 +5,7 @@ mixin experienceCard(years, company, image, position, link, descr, ...descriptio
             .experience-card__years!= years
         .experience-card__position
             .experience-card__position-media
-                if image.endsWith('.mp4') || image.endsWith('.webm') || image.endsWith('.ogg')
-                    video(src=image, muted, loop, playsinline, autoplay, preload="auto")
-                else
-                    img(src=image, alt=company)
+                img(src=image, alt=company)
             .experience-card__position-name= position
             p.experience-card__position-descr!= descr
         .experience-card__details
