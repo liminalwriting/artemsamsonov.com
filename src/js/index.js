@@ -37,56 +37,106 @@ function initPage() {
     tenureEl.textContent = `${n} мес`;
   }
 
-  const imagePairs = Array.prototype.slice.call(document.querySelectorAll('.article__pair'));
+  const comparisons = Array.prototype.slice.call(document.querySelectorAll('.article__compare'));
 
-  imagePairs.forEach(function(pair) {
-    const toggle = pair.querySelector('.article__pair-toggle');
-    const frames = Array.prototype.slice.call(pair.querySelectorAll('.article__image-frame'));
+  comparisons.forEach(function(compare) {
+    const frame = compare.querySelector('.article__compare-frame');
+    const handle = compare.querySelector('.article__compare-handle');
+    const toggle = compare.querySelector('.article__compare-toggle');
 
-    if (!toggle || !frames.length) {
+    if (!frame || !handle) {
       return;
     }
 
-    function getFullHeight(frame) {
-      const img = frame.querySelector('img');
+    // Нижний слой задаёт размеры кадра, верхний обрезается шторкой
+    const baseImage = frame.querySelector('img');
 
-      if (!img) {
-        return 0;
-      }
+    let position = 50;
 
-      // naturalWidth is 0 until the image is decoded, so fall back to the rendered height
-      if (img.naturalWidth && img.naturalHeight) {
-        return Math.round(frame.clientWidth * img.naturalHeight / img.naturalWidth);
-      }
-
-      return img.offsetHeight;
+    function setPosition(value) {
+      position = Math.min(100, Math.max(0, value));
+      compare.style.setProperty('--compare-position', `${position}%`);
+      handle.setAttribute('aria-valuenow', String(Math.round(position)));
     }
 
-    function applyFrameHeights() {
-      const isExpanded = pair.classList.contains('article__pair_expanded');
+    function positionFromEvent(event) {
+      const rect = frame.getBoundingClientRect();
 
-      frames.forEach(function(frame) {
-        frame.style.height = isExpanded ? `${getFullHeight(frame)}px` : '';
-      });
+      return ((event.clientX - rect.left) / rect.width) * 100;
+    }
+
+    function onPointerMove(event) {
+      setPosition(positionFromEvent(event));
+    }
+
+    function stopDragging() {
+      compare.classList.remove('article__compare_dragging');
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', stopDragging);
+      window.removeEventListener('pointercancel', stopDragging);
+    }
+
+    frame.addEventListener('pointerdown', function(event) {
+      event.preventDefault();
+      compare.classList.add('article__compare_dragging');
+      setPosition(positionFromEvent(event));
+      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointerup', stopDragging);
+      window.addEventListener('pointercancel', stopDragging);
+    });
+
+    handle.addEventListener('keydown', function(event) {
+      const step = event.shiftKey ? 10 : 2;
+
+      if (event.key === 'ArrowLeft') {
+        setPosition(position - step);
+      } else if (event.key === 'ArrowRight') {
+        setPosition(position + step);
+      } else if (event.key === 'Home') {
+        setPosition(0);
+      } else if (event.key === 'End') {
+        setPosition(100);
+      } else {
+        return;
+      }
+
+      event.preventDefault();
+    });
+
+    setPosition(position);
+
+    if (!toggle || !baseImage) {
+      return;
+    }
+
+    function getFullHeight() {
+      // naturalWidth is 0 until the image is decoded, so keep the collapsed height until then
+      if (baseImage.naturalWidth && baseImage.naturalHeight) {
+        return Math.round(frame.clientWidth * baseImage.naturalHeight / baseImage.naturalWidth);
+      }
+
+      return frame.clientHeight;
+    }
+
+    function applyFrameHeight() {
+      const isExpanded = compare.classList.contains('article__compare_expanded');
+
+      frame.style.height = isExpanded ? `${getFullHeight()}px` : '';
     }
 
     toggle.addEventListener('click', function() {
-      const isExpanded = pair.classList.toggle('article__pair_expanded');
+      const isExpanded = compare.classList.toggle('article__compare_expanded');
 
-      applyFrameHeights();
+      applyFrameHeight();
       toggle.textContent = isExpanded ? 'Свернуть' : 'Развернуть на\u00A0всю высоту';
       toggle.setAttribute('aria-expanded', String(isExpanded));
     });
 
-    window.addEventListener('resize', applyFrameHeights);
+    window.addEventListener('resize', applyFrameHeight);
 
-    frames.forEach(function(frame) {
-      const img = frame.querySelector('img');
-
-      if (img && !img.complete) {
-        img.addEventListener('load', applyFrameHeights);
-      }
-    });
+    if (!baseImage.complete) {
+      baseImage.addEventListener('load', applyFrameHeight);
+    }
   });
 
   const header = document.querySelector('.header');
