@@ -73,7 +73,7 @@
     }
 
     &-name {
-      @include col100(1.5rem 0 0 0, column, flex-start, flex-start);
+      @include col100(2rem 0 0 0, column, flex-start, flex-start);
       font: $fontMain;
       margin-bottom: 0.5rem;
       color: inherit;
