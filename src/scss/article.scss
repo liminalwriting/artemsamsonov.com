@@ -84,6 +84,14 @@
     }
   }
 
+  &__getmatch {
+    color: $getmatchYellow;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: calc(1em + 4px);
+    font-style: italic;
+    filter: saturate(50%);
+  }
+
   &__hero {
     display: grid;
     grid-template-columns: repeat(20, 5%);
@@ -106,10 +114,6 @@
         grid-column-start: 2;
         grid-column-end: 20;
         @include col100(88px 24px 24px 24px, column, center);
-      }
-
-      h3 {
-        color: $blanc;
       }
     }
 
@@ -241,9 +245,15 @@
       color: $coldBlue;
       text-align: left;
       cursor: pointer;
+      text-decoration: none;
+      transition: color 0.2s ease;
 
       &:hover {
-        text-decoration: underline;
+        color: lighten($coldBlue, 10%);
+      }
+
+      &:active {
+        color: lighten($coldBlue, 5%);
       }
 
       @include respond(mobile) {
@@ -323,7 +333,7 @@
         right: 0;
         bottom: 0;
         height: 24%;
-        background: linear-gradient(to bottom, rgba($darkGray, 0), $darkGray);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 90%, rgb(255, 255, 255));
         pointer-events: none;
         transition: opacity 0.3s ease;
       }
