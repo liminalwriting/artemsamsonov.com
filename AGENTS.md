@@ -39,7 +39,8 @@ src/
   js/index.js               # Hotjar, --vh, glassmorphism header, tenure counter
   img/ video/ fonts/        # копируются в built/ как есть
 built/                      # OUTPUT: HTML + css/style.bundle.css + js/bundle.js + assets
-docs/features/              # changelog по фичам и крупным изменениям
+docs/changelog/             # changelog по фичам и крупным изменениям
+docs/instructions/          # инструкции по работе с проектом
 webpack/                    # модули конфига (pug, scss, script, files, pug-to-html)
 gulpfile.js                 # seo-задачи, SITE_URL = https://artemsamsonov.com
 .htaccess                   # чистые URL без .html (копируется в built/)
@@ -111,7 +112,8 @@ Yandex Metrika — в `src/components/metrika/`.
 6. Коммиты в истории часто на русском и по смыслу («Главная: …», «Сборка: обновлён built …»). Следуй этому стилю, если просят закоммитить.
 7. Внешние ссылки в шапке: Telegram `t.me/forrrealism`, LinkedIn `linkedin.com/in/a-samsonov/`.
 8. `soshnikov-writing` в dependencies — наследие; не опирайся на него без проверки фактического использования.
-9. Changelog законченных фич и крупных изменений веди отдельными Markdown-файлами в `docs/features/`. Называй файл по фиче (`getmatch-odo-redesign.md`) и фиксируй пользовательские и технические изменения.
+9. Changelog законченных фич и крупных изменений веди отдельными Markdown-файлами в `docs/changelog/`. Называй файл по фиче (`getmatch-odo-redesign.md`) и фиксируй пользовательские и технические изменения.
+10. Инструкции по типовым задачам (шрифты и т.п.) — в `docs/instructions/`.
 
 ## Типичные задачи
 
@@ -122,6 +124,7 @@ Yandex Metrika — в `src/components/metrika/`.
 | Карточка навыка / кейса | `skill-card/`, `case-card/` |
 | Стили статей | `src/scss/article.scss` |
 | Глобальные цвета/типографика | `src/scss/colors.scss`, `typo.scss` |
+| Новый локальный шрифт | `docs/instructions/adding-fonts.md` |
 | Новая страница-кейс | скопируй структуру `jb` или `getmatch-card`, добавь картинки в `src/img/` |
 | Деплой-проверка | `yarn run build` → открыть `built/index.html` / devserver |
 

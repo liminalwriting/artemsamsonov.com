@@ -23,7 +23,8 @@ src/
   js/index.js               аналитика и мелкие эффекты
   img/ video/ fonts/        ассеты, копируются в built/ как есть
 built/                      результат сборки
-docs/features/              changelog по отдельным фичам и крупным изменениям
+docs/changelog/             changelog по отдельным фичам и крупным изменениям
+docs/instructions/          инструкции по работе с проектом
 webpack/                    модули конфига
 gulpfile.js                 SEO-задачи
 ```
@@ -32,7 +33,11 @@ gulpfile.js                 SEO-задачи
 
 ## Changelog
 
-Описание законченных фич и заметных изменений складываем отдельными Markdown-файлами в [`docs/features/`](docs/features/). Имя файла должно коротко описывать фичу, например `getmatch-odo-redesign.md`.
+Описание законченных фич и заметных изменений складываем отдельными Markdown-файлами в [`docs/changelog/`](docs/changelog/). Имя файла должно коротко описывать фичу, например `getmatch-odo-redesign.md`.
+
+## Инструкции
+
+Типовые задачи (например, добавление шрифтов) описаны в [`docs/instructions/`](docs/instructions/).
 
 ## Для ИИ-агентов
 
