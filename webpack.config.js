@@ -15,14 +15,14 @@ const pugToHtml = require('./webpack/pug-to-html');
 /* ПУТИ */
 const PATHS = {
   src:       path.join(__dirname, './src'),
-  dist:      path.join(__dirname, './docs'),
+  dist:      path.join(__dirname, './built'),
   img:       path.join(__dirname, './src/img'),
-  distImg:   path.join(__dirname, './docs/img'),
+  distImg:   path.join(__dirname, './built/img'),
   video:     path.join(__dirname, './src/video'),
-  distVideo: path.join(__dirname, './docs/video'),
+  distVideo: path.join(__dirname, './built/video'),
   styles:    path.join(__dirname, './src/scss'),
   fonts:     path.join(__dirname, './src/fonts'),
-  distFonts: path.join(__dirname, './docs/fonts')
+  distFonts: path.join(__dirname, './built/fonts')
 };
 
 /* ПЛАГИНЫ */

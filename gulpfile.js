@@ -8,7 +8,7 @@ const SITE_URL = 'https://artemsamsonov.com';
 
 // sitemap.xml
 gulp.task('sitemap', function () {
-    return gulp.src('docs/*.html')
+    return gulp.src('built/*.html')
         .pipe(sitemap({
             siteUrl: SITE_URL,
             changefreq: 'monthly',
@@ -20,14 +20,14 @@ gulp.task('sitemap', function () {
                 return `${siteUrl}/${url}`;
             }
         }))
-        .pipe(gulp.dest('docs'));
+        .pipe(gulp.dest('built'));
 });
 
 // robots.txt
 gulp.task('robots', function () {
     return gulp.src('src/robots.template.txt')
         .pipe(rename('robots.txt'))
-        .pipe(gulp.dest('docs'));
+        .pipe(gulp.dest('built'));
 });
 
 // manifest.json
@@ -42,7 +42,7 @@ gulp.task('manifest', function (done) {
         icons: []
     };
 
-    fs.writeFileSync('docs/manifest.json', JSON.stringify(manifest, null, 2));
+    fs.writeFileSync('built/manifest.json', JSON.stringify(manifest, null, 2));
     done();
 });
 

@@ -22,11 +22,11 @@
 ```bash
 yarn install
 yarn run devserver   # webpack-dev-server, development
-yarn run build       # production → папка docs/
-npx gulp seo         # sitemap.xml, robots.txt, manifest.json в docs/
+yarn run build       # production → папка built/
+npx gulp seo         # sitemap.xml, robots.txt, manifest.json в built/
 ```
 
-После правок контента/стилей/компонентов обычно нужен `yarn run build`, потому что **`docs/` — закоммиченный артефакт сборки** (деплой идёт из неё, не из `src/`).
+После правок контента/стилей/компонентов обычно нужен `yarn run build`, потому что **`built/` — закоммиченный артефакт сборки** (деплой идёт из неё, не из `src/`).
 
 ## Архитектура каталогов
 
@@ -37,17 +37,18 @@ src/
   components/<name>/        # Pug-миксин + SCSS рядом
   scss/                     # глобальные токены, сетка, типографика, article
   js/index.js               # Hotjar, --vh, glassmorphism header, tenure counter
-  img/ video/ fonts/        # копируются в docs/ как есть
-docs/                       # OUTPUT: HTML + css/style.bundle.css + js/bundle.js + assets
+  img/ video/ fonts/        # копируются в built/ как есть
+built/                      # OUTPUT: HTML + css/style.bundle.css + js/bundle.js + assets
+docs/features/              # changelog по фичам и крупным изменениям
 webpack/                    # модули конфига (pug, scss, script, files, pug-to-html)
 gulpfile.js                 # seo-задачи, SITE_URL = https://artemsamsonov.com
-.htaccess                   # чистые URL без .html (копируется в docs/)
+.htaccess                   # чистые URL без .html (копируется в built/)
 ```
 
 ### Как появляется страница
 
 1. Создай `src/pages/<slug>/<slug>.pug`.
-2. `webpack/pug-to-html.js` подхватывает все `src/pages/**/*.pug` и пишет `docs/<slug>.html`.
+2. `webpack/pug-to-html.js` подхватывает все `src/pages/**/*.pug` и пишет `built/<slug>.html`.
 3. Имя файла Pug **должно совпадать** с именем папки (`jb/jb.pug` → `jb.html`).
 
 ### Как устроены компоненты
@@ -97,19 +98,20 @@ Yandex Metrika — в `src/components/metrika/`.
 
 - OG/title/description задаются через mixin `+head(...)` в `src/components/head/head.pug`.
 - JSON-LD Person / WebSite зашиты в head и на index — при смене должности/компании обновляй и schema, и copy на главной.
-- После добавления HTML-страниц запускай `npx gulp seo`, чтобы обновить `docs/sitemap.xml`.
+- После добавления HTML-страниц запускай `npx gulp seo`, чтобы обновить `built/sitemap.xml`.
 - `robots.txt` генерится из `src/robots.template.txt`.
 
 ## Правила для агентов
 
-1. **Править источник в `src/`**, затем собирать в `docs/`. Не править только HTML в `docs/`, если правка должна жить в репозитории.
+1. **Править источник в `src/`**, затем собирать в `built/`. Не править только HTML в `built/`, если правка должна жить в репозитории.
 2. При UI-изменениях обновляй и компонент (Pug/SCSS), и при необходимости `imports.scss`.
 3. Новую страницу клади по конвенции `pages/<slug>/<slug>.pug`; не изобретай роутинг.
 4. Не обновляй Webpack/Babel/зависимости «на всякий случай» — стек старый (Webpack 4), апгрейды рискованны.
-5. Не коммить `node_modules`. `docs/` после осмысленной сборки — да, это нормальная практика этого репо.
-6. Коммиты в истории часто на русском и по смыслу («Главная: …», «Сборка: обновлены docs …»). Следуй этому стилю, если просят закоммитить.
+5. Не коммить `node_modules`. `built/` после осмысленной сборки — да, это нормальная практика этого репо.
+6. Коммиты в истории часто на русском и по смыслу («Главная: …», «Сборка: обновлён built …»). Следуй этому стилю, если просят закоммитить.
 7. Внешние ссылки в шапке: Telegram `t.me/forrrealism`, LinkedIn `linkedin.com/in/a-samsonov/`.
 8. `soshnikov-writing` в dependencies — наследие; не опирайся на него без проверки фактического использования.
+9. Changelog законченных фич и крупных изменений веди отдельными Markdown-файлами в `docs/features/`. Называй файл по фиче (`getmatch-odo-redesign.md`) и фиксируй пользовательские и технические изменения.
 
 ## Типичные задачи
 
@@ -121,7 +123,7 @@ Yandex Metrika — в `src/components/metrika/`.
 | Стили статей | `src/scss/article.scss` |
 | Глобальные цвета/типографика | `src/scss/colors.scss`, `typo.scss` |
 | Новая страница-кейс | скопируй структуру `jb` или `getmatch-card`, добавь картинки в `src/img/` |
-| Деплой-проверка | `yarn run build` → открыть `docs/index.html` / devserver |
+| Деплой-проверка | `yarn run build` → открыть `built/index.html` / devserver |
 
 ## Чего здесь нет
 
