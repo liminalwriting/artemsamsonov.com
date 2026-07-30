@@ -39,6 +39,13 @@ body {
   @include respond(mobile) {
     @include col100(0, column, flex-start, center);
   }
+
+  &_grid {
+    display: grid;
+    grid-template-columns: repeat(20, 5%);
+    max-width: none;
+    margin: 0;
+  }
 }
 
 blockquote {

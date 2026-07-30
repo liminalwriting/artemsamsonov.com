@@ -41,25 +41,34 @@ html
         }
 body.body_dark
     +header('dark')
-    div.content
+    div.article__hero
+        div.article__hero-content
+            h1 One Day Offer для кандидатов
+            p.article__annotation Редизайн механики увеличил среднее количество откликов на 212% и принёс 1 500 000 ₽ продаж за первый месяц после релиза.
+            h3 Мой вклад
+            div.article__tags
+                +tag('Сбор бизнес-требований', 'M')
+                +tag('UX-исследование кандидатов', 'M')
+                +tag('Определение и анализ метрик', 'M')
+                +tag('Арт-дирекшен дизайна', 'M')
+    div.content.content_grid
         div.article
             section
-                h1 One Day Offer для кандидатов
-                p.article__annotation Редизайн механики увеличил среднее количество откликов на 212% и принёс 1 500 000 ₽ продаж за первый месяц после релиза.
-                h3 Мой вклад
-                div.article__tags
-                    +tag('Сбор бизнес-требований', 'M')
-                    +tag('UX-исследование кандидатов', 'M')
-                    +tag('Определение и анализ метрик', 'M')
-                    +tag('Ревью контента и макетов', 'M')
+                div.article__pair
+                    div.article__image
+                        a(href="../../img/getmatch-odo-old.jpg" target="_blank")
+                            div.article__image-frame
+                                img(src="../../img/getmatch-odo-old.jpg")
+                        span.article__image-caption Так выглядела страница до редизайна
+                    div.article__image
+                        a(href="../../img/getmatch-odo-01.jpg" target="_blank")
+                            div.article__image-frame
+                                img(src="../../img/getmatch-odo-01.jpg")
+                        span.article__image-caption Версия после редизайна
+                    button.article__pair-toggle(type="button" aria-expanded="false") Развернуть на&nbsp;всю высоту
                 h3 Контекст
                 p One Day Offer (ODO) — мероприятие, на котором кандидаты проходят все этапы собеседования за день. getmatch продавал компаниям ODO под ключ.
-                p Однако, презентация услуги хромала — кандидаты не понимали, чем One Day Offer лучше обычного отклика на вакансию. Компании получали мало откликов и не понимали, почему One Day Offer дороже обычной вакансии.
-                h3 Задача
-                p Создать решение, которое:
-                ul
-                    li донесёт до кандидатов ценность One Day Offer
-                    li докажет компаниям, что за One Day Offer стоит заплатить в 5 раз больше
+                p Однако, презентация услуги хромала — кандидаты не понимали, чем One Day Offer лучше обычного отклика на вакансию. Компании получали мало откликов и не понимали, почему One Day Offer дороже обычной вакансии в 5 раз.
                 h2 Решение
                 h3 Этап 1 → Исследование ценности ODO
                 p  Провели опрос кандидатов в телеграм-боте, которые уже откликались на One Day Offer. Спрашивали о причинах отклика. Получили следующие результаты:
@@ -70,12 +79,8 @@ body.body_dark
                         li Желание получить обратную связь (17%)
                         li Другое (писали в свободной форме)
                     p Параллельно собрали данные о том, какую информацию считают важными рекрутеры: даты проведения мероприятия, этапы, перечень требуемых скиллов и команд.
-                h3  Этап 2 → Новый дизайн страницы ODO 
-                p Опираясь на данные с двух сторон, спроектировали новую страницу ↓
-                p.article__image.article__image
-                    a(href="../../img/getmatch-odo-01.jpg" target="_blank")
-                        img(src="../../img/getmatch-odo-01.jpg")
-                    span.article__image-caption Новый дизайн страницы ODO
+                h3 Этап 2 → Новый дизайн страницы ODO
+                p Опираясь на данные с двух сторон, спроектировали новую страницу →
                 h2 Подробности
                 .article__skill-cards
                     +skillCard(

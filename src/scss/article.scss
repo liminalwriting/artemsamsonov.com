@@ -9,6 +9,27 @@
     @include col100(24px 0 48px 0, column);
   }
 
+  .content_grid & {
+    grid-column-start: 3;
+    grid-column-end: 18;
+    width: auto;
+    margin: 0;
+
+    @include respond(mobile) {
+      grid-column-start: 2;
+      grid-column-end: 20;
+    }
+
+    section > p:not(.article__image) {
+      max-width: 70%;
+
+      @include respond(mobile) {
+        max-width: 100%;
+      }
+    }
+
+  }
+
   section {
     margin: 0 0 24px 0;
 
@@ -61,6 +82,48 @@
     @include respond(mobile) {
       margin: 0 0 24px 0;
     }
+  }
+
+  &__hero {
+    display: grid;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: 1fr;
+    width: 100%;
+    min-height: 40vh;
+    min-height: calc(var(--vh) * 40);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/getmatch-odo-hero.jpg');
+    background-size: cover;
+    background-position: center;
+
+    &-content {
+      grid-column-start: 3;
+      grid-column-end: 12;
+      @include col100(112px 0 48px 0, column, center);
+      font: $fontMain;
+      color: $blanc;
+
+      @include respond(mobile) {
+        grid-column-start: 2;
+        grid-column-end: 20;
+        @include col100(88px 24px 24px 24px, column, center);
+      }
+
+      h3 {
+        color: $blanc;
+      }
+    }
+
+    .article__annotation {
+      margin-bottom: 24px;
+    }
+
+    .article__tags {
+      margin-bottom: 0;
+    }
+  }
+
+  &__hero + .content & {
+    padding-top: 48px;
   }
 
   &__tags {
@@ -135,6 +198,106 @@
     margin-bottom: 48px;
   }
 
+  &__pair {
+    display: grid;
+    grid-template-columns: repeat(15, minmax(0, 1fr));
+    align-items: start;
+    margin: 0 0 48px 0;
+
+    @include respond(mobile) {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+      margin: 0 0 32px 0;
+    }
+
+    .article__image {
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      &:nth-child(1) {
+        grid-column: 1 / 8;
+      }
+
+      &:nth-child(2) {
+        grid-column: 9 / 16;
+      }
+
+      @include respond(mobile) {
+        grid-column: 1;
+      }
+    }
+
+    .article__image-caption {
+      color: $gray;
+    }
+
+    &-toggle {
+      grid-column: 1 / 16;
+      margin: 12px 0 0 0;
+      padding: 0;
+      border: 0;
+      background: none;
+      font: $fontSmall;
+      color: $coldBlue;
+      text-align: left;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include respond(mobile) {
+        grid-column: 1;
+        margin: 0;
+      }
+    }
+
+    &_expanded {
+      .article__image-frame::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(15, minmax(0, 1fr));
+    align-items: start;
+    margin: 0 0 48px 0;
+
+    @include respond(mobile) {
+      grid-template-columns: minmax(0, 1fr);
+      margin: 0 0 32px 0;
+    }
+
+    &-text {
+      grid-column: 1 / 7;
+
+      @include respond(mobile) {
+        grid-column: 1;
+      }
+    }
+
+    &-media {
+      grid-column: 8 / 16;
+      @include col100(0, column);
+
+      @include respond(mobile) {
+        grid-column: 1;
+        margin-top: 16px;
+      }
+
+      .article__image:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .article__image-caption {
+        color: $gray;
+      }
+    }
+  }
+
   &__image {
     @include col100(0 0 24px 0, column);
 
@@ -144,6 +307,31 @@
 
     &-auto {
       width: 320px !important;
+    }
+
+    &-frame {
+      position: relative;
+      height: 24rem;
+      overflow: hidden;
+      border-radius: 6px;
+      transition: height 0.4s ease;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 24%;
+        background: linear-gradient(to bottom, rgba($darkGray, 0), $darkGray);
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
 
     &--half {
