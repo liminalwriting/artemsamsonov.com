@@ -62,13 +62,12 @@ body.body_dark
                         height="30"
                     )
                 div.article__compare
+                    div.article__compare-labels
+                        span После
+                        span До
                     div.article__compare-frame
                         img.article__compare-before(src="../../img/getmatch-odo-old.jpg" alt="Страница One Day Offer до редизайна")
                         img.article__compare-after(src="../../img/getmatch-odo-01.jpg" alt="Страница One Day Offer после редизайна")
-                        div.article__compare-label.article__compare-label_after
-                            +tag('После', 'S', 'dark')
-                        div.article__compare-label.article__compare-label_before
-                            +tag('До', 'S', 'dark')
                         div.article__compare-handle(
                             role="slider"
                             tabindex="0"

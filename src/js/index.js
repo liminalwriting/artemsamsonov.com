@@ -52,11 +52,35 @@ function initPage() {
     const baseImage = frame.querySelector('img');
 
     let position = 50;
+    let introTimers = [];
 
     function setPosition(value) {
       position = Math.min(100, Math.max(0, value));
       compare.style.setProperty('--compare-position', `${position}%`);
       handle.setAttribute('aria-valuenow', String(Math.round(position)));
+    }
+
+    function clearIntroNudge() {
+      introTimers.forEach(function(timerId) {
+        clearTimeout(timerId);
+      });
+      introTimers = [];
+    }
+
+    function playIntroNudge() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+      }
+
+      introTimers.push(setTimeout(function() {
+        setPosition(58);
+      }, 500));
+      introTimers.push(setTimeout(function() {
+        setPosition(42);
+      }, 900));
+      introTimers.push(setTimeout(function() {
+        setPosition(50);
+      }, 1300));
     }
 
     function positionFromEvent(event) {
@@ -78,6 +102,7 @@ function initPage() {
 
     frame.addEventListener('pointerdown', function(event) {
       event.preventDefault();
+      clearIntroNudge();
       compare.classList.add('article__compare_dragging');
       setPosition(positionFromEvent(event));
       window.addEventListener('pointermove', onPointerMove);
@@ -89,12 +114,16 @@ function initPage() {
       const step = event.shiftKey ? 10 : 2;
 
       if (event.key === 'ArrowLeft') {
+        clearIntroNudge();
         setPosition(position - step);
       } else if (event.key === 'ArrowRight') {
+        clearIntroNudge();
         setPosition(position + step);
       } else if (event.key === 'Home') {
+        clearIntroNudge();
         setPosition(0);
       } else if (event.key === 'End') {
+        clearIntroNudge();
         setPosition(100);
       } else {
         return;
@@ -104,6 +133,7 @@ function initPage() {
     });
 
     setPosition(position);
+    playIntroNudge();
 
     if (!toggle || !baseImage) {
       return;

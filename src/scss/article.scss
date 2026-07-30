@@ -99,7 +99,7 @@
     width: 100%;
     min-height: 40vh;
     min-height: calc(var(--vh) * 40);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/getmatch-odo-hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--article-hero-image, url('../img/getmatch-odo-hero.jpg'));
     background-size: cover;
     background-position: center;
 
@@ -259,21 +259,15 @@
 
     &-after {
       clip-path: inset(0 calc(100% - var(--compare-position)) 0 0);
+      transition: clip-path 0.35s ease;
     }
 
-    &-label {
-      position: absolute;
-      top: 12px;
-      z-index: 2;
-      pointer-events: none;
-
-      &_after {
-        left: 12px;
-      }
-
-      &_before {
-        right: 12px;
-      }
+    &-labels {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 8px 0;
+      font: $fontExtraSmall;
+      color: $gray;
     }
 
     &-handle {
@@ -287,18 +281,19 @@
       background-color: $blanc;
       cursor: ew-resize;
       touch-action: none;
+      transition: left 0.35s ease;
 
       .tag {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 1.5rem;
-        height: 4rem;
+        width: 1rem;
+        height: 3rem;
         padding: 0;
         transform: translate(-50%, -50%);
-        border: 2px solid $darkGray;
+        border: 2px solid $blanc;
         border-radius: 100px;
-        background-color: $blanc;
+        background-color: $black;
         justify-content: center;
         align-items: center;
 
@@ -341,6 +336,11 @@
     &_dragging {
       .article__compare-frame {
         cursor: ew-resize;
+      }
+
+      .article__compare-after,
+      .article__compare-handle {
+        transition: none;
       }
     }
 

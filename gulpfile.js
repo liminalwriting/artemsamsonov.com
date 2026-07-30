@@ -8,7 +8,7 @@ const SITE_URL = 'https://artemsamsonov.com';
 
 // sitemap.xml
 gulp.task('sitemap', function () {
-    return gulp.src('built/*.html')
+    return gulp.src(['built/*.html', '!built/template-case.html'])
         .pipe(sitemap({
             siteUrl: SITE_URL,
             changefreq: 'monthly',

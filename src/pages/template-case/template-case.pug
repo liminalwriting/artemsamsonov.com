@@ -1,0 +1,106 @@
+//- Шаблон кейса.
+//- 1. Скопируй папку и назови Pug-файл так же, как новую папку.
+//- 2. Замени мета, hero, теги, изображения и текстовые плейсхолдеры.
+//- 3. Удали noindex перед публикацией.
+
+include ../../components/head/head
+include ../../components/header/header
+include ../../components/tag/tag
+include ../../components/skill-card/skill-card
+
+doctype html
+html
+    +head(
+      'Название кейса • Артём Самсонов • Продуктовый дизайнер',
+      'Короткое описание кейса и его результата',
+      'https://artemsamsonov.com/img/default.jpg',
+      'article'
+    )
+    meta(name="robots" content="noindex, nofollow")
+body.body_dark
+    +header('dark')
+
+    //- Hero-фон задаётся через CSS-переменную; путь считается от собранного HTML.
+    div.article__hero(style="--article-hero-image: url(img/default.jpg)")
+        div.article__hero-content
+            h1 Название продукта или проекта
+            p.article__annotation Одним предложением: что изменилось для пользователей и бизнеса после релиза.
+            div.article__tags
+                +tag('Роль в проекте', 'S', 'light')
+                +tag('Исследования', 'S', 'light')
+                +tag('Проектирование', 'S', 'light')
+                +tag('Арт-дирекшен', 'S', 'light')
+
+    div.content.content_grid
+        div.article
+            section
+                //- Опциональный блок сравнения. Первое изображение — «до»,
+                //- второе — «после». Удали весь блок, если сравнение не нужно.
+                div.article__compare-heading
+                    h2 До и после
+                div.article__compare
+                    div.article__compare-labels
+                        span После
+                        span До
+                    div.article__compare-frame
+                        img.article__compare-before(src="../../img/case-01.jpg" alt="Интерфейс до изменений")
+                        img.article__compare-after(src="../../img/case-02.jpg" alt="Интерфейс после изменений")
+                        div.article__compare-handle(
+                            role="slider"
+                            tabindex="0"
+                            aria-label="Шторка сравнения: влево — до, вправо — после"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="50"
+                        )
+                            div.tag.tag--S.tag--dark
+                    button.article__compare-toggle(type="button" aria-expanded="false") Развернуть на&nbsp;всю высоту
+
+                h2 Контекст
+                p Опиши продукт, аудиторию и исходную ситуацию. Оставь только факты, необходимые для понимания задачи.
+                p Объясни проблему пользователей и бизнеса: что не работало, как это проявлялось и почему стоило вмешаться.
+
+                h2 Решение
+                h3 Этап 1. Исследование
+                p Опиши метод, выборку и выводы, которые повлияли на решение.
+                ul
+                    li Первый важный вывод
+                    li Второй важный вывод
+                    li Третий важный вывод
+
+                h3 Этап 2. Проектирование
+                p Покажи, как выводы превратились в сценарий, структуру и интерфейс.
+
+                h2 Подробности
+                .article__skill-cards
+                    +skillCard(
+                        'Название изменения',
+                        'Что изменилось и почему это стало лучше для пользователя.',
+                        '',
+                        'default',
+                        'case'
+                    )
+                    +skillCard(
+                        'Название второго изменения',
+                        'Короткое объяснение решения и его продуктового смысла.',
+                        '',
+                        'default',
+                        'case'
+                    )
+
+                h2 Результаты
+                .article__skill-cards
+                    +skillCard(
+                        'Ключевая метрика: +00%',
+                        'Что измеряли, за какой период и с чем сравнивали.',
+                        '',
+                        'metric',
+                        'case'
+                    )
+                    +skillCard(
+                        'Бизнес-результат',
+                        'Как решение повлияло на деньги, скорость или качество процесса.',
+                        '',
+                        'metric',
+                        'case'
+                    )

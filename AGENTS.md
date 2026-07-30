@@ -125,7 +125,7 @@ Yandex Metrika — в `src/components/metrika/`.
 | Стили статей | `src/scss/article.scss` |
 | Глобальные цвета/типографика | `src/scss/colors.scss`, `typo.scss` |
 | Новый локальный шрифт | `docs/instructions/adding-fonts.md` |
-| Новая страница-кейс | скопируй структуру `jb` или `getmatch-card`, добавь картинки в `src/img/` |
+| Новая страница-кейс | скопируй `template-case`; инструкция — `docs/instructions/creating-case-from-template.md` |
 | Деплой-проверка | `yarn run build` → открыть `built/index.html` / devserver |
 
 ## Чего здесь нет
