@@ -1,17 +1,14 @@
 include ../../components/head/head
 include ../../components/header/header
-include ../../components/article-headline/article-headline
-include ../../components/article-breadcrumb/article-breadcrumb
 include ../../components/tag/tag
 include ../../components/skill-card/skill-card
-include ../../components/sign/sign
 
 doctype html
 html
     +head(
-      'Зарплатный калькулятор getmatch • Артём Самсонов • Продуктовый дизайнер',
-      'Дизайн сервиса на пересечении интересов кандидатов и клиентов',
-      'http://artemsamsonov.com/img/case-04.jpg',
+      'Редизайн карточки кандидата getmatch • Артём Самсонов • Продуктовый дизайнер',
+      'Анализ кандидата стал в 2 раза быстрее, а рост одобрений принёс 972 000 ₽ выручки в месяц',
+      'https://artemsamsonov.com/img/getmatch-card-preview.jpg',
       'article'
     )
     script(type="application/ld+json").
@@ -20,8 +17,8 @@ html
           "@type": "CreativeWork",
           "name": "Редизайн карточки кандидата getmatch",
           "alternateName": "Candidate Card Redesign getmatch",
-          "headline": "Улучшение UX карточки кандидата для рекрутеров",
-          "description": "Кейс о том, как я провёл редизайн карточки кандидата в getmatch. Новая карточка помогла рекрутерам быстрее анализировать информацию и увеличила количество одобрений, что привело к росту наймов и выручки.",
+          "headline": "Редизайн карточки кандидата",
+          "description": "Кейс о редизайне карточки кандидата в getmatch: новая карточка ускорила анализ информации в 2 раза, увеличила количество одобрений и принесла 972 000 ₽ дополнительной выручки в месяц.",
           "url": "https://artemsamsonov.com/getmatch-card",
           "author": {
             "@type": "Person",
@@ -29,37 +26,60 @@ html
             "url": "https://artemsamsonov.com"
           },
           "datePublished": "2025-06-26",
-          "dateModified": "2025-06-26",
+          "dateModified": "2026-07-31",
           "inLanguage": "ru",
           "mainEntityOfPage": "https://artemsamsonov.com/getmatch-card",
           "image": {
             "@type": "ImageObject",
-            "url": "https://artemsamsonov.com/img/getmatch-card-01.png",
-            "width": 1152,
-            "height": 768
+            "url": "https://artemsamsonov.com/img/getmatch-card-preview.jpg",
+            "width": 2000,
+            "height": 1378
           }
         }
 body.body_dark
     +header('dark')
-    div.content
+    div.article__hero(style="--article-hero-image: url(../img/getmatch-card-hero.jpg)")
+        div.article__hero-content
+            h1 Редизайн карточки кандидата
+            p.article__annotation Новая карточка в ленте рекрутеров помогла и пользователям, и бизнесу: анализ информации стал в 2 раза быстрее, а рост одобрений привёл к росту наймов и, как следствие, выручки.
+            div.article__tags
+                +tag('Координация UX-исследования', 'S')
+                +tag('Арт-дирекшен', 'S')
+                +tag('Постанализ', 'S')
+    div.content.content_grid
         div.article
             section
-                h1 Редизайн карточки кандидата
-                p.article__annotation Новая карточка в ленте рекрутеров помогла и пользователям, и бизнесу: анализ информации стал в 2 раза быстрее, а количество одобрений привело к росту наймов и, как следствие—выручки. И всё благодаря дизайну.
-                 
-                div.article__tags
-                    +tag('Координация UX-исследования', 'M')
-                    +tag('Арт-дирекшен', 'M')
-                    +tag('Постанализ', 'M')
-                h3 Контекст
+                h2 Контекст
                 p Проводя сезонную сессию глубинных интервью с рекрутерами, мы выявили, что на краткой карточке кандидата нет ряда важной информации. Из-за этого рекрутеры всегда открывают полный профиль в соседней вкладке.
-                h3 Задача
-                p Создать решение, которое:
-                ul
-                    li Сократит путь от просмотра информации до открытия контактов
-                    li Увеличит количество одобрений
+                p Требовалось сократить путь от просмотра информации до открытия контактов и увеличить количество одобрений.
+            section
+                div.article__compare-heading
+                    h2 До и после
+                    img(
+                        src="../../img/hand-drag.png"
+                        alt="hand-drag"
+                        width="30"
+                        height="30"
+                    )
+                div.article__compare
+                    div.article__compare-labels
+                        span После
+                        span До
+                    div.article__compare-frame
+                        img.article__compare-before(src="../../img/getmatch-card-old.jpg" alt="Карточка кандидата до редизайна")
+                        img.article__compare-after(src="../../img/getmatch-card-new.jpg" alt="Карточка кандидата после редизайна")
+                        div.article__compare-handle(
+                            role="slider"
+                            tabindex="0"
+                            aria-label="Шторка сравнения: влево — до редизайна, вправо — после"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="50"
+                        )
+                            div.tag.tag--S
+            section
                 h2 Решение
-                p  Провели редизайн карточки кандидата для рекрутера:
+                p Провели редизайн карточки кандидата для рекрутера:
                 .article__skill-cards
                     +skillCard(
                         'Подняли выше навыки',
@@ -89,9 +109,7 @@ body.body_dark
                         'default',
                         'case'
                     )
-                p.article__image.article__image
-                    a(href="../../img/getmatch-card-01.png" target="_blank")
-                        img(src="../../img/getmatch-card-02.png")
+            section
                 h2 Результаты
                 .article__skill-cards
                     +skillCard(
@@ -109,10 +127,28 @@ body.body_dark
                         'case'
                     )
                     +skillCard(
-                        'Выручка в месяц: +972 000 ₽',
+                        'Выручка в месяц: +972 000 ₽',
                         'Больше открытий контактов → больше собеседований → больше наймов. А за наймы нам платили деньги',
                         '',
                         'metric',
                         'case'
                     )
-                
+            section
+                h2 Детали
+                p Чуть позже реализовали для карточки две темы:
+                div.article__compare
+                    div.article__compare-labels
+                        span Светлая
+                        span Тёмная
+                    div.article__compare-frame
+                        img.article__compare-before(src="../../img/getmatch-card-new-dark.jpg" alt="Тёмная тема карточки кандидата")
+                        img.article__compare-after(src="../../img/getmatch-card-new.jpg" alt="Светлая тема карточки кандидата")
+                        div.article__compare-handle(
+                            role="slider"
+                            tabindex="0"
+                            aria-label="Шторка сравнения тем: влево — тёмная, вправо — светлая"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="50"
+                        )
+                            div.tag.tag--S
