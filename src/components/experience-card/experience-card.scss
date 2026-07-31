@@ -7,16 +7,6 @@
   color: $white;
   border-radius: 0.4rem;
   overflow: hidden;
-  text-decoration: none;
-
-  // Убираем стандартные стили ссылки
-  &:link,
-  &:visited,
-  &:hover,
-  &:active {
-    color: $white;
-    text-decoration: none;
-  }
 
   &__content {
     display: grid;
@@ -37,7 +27,7 @@
   }
   
   &__company {
-    font: $fontH2;
+    font: $fontMain;
     color: inherit;
     grid-row: 2;
     grid-column: 1;
@@ -45,7 +35,7 @@
   
   &__position {
     @include col100(0, column, flex-start, flex-start);
-    margin-bottom: 1rem;
+    margin-bottom: calc(1rem + 24px);
     border-radius: 0.4rem;
     overflow: hidden;
     position: relative;

@@ -131,27 +131,13 @@
 
     @include respond(mobile) {
       grid-template-columns: 1fr;
-      
+
       .experience-card:nth-child(1),
       .experience-card:nth-child(2),
       .experience-card:nth-child(3) {
         grid-column-start: 1;
         grid-column-end: 2;
         margin-bottom: 3rem;
-      }
-    }
-
-    // Стили для ссылок компаний
-    .experience-card {
-      transition: transform 0.2s ease;
-      cursor: pointer;
-
-      &:hover {
-        transform: translateY(-2px);
-      }
-
-      &:focus {
-        outline: none;
       }
     }
   }

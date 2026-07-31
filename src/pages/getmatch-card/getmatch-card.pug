@@ -7,20 +7,26 @@ doctype html
 html
     +head(
       'Редизайн карточки кандидата getmatch • Артём Самсонов • Продуктовый дизайнер',
-      'Анализ кандидата стал в 2 раза быстрее, а рост одобрений принёс 972 000 ₽ выручки в месяц',
+      'Анализ кандидата стал в 2 раза быстрее, открытий контактов +18%, +972 000 ₽ выручки в месяц',
       'https://artemsamsonov.com/img/getmatch-card-preview.jpg',
       'article'
     )
     script(type="application/ld+json").
         {
           "@context": "https://schema.org",
-          "@type": "CreativeWork",
+          "@type": "Article",
           "name": "Редизайн карточки кандидата getmatch",
           "alternateName": "Candidate Card Redesign getmatch",
           "headline": "Редизайн карточки кандидата",
-          "description": "Кейс о редизайне карточки кандидата в getmatch: новая карточка ускорила анализ информации в 2 раза, увеличила количество одобрений и принесла 972 000 ₽ дополнительной выручки в месяц.",
+          "description": "Кейс о редизайне карточки кандидата в getmatch: анализ информации ускорился в 2 раза (Time to Value −56%), открытий контактов стало на 18% больше, дополнительная выручка — 972 000 ₽ в месяц.",
           "url": "https://artemsamsonov.com/getmatch-card",
           "author": {
+            "@type": "Person",
+            "name": "Артём Самсонов",
+            "url": "https://artemsamsonov.com",
+            "jobTitle": "Head of Product Design"
+          },
+          "publisher": {
             "@type": "Person",
             "name": "Артём Самсонов",
             "url": "https://artemsamsonov.com"
@@ -28,7 +34,16 @@ html
           "datePublished": "2025-06-26",
           "dateModified": "2026-07-31",
           "inLanguage": "ru",
-          "mainEntityOfPage": "https://artemsamsonov.com/getmatch-card",
+          "about": {
+            "@type": "Organization",
+            "name": "getmatch",
+            "url": "https://getmatch.ru"
+          },
+          "keywords": "getmatch, карточка кандидата, редизайн, продуктовый дизайн, UX, рекрутинг",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://artemsamsonov.com/getmatch-card"
+          },
           "image": {
             "@type": "ImageObject",
             "url": "https://artemsamsonov.com/img/getmatch-card-preview.jpg",

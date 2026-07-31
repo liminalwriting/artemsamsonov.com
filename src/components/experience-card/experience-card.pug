@@ -1,7 +1,7 @@
-mixin experienceCard(years, company, image, position, link, descr, ...descriptions)
-    a.experience-card(href=link, target="_blank", rel="noopener noreferrer")
+mixin experienceCard(years, company, image, position, descr, ...descriptions)
+    .experience-card
         .experience-card__content
-            h3.experience-card__company= company
+            .experience-card__company= company
             .experience-card__years!= years
         .experience-card__position
             .experience-card__position-media
