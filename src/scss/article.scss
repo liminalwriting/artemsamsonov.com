@@ -1,6 +1,7 @@
 .article {
   @include colauto(120px 0 48px 0, column);
   width: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
   font: $fontMain;
   color: $gray;
@@ -11,7 +12,7 @@
 
   .content_grid & {
     grid-column-start: 3;
-    grid-column-end: 18;
+    grid-column-end: 19;
     width: auto;
     margin: 0;
 
@@ -25,6 +26,19 @@
 
       @include respond(mobile) {
         max-width: 100%;
+      }
+    }
+
+    section {
+      margin: 0 0 48px 0;
+
+      // Нижний отступ секции задаёт ритм, внутренний отступ последнего блока его удваивает
+      > :last-child {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
 
@@ -106,7 +120,7 @@
     &-content {
       grid-column-start: 3;
       grid-column-end: 12;
-      @include col100(112px 0 48px 0, column, center);
+      @include col100(96px 0 48px 0, column, center);
       font: $fontMain;
       color: $blanc;
 
@@ -238,10 +252,27 @@
       position: relative;
       height: 32rem;
       overflow: hidden;
+      overflow: clip;
       border-radius: 6px;
+      background-color: $black;
+      // Mask заставляет браузер клипать по скруглению без светлого ореола
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
+      mask-image: linear-gradient(#000 0 0);
+      isolation: isolate;
       transition: height 0.4s ease;
       // Вертикальный свайп страницы остаётся, горизонтальный уходит в шторку
       touch-action: pan-y;
+
+      // Перекрывает субпиксельный ореол на тёмном фоне страницы
+      &::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        z-index: 3;
+        border: 2px solid $black;
+        border-radius: 7px;
+        pointer-events: none;
+      }
     }
 
     &-after,
@@ -339,8 +370,19 @@
       }
 
       .article__compare-after,
+      .article__compare-before,
       .article__compare-handle {
         transition: none;
+      }
+    }
+
+    // В развороте не кропаем: каждая картинка в натуральных пропорциях по ширине кадра.
+    // Высоту кадра JS ставит по самой высокой; у более низкой — letterbox снизу.
+    &_expanded {
+      .article__compare-after,
+      .article__compare-before {
+        object-fit: contain;
+        background-color: $blanc;
       }
     }
 

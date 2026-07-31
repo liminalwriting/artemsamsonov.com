@@ -48,8 +48,7 @@ function initPage() {
       return;
     }
 
-    // Нижний слой задаёт размеры кадра, верхний обрезается шторкой
-    const baseImage = frame.querySelector('img');
+    const images = Array.prototype.slice.call(frame.querySelectorAll('img'));
 
     let position = 50;
     let introTimers = [];
@@ -73,10 +72,10 @@ function initPage() {
       }
 
       introTimers.push(setTimeout(function() {
-        setPosition(58);
+        setPosition(66);
       }, 500));
       introTimers.push(setTimeout(function() {
-        setPosition(42);
+        setPosition(34);
       }, 900));
       introTimers.push(setTimeout(function() {
         setPosition(50);
@@ -135,17 +134,24 @@ function initPage() {
     setPosition(position);
     playIntroNudge();
 
-    if (!toggle || !baseImage) {
+    if (!toggle || !images.length) {
       return;
     }
 
     function getFullHeight() {
-      // naturalWidth is 0 until the image is decoded, so keep the collapsed height until then
-      if (baseImage.naturalWidth && baseImage.naturalHeight) {
-        return Math.round(frame.clientWidth * baseImage.naturalHeight / baseImage.naturalWidth);
-      }
+      // Кадр под самую высокую картинку при ширине 100%; пока нет natural* — не трогаем высоту
+      let maxHeight = 0;
 
-      return frame.clientHeight;
+      images.forEach(function(image) {
+        if (image.naturalWidth && image.naturalHeight) {
+          maxHeight = Math.max(
+            maxHeight,
+            frame.clientWidth * image.naturalHeight / image.naturalWidth
+          );
+        }
+      });
+
+      return maxHeight ? Math.round(maxHeight) : frame.clientHeight;
     }
 
     function applyFrameHeight() {
@@ -164,9 +170,11 @@ function initPage() {
 
     window.addEventListener('resize', applyFrameHeight);
 
-    if (!baseImage.complete) {
-      baseImage.addEventListener('load', applyFrameHeight);
-    }
+    images.forEach(function(image) {
+      if (!image.complete) {
+        image.addEventListener('load', applyFrameHeight);
+      }
+    });
   });
 
   const header = document.querySelector('.header');

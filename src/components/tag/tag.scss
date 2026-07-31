@@ -9,19 +9,12 @@
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.025);
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
+  color: $blanc;
   transition: all 0.3s ease;
   
   &:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-  }
-
-  &--light {
-    color: $gray;
-  }
-
-  &--dark {
-    color: $black;
   }
 
   &--S {
